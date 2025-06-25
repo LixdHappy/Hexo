@@ -1257,6 +1257,7 @@ inject:
     - <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script> # 统计页面
     - <script src="/js/countdown.js"></script> # 引入侧边栏倒计时卡片
     - <script src="js/card-welcome.js"></script> #引入侧边栏来访者卡片
+    - <script src="/js/footer-animal.js" defer></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
