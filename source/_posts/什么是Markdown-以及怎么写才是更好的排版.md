@@ -9,14 +9,18 @@ tags:
 swiper_index: 1
 top_group_index: 1
 location: 南宁
-cover: 'https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img1.Markdown.jpg'
+cover: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img1.Markdown.jpg
 copyright: true
 copyright_author: LixdHappy
-copyright_url: 'https://markdown.com.cn/'
+copyright_url: https://markdown.com.cn/
 copyright_info: 本文是转载或翻译文章，版权归原作者所有。建议访问原文，转载本文请联系原作者。
 abbrlink: edc6e88
+ai: >-
+  这里是GB的AI，这篇文章介绍了Markdown的基本概念、优势以及详细语法指南。Markdown是一种轻量级标记语言，由John
+  Gruber于2004年创建，专注于文字内容且语法简单易学。文章解释了Markdown与Word等所见即所得编辑器的区别，强调其纯文本可移植性、跨平台兼容性和未来适应性等优势。文中提供了Markdown语法的全面速查表，包括标题、段落、换行、强调（粗体/斜体）、引用和列表等基本语法元素的使用方法和常见错误提示。特别推荐新手使用Typora编辑器，并建议通过实践来掌握Markdown。文章还详细说明了如何在Markdown中创建各种格式，如多级标题、嵌套引用、有序/无序列表等，并强调了不同平台对Markdown语法支持的差异性。
 date: 2025-06-21 11:17:48
 ---
+
 {% note success simple %}为了方便自己在写博文的时候参考, 特地为自己安排了 Markdown 语法的教程一环 🤐, 翻译了一下文档, 便于国人理解, 虽然单词都挺基础也罢{% endnote %}
 
 # Markdown入门基础
@@ -688,7 +692,7 @@ See the section on [`code`](https://markdown.com.cn/basic-syntax/links.html#code
 | 字符 | 名称                                                         |
 | ---- | ------------------------------------------------------------ |
 | \    | 反斜杠                                                       |
-| `    | 反引号（另见[代码中转义反引号 ](https://markdown.com.cn/basic-syntax/escaping-characters.html#escaping-backticks)） |
+| `    | 反引号（另见[代码中转义反引号](https://markdown.com.cn/basic-syntax/escaping-characters.html#escaping-backticks)） |
 | *    | 星号                                                         |
 | _    | 下划线                                                       |
 | { }  | 花括号                                                       |
@@ -699,7 +703,7 @@ See the section on [`code`](https://markdown.com.cn/basic-syntax/links.html#code
 | -    | 减号（连字符）                                               |
 | .    | 点                                                           |
 | !    | 感叹号                                                       |
-| \|   | 竖线（另见[表格中的竖线转义 ](https://markdown.com.cn/extended-syntax/escaping-pipe-characters-in-tables.html)） |
+| \|   | 竖线（另见[表格中的竖线转义](https://markdown.com.cn/extended-syntax/escaping-pipe-characters-in-tables.html)） |
 
 ### 特殊字符自动转义
 
@@ -977,7 +981,7 @@ HTML看起来像这样：
 
 ### 链接到标题ID (#headid)
 
-通过创建带有数字符号（`#`）和自定义标题ID的[标准链接]((/basic-syntax/links.html)，可以链接到文件中具有自定义ID的标题。
+通过创建带有数字符号（`#`）和自定义标题ID的[标准链接]((/basic-syntax/links.HTML)，可以链接到文件中具有自定义ID的标题。
 
 | Markdown                      | HTML                                     | 预览效果                                                     |
 | ----------------------------- | ---------------------------------------- | ------------------------------------------------------------ |
@@ -1075,7 +1079,7 @@ HTML看起来像这样：
 
 ## 自动网址链接
 
-许多Markdown处理器会自动将URL转换为链接。这意味着如果您输入http://www.example.com，即使您未[使用方括号](https://markdown.com.cn/basic-syntax/links.html)，您的Markdown处理器也会自动将其转换为链接。
+许多Markdown处理器会自动将URL转换为链接。这意味着如果您输入<http://www.example.com，即使您未[使用方括号>](<https://markdown.com.cn/basic-syntax/links.html)，您的Markdown处理器也会自动将其转换为链接。>
 
 ```text
 http://www.example.com
@@ -1107,7 +1111,7 @@ http://www.example.com
 
 ## Markdown 下划线
 
-Markdown 原生不支持下划线，可能是因为网页文本中的下划线通常表示超链接。然而，在写论文或报告时，可能需要使用下划线。一些应用（如 Bear 和 Simplenote）支持文本下划线，但如果你的 Markdown 处理器支持 HTML，可以使用 `<ins> `标签：
+Markdown 原生不支持下划线，可能是因为网页文本中的下划线通常表示超链接。然而，在写论文或报告时，可能需要使用下划线。一些应用（如 Bear 和 Simplenote）支持文本下划线，但如果你的 Markdown 处理器支持 HTML，可以使用 `<ins>`标签：
 
 ```text
 一些文字 <ins>将被加下划线</ins>。
@@ -1171,7 +1175,6 @@ Markdown 没有内置的注释功能，但可以使用一种非官方的 Hack �
 
 这是可见的段落。
 
-[这是一个隐藏的注释]: #
 
 这是另一个可见的段落。
 
@@ -1348,6 +1351,6 @@ Markdown 不能直接嵌入视频，但可以使用 HTML，或变通方式（图
 
 渲染效果：
 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114201066479129&bvid=BV1GPX1YpErE&cid=28993847393&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe src="//player.bilibili.com/player.HTML?isOutside=true&aid=114201066479129&bvid=BV1GPX1YpErE&cid=28993847393&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 Markdown 作为轻量级标记语言，有一定的局限性，但借助 HTML 和 CSS，可以实现许多 Markdown 不支持的功能。希望这些技巧能帮助你更高效地使用 Markdown！ 🚀
