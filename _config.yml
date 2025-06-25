@@ -277,3 +277,13 @@ envelope_comment:
     comments: true
     top_img: false
     type: envelope
+
+#//  --- 信阀留言板 结束 ---  //
+
+#//  --- 搜索预览图小开关 --- //
+# 本地搜索
+search:
+  path: search.xml
+  field: post
+  content: true # 文章内容
+  template: source/_data/search.xml # 自定义模板

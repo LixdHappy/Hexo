@@ -105,7 +105,7 @@ algolia_search:
 # Crawler Admin Console: see https://crawler.algolia.com/
 # Settings: https://www.algolia.com/
 docsearch:
-  enable: true
+  enable: false
   appId: J31N9U1UVX # see email
   apiKey: 78d5a10ed7213c776a4f9f6134f7247b # see email
   indexName: gbfun # see email
@@ -113,8 +113,8 @@ docsearch:
 
 # Local search
 local_search:
-  enable: false
-  preload: true
+  enable: true
+  preload: false
   CDN:
 
 # Math (数学)
@@ -1084,10 +1084,10 @@ home_top:
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
-    tips: 新品主题
-    title: Theme-AnZhiYu
-    image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
-    link: https://docs.anheyu.com/
+    tips: 博客上线
+    title: GB的记事簿
+    image: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%E9%A1%B5%E8%83%8C%E6%99%AF.svg
+    link: https://blog.gbfun.cc/
 
 # 朋友圈配置
 friends_vue:
@@ -1257,7 +1257,8 @@ inject:
     - <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script> # 统计页面
     - <script src="/js/countdown.js"></script> # 引入侧边栏倒计时卡片
     - <script src="js/card-welcome.js"></script> #引入侧边栏来访者卡片
-    - <script src="/js/footer-animal.js" defer></script>
+    - <script src="/js/footer-animal.js" defer></script> #引入页脚挂件(动物派对)
+    - 
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -1289,7 +1290,7 @@ CDN:
     # comment_barrage_js:
     # ai_abstract_js:
     # people_js:
-    # local_search:
+    local_search: https://cdn.cbd.int/hexo-naokuo-search@0.0.2/dist/local-search.js
     # algolia_js:
     # algolia_search:
     # instantsearch:

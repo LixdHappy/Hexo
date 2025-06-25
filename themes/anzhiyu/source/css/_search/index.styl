@@ -1,19 +1,39 @@
-.search-dialog
-  position: fixed
-  top: 5rem
-  left: 50%
-  z-index: 1001
-  display: none
-  margin-left: -18.75rem;
-  padding: 1.25rem;
-  width: 37.5rem;
-  border-radius: 8px
-  background: var(--search-bg)
-  border-radius: 12px;
-  box-shadow: var(--anzhiyu-shadow-lightblack);
-  background: var(--anzhiyu-card-bg);
-  border: var(--style-border);
-  transition: .3s;
+// .search-dialog
+//  position: fixed
+//  top: 5rem
+//  left: 50%
+//  z-index: 1001
+//  display: none
+//  margin-left: -18.75rem;
+//  padding: 1.25rem;
+//  width: 37.5rem;
+//  border-radius: 8px
+//  background: var(--search-bg)
+//  border-radius: 12px;
+//  box-shadow: var(--anzhiyu-shadow-lightblack);
+//  background: var(--anzhiyu-card-bg);
+//  border: var(--style-border);
+//  transition: .3s;
+
+ .search-dialog
+   position: fixed
+   top: 5rem
+   left: 0
+   right: 0
+   z-index: 1001
+   display: none
+   // margin-left: -18.75rem;
+   margin: auto;
+   padding: 1.25rem;
+   max-width: 70rem;
+   width: 100%;
+   border-radius: 8px
+   background: var(--search-bg)
+   border-radius: 12px;
+   box-shadow: var(--anzhiyu-shadow-lightblack);
+   background: var(--anzhiyu-card-bg);
+   border: var(--style-border);
+   transition: .3s;
 
   +maxWidth768()
     top: 0
