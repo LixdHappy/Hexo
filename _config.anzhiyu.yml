@@ -365,7 +365,7 @@ waline:
 twikoo:
   envId: https://twikoo.gbfun.cc/
   region:
-  visitor: true # 开启 visitor 后，文章页的访问人数将改为 Twikoo 提供
+  visitor: false # 开启 visitor 后，文章页的访问人数将改为 Twikoo 提供
   option:
 
 # Artalk
@@ -668,7 +668,7 @@ category_ui: # 留空或 index
 tag_ui: # 留空或 index
 
 # Footer Background
-footer_bg: false
+footer_bg: true
 
 # the position of bottom right button/default unit: px (右下角按钮距离底部的距离/默认单位为px)
 rightside-bottom: 100px
@@ -1245,7 +1245,7 @@ dynamicEffect:
 inject:
   head:
     # 自定义css
-    # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
 
   bottom:
     # 自定义js
