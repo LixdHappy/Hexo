@@ -516,6 +516,9 @@ footer:
             link: /fcircle/
           - title: 留言板
             link: /comments/
+          - title: 统计图
+            link: /charts/
+
       - title: 协议
         links:
           - title: 隐私协议
@@ -1247,6 +1250,7 @@ inject:
     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
 
   bottom:
+    - <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script> # 统计页面
     # 自定义js
     # - <script src="/js/xxx"></script>
 
