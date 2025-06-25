@@ -103,6 +103,10 @@
     music_bg: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img1750262302100.jpg
     music_link: /music
   reward_list:
+    - name: 我家彬少
+      amout: 50
+      suffix: 洛克贝
+      datatime: 2025-06-26
     - name: 海阔蓝
       amount: 8.8
       datatime: 2023-03-28
