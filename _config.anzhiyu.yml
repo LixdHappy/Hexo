@@ -482,9 +482,9 @@ footer:
       - title: Bilibili
         link: https://space.bilibili.com/1329819902
         icon: anzhiyu-icon-bilibili
-      - title: 抖音
-        link: https://www.iesdouyin.com/share/user/MS4wLjABAAAALPwxQV0fdVyZgX9z_rs884FaNkzU8VSn0ooVF_f8vbYG_sYLXOKq2JO3xOV-6CIw?did=MS4wLjABAAAANfhDJH6hgkf_n5HY1cNDM6fboDAdMDsxJVKneC-R7E296Go2FvrAU3m7G1XWbdR7&iid=MS4wLjABAAAAtqDvtvDmA4vCzMgDtgVZe5pdIoNoUw0scKnFlmNIwY5I0Akh5oLwtsZE1DeyTfr9&with_sec_did=1&sec_uid=MS4wLjABAAAALPwxQV0fdVyZgX9z_rs884FaNkzU8VSn0ooVF_f8vbYG_sYLXOKq2JO3xOV-6CIw&from_ssr=1&from_aid=1128&u_code=2djm2jfl17ma&timestamp=1750149039&utm_source=copy&utm_campaign=client_share&utm_medium=android&app=aweme&activity_info=%7B%22social_author_id%22%3A%222480118628620247%22%2C%22social_share_id%22%3A%222480118628620247_1750149036476%22%2C%22social_share_time%22%3A%221750149039%22%2C%22social_share_user_id%22%3A%222480118628620247%22%7D 8@8.com :5pm
-        icon: anzhiyu-icon-tiktok
+      - title: RSS
+        link: /atom.xml
+        icon: anzhiyu-icon-rss
       - title: QQ
         link: https://qm.qq.com/q/lycfuP61qM
         icon: fab fa-qq

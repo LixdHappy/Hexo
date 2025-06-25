@@ -203,3 +203,15 @@ aisummary: #AI 摘要配置文件，请根据实际情况修改以下参数
 
   max_token: 5000 # 输入内容最大 token 长度（非输出限制）
   concurrency: 2 # 并发处理数，建议不高于 5
+
+# 更加美观的RSS订阅源
+# see：https://github.com/willow-god/hexo-pretty-feed
+feed:
+  enable: true
+  content: false #可选项，设置是否在 feed 中显示文章内容。留空表示显示完整内容。
+  content_limit: 40 #可选项，用于限制文章内容的字数。
+  type: atom #你可以选择 atom 或 rss2（atom好像有问题，建议用rss2）
+  path: atom.xml #生成的 RSS 文件的路径。可以使用 atom.xml 或 rss2.xml。
+  limit: 25 #限制显示的文章数量，默认是 20 篇文章。
+  pretty_atom_file: /config/feed/atom.xsl
+  pretty_rss2_file: /config/feed/rss2.xsl
