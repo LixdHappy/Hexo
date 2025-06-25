@@ -208,10 +208,48 @@ aisummary: #AI 摘要配置文件，请根据实际情况修改以下参数
 # see：https://github.com/willow-god/hexo-pretty-feed
 feed:
   enable: true
-  content: false #可选项，设置是否在 feed 中显示文章内容。留空表示显示完整内容。
-  content_limit: 40 #可选项，用于限制文章内容的字数。
-  type: atom #你可以选择 atom 或 rss2（atom好像有问题，建议用rss2）
-  path: atom.xml #生成的 RSS 文件的路径。可以使用 atom.xml 或 rss2.xml。
-  limit: 25 #限制显示的文章数量，默认是 20 篇文章。
-  pretty_atom_file: /config/feed/atom.xsl
-  pretty_rss2_file: /config/feed/rss2.xsl
+  content: false
+  content_limit: 40
+  content_limit_delim: " "
+  order_by: -date
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss2.xml
+  limit: 25
+  hub:
+  icon: /img/爆米花.svg
+  autodiscovery: true
+  pretty_atom_file: ./rss/atom.xsl
+  pretty_rss2_file: ./rss/rss2.xsl
+# //以下为rss配置项说明
+#enable - 启用插件。默认为启用。
+#type - Feed 类型。可为 atom、rss2，或同时输出多个类型（数组形式）。默认：atom
+#feed:
+#  type:
+#    - atom
+#    - rss2
+#     - path:
+#    - atom.xml
+#    - rss2.xml
+#path - 输出路径。若配置多个类型，则顺序需与 type 一一对应。
+#limit - Feed 中最多包含的文章数。设为 0 或 false 表示不限制。
+#hub - PubSubHubbub 的 hub 地址（可选）。
+#content - 是否在 Feed 中包含完整文章内容。
+#content_limit - 若未包含全文，此项设置摘要字符数。
+#content_limit_delim - 设置字符截断的分隔符，只在启用 content_limit 时生效。
+#order_by - 排序方式。默认：-date
+#icon - Feed 图标。默认为使用邮箱对应的 gravatar。
+#autodiscovery - 是否添加自动发现标签。默认启用。
+#template - 自定义模板路径，可为字符串或数组（与 type 一一对应）。
+#feed:
+#  type:
+#    - atom
+#    - rss2
+#  template:
+#    - ./source/custom.xml
+#pretty_atom_file - 插入 Atom Feed 顶部的样式文件路径（如：XSL 文件），建议使用相对路径。留空则不插入。
+#pretty_rss2_file - 插入 RSS2 Feed 顶部的样式文件路径。留空则不插入。
+# // ---Rss配置项说明结束---  //
