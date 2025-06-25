@@ -535,8 +535,8 @@ footer:
         text: 主题
       # - link: https://image.anheyu.com
       #   text: 图床
-      # - link: https://beian.miit.gov.cn/
-      #   text: 湘ICP备-xxxxxxx号
+      - link: https://icp.gov.moe/?keyword=20258100
+        text: 萌ICP备20258100号
     subTitle:
       enable: false
       # Typewriter Effect (打字效果)
@@ -668,8 +668,7 @@ category_ui: # 留空或 index
 tag_ui: # 留空或 index
 
 # Footer Background
-footer_bg: true
-
+footer_bg: false
 # the position of bottom right button/default unit: px (右下角按钮距离底部的距离/默认单位为px)
 rightside-bottom: 100px
 
