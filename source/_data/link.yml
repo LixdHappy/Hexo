@@ -1,0 +1,103 @@
+# class_name	    【必填】友链分类名
+# class_desc	    【可选】友链分类描述
+# flink_style	    【必填】flexcard或者anzhiyu或者telescopic
+# hundredSuffix	  【可选】解决共同进步板块头像质量问题，配置后共同进步板块的头像会添加该后缀（请确保你的图片加上 hundredSuffix 的配置后依然可以访问）。 例如:hundredSuffix: "!w120"
+# link_list	      【必须】友链列表
+# link_list.name	【必须】友链名称
+# link_list.link	【必须】友链链接
+# link_list.avatar	  【必须】友链头像
+# link_list.descr	    【必须】友链描述
+# link_list.siteshot	【可选】flink_style 为 flexcard 或 telescopic 时友链的站点图片
+# link_list.recommend	【可选】快捷选项，等于color:"" + tag: "荐"
+# link_list.tag	      【可选】左上角的 tag，为当前友链打上标签 例如:"推荐"
+# link_list.color	    【可选】tag 的十六进制背景颜色例如: "#646cff"，提供了两个快捷颜色选项分别是vip和speed
+
+- class_name: 推荐 # 分类名称
+  class_desc: 参与本站开发、提供设计灵感的优秀博主,综合排序
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-cn/
+      descr: 快速、简单且强大的网志框架
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae
+      siteshot: https://source.fomal.cc/siteshot/hexo.io.jpg
+      tag: 官方
+      color: vip
+
+    - name: 张洪Heo
+      link: https://blog.zhheo.com/
+      descr: 分享设计与科技生活
+      avatar: https://img.zhheo.com/i/67d8fa75943e4.webp
+      siteshot: https://img.zhheo.com/i/67d8fb3c51399.webp
+      tag: 生活
+      color: vip
+
+    - name: Efu # 友链名称
+      link: https://www.efu.me # 友链地址
+      descr: An Open Source worker. # 友链简介
+      avatar: https://s3.qjqq.cn/47/660a7ece07609.webp!color # 显示头像
+      siteshot: https://s3.qjqq.cn/47/660a7ece07609.webp!color # 如果是card模式下，将显示主页截图
+      tag: 主题作者
+      color: vip
+
+    - name: 安知鱼
+      link: https://blog.anheyu.com/
+      descr: 生活明朗，万物可爱
+      avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
+      siteshot: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg
+      tag: 博主
+      color: vip
+
+    - name: GB_blog
+      link: https://blog.gbfun.cc/
+      descr: 追求美,探索美,创造美.
+      avatar: https://cdn.jsdelivr.net/gh/LixdHappy/Needaicon/博客头像.gif
+      siteshot:
+      tag: 生活
+      color: vip
+
+    - name: Fomalhaut🥝
+      link: https://fomal.cc/
+      descr: Future is now 🍭🍭🍭
+      avatar: https://www.fomal.cc/assets/avatar.webp
+      siteshot: https://source.fomal.cc/siteshot/www.fomal.cc.webp
+      tag: 博主
+      color: speed
+
+    - name: Akilar
+      link: https://akilar.top
+      avatar: https://npm.elemecdn.com/akilar-friends@latest/avatar/akilar.top.jpg
+      siteshot: https://npm.elemecdn.com/akilar-friends@latest/siteshot/akilar.top.jpg
+      tag: 博主
+      color: speed
+
+    - name: 🧊小冰博客 #152
+      link: https://zfe.space/
+      avatar: https://npm.elemecdn.com/akilar-friends@latest/avatar/zfe.space.jpg
+      descr: 做个有梦想的人！
+      siteshot: https://npm.elemecdn.com/akilar-friends@latest/siteshot/zfe.space.jpg
+      tag: 博主
+      color: speed
+
+- class_name: 技术型 # 分类名称
+  class_desc: 技术知识为主的博客
+  flink_style: anzhiyu
+  hundredSuffix: ""
+  link_list:
+    - name: Bensz
+      link: https://blognas.hwb0307.com
+      avatar: https://blognas.hwb0307.com/logo.jpg
+      descr: 百代繁华一朝都，谁非过客；千秋明月吹角寒，花是主人。
+      tag: 博主
+
+    - name: isYangs # 友链名称
+      link: https://isyangs.cn # 友链地址
+      avatar: https://7.isyangs.cn/8/655c9835780a0-8.jpg # 显示头像
+      descr: 一个前端Bug构造师的博客 # 友链简介
+
+    - name: Fiveth
+      link: https://blog.fiveth.cc/
+      avatar: https://p.fiveth.cc/avatar.jpg
+      descr: 分享知识与生活
+      tag: 博主

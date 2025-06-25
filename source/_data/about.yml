@@ -1,0 +1,152 @@
+- class_name: 关于页
+  subtitle: 热爱生活,热爱精彩✨
+  avatarImg: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%8D%9A%E5%AE%A2%E9%9D%99%E6%80%81%E5%A4%B4%E5%83%8F.jpg
+  avatarSkills:
+    left:
+      - 🤖️ 数码科技爱好者
+      - 🔍 分享与热心帮助
+      - 🏠 捣鼓钻研小能手
+      - 📚 拼命挣扎修BUG
+    right:
+      - 热度维持三分钟 🏃
+      - 行动分钟偏失联 🧱
+      - 实践修行第一人 💯
+      - 壮汉人狠话不多 💢
+  name: GB
+  description: 是一名学生、机械工程师、非开发者、博主
+  aboutsiteTips:
+    tips: 追求
+    title1: 源于
+    title2: 热爱而去 感受
+    word:
+      - 优秀
+      - 出色
+      - 高效
+      - 心动
+  helloAbout: Hello there!
+  skillsTips:
+    tips: 技能
+    title: 开启创造力
+  careers:
+    tips: 生涯
+    title: 无限进步
+    list:
+      - desc: EDU,软件工程专业
+        color: "#357ef5"
+      #- desc: EDU,软件工程专业
+      #  color: "#357ef5"
+      #- desc: EDU,软件工程专业
+      #  color: "#357ef5"
+    img: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img3.png
+  statistic:
+    link: /archives
+    text: 文章隧道
+    cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
+  map:
+    title: 我现在住在
+    StrengthenTitle: 中国，东莞市
+    background: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgmap%20light.PNG
+    backgroundDark: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgmap%20night.PNG
+  selfInfo:
+    selfInfoTips1: 生于
+    selfInfoContentYear: 2002
+    selfInfoTips2: 桂林理工大学
+    selfInfoContent2: 工业机器人工程
+    selfInfoTips3: 现在职业
+    selfInfoContent3: 普通学生👨‍🎓
+  personalities:
+    author_name: 调停者
+    personality_type: INFP-T
+    photo_url: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
+    personality_img: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgINFP_male.png
+    name_url: https://www.16personalities.com/ch/infp-人格
+  maxim:
+    maxim_tips: 座右铭
+    maxim_top: 可可爱爱，
+    maxim_bottom: 没有脑袋💕。
+  buff:
+    buff_tips: 特长
+    buff_top: 计算机,文学,吹牛 小天才
+    buff_bottom: 瞎捣鼓 好奇心 MAX
+  game:
+    game_tips: 爱好游戏
+    game_title: 金铲铲之战
+    game_uid: "ID 波斯猫的茄皇"
+    game_bg: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E9%87%91%E9%93%B2%E9%93%B2%E4%B9%8B%E6%88%98.jpg
+  comic:
+    comic_tips: 爱好番剧
+    comic_title: 追番
+    comic_list:
+      - name: 你的名字 # 动漫或影视名
+        href: https://movie.douban.com/subject/26683290/ # B站或豆瓣某个位置
+        cover: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97.webp # 封面图
+      - name: 怪兽八号
+        href: https://www.bilibili.com/bangumi/media/md21231256
+        cover: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E6%80%AA%E5%85%BD%E5%85%AB%E5%8F%B7.webp
+      - name: 流浪地球2
+        href: https://movie.douban.com/subject/35267208/
+        cover: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E3%80%8A%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%832%E3%80%8B.jpg
+      - name: 胆大党
+        href: https://movie.douban.com/subject/36171155/
+        cover: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E8%83%86%E5%A4%A7%E5%85%9A.webp
+      - name: 天气之子
+        href: https://movie.douban.com/subject/30402296/
+        cover: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90.webp
+  like:
+    like_tips: 关注偏好
+    like_title: 数码科技
+    like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
+    like_bottom: 手机、电脑软硬件
+  music:
+    music_tips: 音乐偏好
+    music_title: 电子乐、古典、轻音乐
+    music_bg: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img1750262302100.jpg
+    music_link: /music
+  reward_list:
+    - name: 海阔蓝
+      amount: 8.8
+      datatime: 2023-03-28
+    - name: LK66
+      amount: 66.6
+      datatime: 2023-03-24
+    - name: 张时貳
+      amount: 6.6
+      datatime: 2023-01-22
+    - name: ZeroAf
+      amount: 9.9
+      datatime: 2022-12-14
+    - name: LuckyWangXi
+      amount: 6.6
+      datatime: 2022-12-14
+    - name: 刀中日月长
+      amount: 10
+      datatime: 2022-11-16
+    - name: 鹿啵包
+      amount: 10
+      datatime: 2022-11-08
+    - name: 疾速k
+      amount: 50
+      datatime: 2022-09-20
+    - name: 伴舟先生大霖子
+      amount: 4.03
+      datatime: 2022-10-27
+      suffix: 贝壳
+    - name: Magica_0x0
+      amount: 3.36
+      datatime: 2022-10-07
+      suffix: 贝壳
+    - name: 名字就是要短像这样
+      amount: 3.36
+      datatime: 2022-08-25
+      suffix: 贝壳
+    - name: Leviathan520
+      amount: 1.34
+      datatime: 2022-08-23
+      suffix: 贝壳
+    - name: 托马斯
+      amount: 10
+      datatime: 2022-08-19
+    - name: 哇是猫猫欸
+      amount: 1.34
+      datatime: 2022-08-19
+      suffix: 贝壳

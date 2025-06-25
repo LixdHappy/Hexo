@@ -1,0 +1,178 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: GB_blog
+subtitle: "热爱生活"
+description: ""
+keywords:
+author: LixdHappy
+language: zh-CN
+timezone: "Asia/Shanghai"
+
+# URL 永久化链接处理
+## 在此处设置您的网站URL。例如，如果使用github页面，请将URL设置为'https://username.github.io/project'
+url: http://example.com
+permalink: posts/:abbrlink.html
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # 设置为false以从永久链接中链接后的“ index.html”
+  trailing_html: true # 设置为false以从永久链接中链接后的“.html”
+## abbrlink 新增
+abbrlink:
+  alg: crc32 #支持 crc16(默认) and crc32
+  rep: hex #支持 dec(默认) and hex
+  drafts: false #(true)Process draft,(false)Do not process draft. false(default)
+  # Generate categories from directory-tree
+  # depth: the max_depth of directory-tree you want to generate, should > 0
+  auto_category:
+    enable: true #true(default)
+    depth: #3(default)
+    over_write: false
+  auto_title: false #启用自动标题，它可以自动填写标题
+  auto_date: false #启用自动日期功能，它可以自动填充为今天的日期
+  force: false #启用强制模式,在此模式下，插件将忽略缓存,并且为每一篇文章计算缩写链接（abbrlink）,即使该文章已经拥有缩写链接,但是这只会更新缩写链接，而不是其他前端变量
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # 在新标签中打开外部链接
+  field: site # Apply to the whole site
+  exclude: ""
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  tab_replace: ""
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ""
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: "mtime"
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include: []
+exclude: []
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: anzhiyu
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repository: https://github.com/LixdHappy/LixdHappy.github.io
+  branch: main
+
+# hexo-filter-nofollow
+# 为网站使用到的所有外链添加rel=“noopener external nofollow noreferrer”, 可以有效地加强网站 SEO 和防止权重流失。
+nofollow:
+  enable: true
+  field: site
+  exclude: # 去除不需要添加的
+    - "exclude1.com"
+    - "exclude2.com"
+
+# sitemap hexo-generator-sitemap
+# 生成站点地图，方便搜索引擎抓取。
+sitemap:
+  path:
+    - sitemap.xml
+    - sitemap.txt
+  template:
+  template_txt:
+  rel: false
+  tags: true
+  categories: true
+
+# 追番插件
+# https://github.com/HCLonely/hexo-bilibili-bangumi
+bangumi: # 追番设置
+  enable: true # 是否启用追番插件
+  source: bili # 数据源，仅支持追番，追剧仅支持哔哩哔哩源。bili: 哔哩哔哩源, bgmv0: 建议Bgm Api源(api.bgm.tv), bangumi: Bangumi源(bangumi.tv), bgm: Bangumi源(bgm.tv)
+  bgmInfoSource: "" # 获取Bangumi番剧信息时使用的Api，仅使用Bangumi源时此选项生效。bgmApi: Bangumi Api, bgmSub: Bangumi-Subject
+  path: /bangumis/ # 页面路径，默认bangumis/index.html, cinemas/index.html
+  vmid: 229818455 # 哔哩哔哩的 vmid(uid)如何获取？/Bangumi的用户用户名(source为bgmv0时使用)如何获取？/Bangumi的用户id(source为bgm或bangumi时使用)如何获取？
+  title: "追番列表" # 该页面的标题
+  quote: "生命不息，追番不止！" # 写在页面开头的一段话，支持 html 语法，可留空。
+  show: 1 # 初始显示页面：0: 想看, 1: 在看, 2: 看过，默认为1
+  lazyload: false # 是否启用图片懒加载，如果与主题的懒加载冲突请关闭，默认true
+  srcValue: "__image__" # 设置封面图的默认src值, __image__为封面链接, __loading__为loading图片链接, lazyload选项为false时此选项生效
+  lazyloadAttrName: "data-src=__image__" # 设置封面图的属性与属性值, 例lazyloadAttrName: 'data-src=__image__'代表为img元素添加data-src属性, 其值为图片链接, lazyload选项为false时此选项生效
+  loading: # 图片加载完成前的 loading 图片，需启用图片懒加载
+  showMyComment: false # 使用bgm源时显示自己的评价及评论，默认false
+  pagination: false # 分页优化，只将第一页的数据渲染到html文件中，其余数据将通过异步请求加载，避免番剧过多时html文件过大导致页面加载缓慢，建议番剧较多时使用，默认false
+  metaColor: "#F2B948" # meta 部分(简介上方)字体颜色（十六进制的颜色代码需要添加引号：metaColor: '#FFFFFF'）
+  color: "#4C4948" # 简介字体颜色
+  webp: false # 番剧封面使用webp格式(此格式在safari浏览器下不显示，但是图片大小可以缩小 100 倍左右，仅支持哔哩哔哩源), 默认true
+  progress: true # 获取番剧数据时是否显示进度条，默认true
+  progressBar: false # 追番页面是否显示进度条，默认true。仅支持bili和bgmv0数据源
+  extraOrder: 1 # 手动添加的番剧/追剧数据是否优先显示，1为优先，其它为不优先
+  order: -score # 排序，支持latest(默认，按添加时间排序), score(评分升序), -score(评分降序)
+  proxy: # 代理设置，仅在使用支持bgm源追番时生效。默认false
+    host: "代理host" # 代理host
+    port: "代理端口" # 代理端口
+  extra_options: # 此配置会扩展到Hexopage变量中
+    key: value # 额外配置项
+  coverMirror: # 封面镜像缓存配置，默认为空。追番，追剧需分别配置。可以将有防盗链的图片引用到网页，并成功显示。可以将 http 图片引用到 https 页面而不出现证书问题。可以将 xxx 的图片，成功加载。可以将比较慢的图片资源，加快显示。可以使用自建或者是第三方的图片镜像服务，例如https://image.baidu.com/search/down?url=百度的接口，但是图片大小不能超过5M(据说不稳定，个人目前使用没啥问题)。其他镜像地址收集之网络，未全部测试。
+
+# APlayer 音乐播放器
+# https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
+aplayer:
+  meting: true
+  asset_inject: false
