@@ -10,3 +10,11 @@
     background-size: 100rem;
     background-image: url(/img/img夜间背景.jpg) !important;
 }
+
+/* 字体css */
+@font-face {
+    font-family: 'ChillRoundFRegularfont';
+    < !-- 其中HuangkaihuaLawyerFont是引入的字体的名称，可以自定义 -->font-display: swap;
+    src: url('/ttf/ChillRoundFRegular.ttf') format("truetype");
+    < !-- url中填写自己的字体地址，我使用的是本地文件夹所以用的是相对路径，如果是外部引用的话在其中写入链接地址就好了 -->
+}
