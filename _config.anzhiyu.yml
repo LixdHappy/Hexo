@@ -1100,11 +1100,11 @@ friends_vue:
 # Lite朋友圈配置
 friends_lite:
   enable: true
-  fclite_css_url: https://fc.ruom.top/main/fclite.css # 轻量朋友圈的CSS
-  fclite_js_url: https://fc.ruom.top/main/fclite.js # 轻量朋友圈的js
+  fclite_css_url: https://fcl.gbfun.cc/main/fclite.css # 轻量朋友圈的CSS
+  fclite_js_url: https://fcl.gbfun.cc/main/fclite.js # 轻量朋友圈的js
   private_api_url: https://fcl.gbfun.cc/ # 获取json的API URL
-  page_turning_number: 20 # 每页显示的文章数量
-  error_img: https://cdn.bsgun.cn/Hexo-static/img/error-404.avif # 404图片 URL
+  page_turning_number: 24 # 每页显示的文章数量
+  error_img: https://pic.imgdb.cn/item/6695daa4d9c307b7e953ee3d.jpg # 404图片 URL
   top_background: https://cdn.bsgun.cn/Hexo-static/img/essay-bg.avif # 顶部背景图片 URL
   top_tips: 使用 轻量友链朋友圈 订阅友链最新文章 # 顶部提示文本
 
