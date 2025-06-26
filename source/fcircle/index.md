@@ -3,8 +3,8 @@ title: 朋友圈
 date: 2025-06-22 15:54:39
 comments: false
 aside: false
-top_single_background: "https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img1750262302100.jpg"
-type: ""
+top_img: false
+type: "fcircle"
 ---
 <div id="friend-circle-lite-root"></div>
 <script>

@@ -1089,13 +1089,24 @@ home_top:
     image: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%E9%A1%B5%E8%83%8C%E6%99%AF.svg
     link: https://blog.gbfun.cc/
 
-# 朋友圈配置
+# 朋友圈配置(废置)
 friends_vue:
   enable: false
   vue_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.1/friends/index.4f887d95.js #朋友圈前端构建后的 url
   apiurl: # 朋友圈后端地址
   top_tips: 使用 友链朋友圈 订阅友链最新文章
   top_background: #朋友圈顶部背景图
+
+# Lite朋友圈配置
+friends_lite:
+  enable: true
+  fclite_css_url: https://fc.ruom.top/main/fclite.css # 轻量朋友圈的CSS
+  fclite_js_url: https://fc.ruom.top/main/fclite.js # 轻量朋友圈的js
+  private_api_url: https://fcl.gbfun.cc/ # 获取json的API URL
+  page_turning_number: 20 # 每页显示的文章数量
+  error_img: https://cdn.bsgun.cn/Hexo-static/img/error-404.avif # 404图片 URL
+  top_background: https://cdn.bsgun.cn/Hexo-static/img/essay-bg.avif # 顶部背景图片 URL
+  top_tips: 使用 轻量友链朋友圈 订阅友链最新文章 # 顶部提示文本
 
 # 深色模式粒子效果canvas
 universe:
@@ -1258,7 +1269,7 @@ inject:
     - <script src="/js/countdown.js"></script> # 引入侧边栏倒计时卡片
     - <script src="js/card-welcome.js"></script> #引入侧边栏来访者卡片
     - <script src="/js/footer-animal.js" defer></script> #引入页脚挂件(动物派对)
-    - 
+    -
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -1299,7 +1310,7 @@ CDN:
     # pjax:
     # blueimp_md5:
     # valine:
-    # twikoo:
+    twikoo: /js/twikoo.all.min.js #Twikoo 评论区 QQ 昵称获取临时修复
     # waline_js:
     # waline_css:
     # sharejs:
