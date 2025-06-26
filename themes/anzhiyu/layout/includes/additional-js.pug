@@ -5,6 +5,9 @@ div
   if theme.translate.enable
     script(src=url_for(theme.asset.translate))
 
+  if theme.smoothscroll && theme.smoothscroll.enable
+    != partial("includes/third-party/smoothscroll", {}, { cache: true })
+
   if theme.medium_zoom
     script(src=url_for(theme.asset.medium_zoom))
   else if theme.fancybox

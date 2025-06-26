@@ -287,3 +287,41 @@ search:
   field: post
   content: true # 文章内容
   template: source/_data/search.xml # 自定义模板
+
+# hexo-safego安全跳转插件
+# see https://blog.liushen.fun/posts/1dfd1f41/
+hexo_safego:
+  # 基本功能设置
+  general:
+    enable: true # 启用插件
+    enable_base64_encode: true # 使用 Base64 编码
+    enable_target_blank: true # 打开新窗口
+  # 安全设置
+  security:
+    url_param_name: "gb" # URL 参数名
+    html_file_name: "go.html" # 重定向页面的文件名
+    ignore_attrs: # 忽略处理的 HTML 属性
+      - "data-fancybox"
+  # 容器与页面设置
+  scope:
+    apply_containers: # 应用的容器选择器
+      - "#article-container"
+    apply_pages: # 应用的页面路径
+      - "/posts/"
+      - "/devices/"
+    exclude_pages: # 排除的页面路径
+  # 域名白名单
+  whitelist:
+    domain_whitelist: # 允许的白名单域名
+      - "gbfun.cc"
+      - "liushen.fun"
+  # 页面外观设置
+  appearance:
+    avatar: /info/avatar.ico # 头像路径
+    title: "GB 的记事簿📒" # 页面标题
+    subtitle: "安全中心" # 页面副标题
+    darkmode: true # 是否启用深色模式
+    countdowntime: -1 # 倒计时秒数
+  # 调试设置
+  debug:
+    enable: false # 启用调试模式
