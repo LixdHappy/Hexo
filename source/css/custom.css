@@ -64,7 +64,7 @@
     filter: brightness(1);
     transition: .3s;
     border: var(--style-border);
-    box-shadow: var(--icat-shadow-border);
+    box-shadow: #2c2d300c;
 }
 
 .rss-plan-item:hover {
@@ -91,7 +91,7 @@
 
 .rss-plan-description {
     font-size: 16px;
-    color: var(--icat-white);
+    color: #fff;
     margin: 26px 0 0 30px;
     line-height: 20px;
 }
@@ -99,7 +99,7 @@
 .rss-plan-info-group {
     position: relative;
     margin: 0 0 26px 30px;
-    color: var(--icat-white);
+    color: #fff;
 }
 
 .rss-plan-title {
@@ -151,15 +151,15 @@ img.rss-plan-icon {
     width: 100%;
     height: auto;
     border-radius: 12px;
-    border: var(--style-border);
-    box-shadow: var(--icat-shadow-border);
-    background-color: var(--icat-background);
+    border: #e3e8f7;
+    box-shadow: #2c2d300c;
+    background-color: #F7F7F9;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1920px) {
     .follow-it-form-subscribe::before {
         content: '';
-        background: url(https://img.meuicat.com/blog/follow.svg);
+        background: url(https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgfollow.svg);
         position: absolute;
         top: 30px;
         right: 26px;
@@ -176,7 +176,7 @@ img.rss-plan-icon {
 
 .follow-it-form-subscribe .heading h5 {
     margin: 0 0 0.2rem 0;
-    color: var(--icat-fontcolor);
+    color: #363636;
     font-size: 18px;
 }
 
@@ -189,15 +189,15 @@ img.rss-plan-icon {
     width: 100%;
     height: 48px;
     border-radius: 6px;
-    border: 2px solid var(--icat-card-border);
+    border: 2px solid #e3e8f7;
     outline: none;
 }
 
 .follow-it-form-subscribe .input-field input::placeholder,
 .follow-it-form-subscribe .input-field input {
     opacity: .6;
-    background: var(--icat-secondbg);
-    color: var(--icat-fontcolor);
+    background: #f7f7f9;
+    color: #363636;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -215,15 +215,15 @@ img.rss-plan-icon {
     border: 0;
     border-radius: 6px;
     line-height: 0;
-    color: var(--icat-white);
-    background: var(--icat-black);
-    box-shadow: var(--icat-shadow-border);
+    color: #fff;
+    background: #000;
+    box-shadow: #2c2d300c;
     transition: .3s;
 }
 
 .follow-it-form-subscribe .submit-button button:hover {
     cursor: pointer;
-    background: var(--icat-blue);
+    background: #425AEF;
 }
 
 .submit-box {
