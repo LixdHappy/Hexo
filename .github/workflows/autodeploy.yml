@@ -45,6 +45,7 @@ jobs:
       - name: 生成静态文件
         run: |
           node link.js #朋友圈友链更新
+          node link_alive.js #友链状态检测
           hexo clean
           hexo bangumi -u #bilibili番剧更新
           hexo generate
