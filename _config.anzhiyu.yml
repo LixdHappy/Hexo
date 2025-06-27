@@ -1254,7 +1254,7 @@ peoplecanvas:
 dynamicEffect:
   postTopWave: true # 文章顶部波浪效果
   postTopRollZoomInfo: true # 文章顶部滚动时缩放
-  pageCommentsRollZoom: false # 非文章页面评论滚动时缩放显示（仅仅Twikoo生效）
+  pageCommentsRollZoom: true # 非文章页面评论滚动时缩放显示（仅仅Twikoo生效）
 
 # 页面平滑滚动
 smoothscroll:

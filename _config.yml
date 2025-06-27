@@ -13,7 +13,7 @@ timezone: "Asia/Shanghai"
 
 # URL 永久化链接处理
 ## 在此处设置您的网站URL。例如，如果使用github页面，请将URL设置为'https://username.github.io/project'
-url: http://example.com
+url: http://blog.gbfun.cc
 permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:
