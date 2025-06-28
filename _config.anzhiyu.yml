@@ -58,7 +58,7 @@ nav:
       item:
         - name: nice猫
           link: https://api.nsmao.net/
-          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgicon.png
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgnice_cat.png
         - name: UptimeRobot
           link: https://dashboard.uptimerobot.com/monitors
           icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgfavicon.ico
