@@ -29,17 +29,27 @@ nav:
   travelling: true
   clock: true
   menu:
-    - title: 网页
+    - title: 个人网站
       item:
-        - name: 博客
-          link: https://blog.anheyu.com/
-          icon: /img/favicon.ico
-    - title: 项目
+        - name: 个人博客
+          link: https://blog.gbfun.cc/
+          icon: /img/博客静态头像.jpg
+    - title: 常用服务
       item:
-        - name: 安知鱼图床
-          link: https://image.anheyu.com/
+        - name: 朋友圈服务
+          link: https://fcl.gbfun.cc/
           icon: https://image.anheyu.com/favicon.ico
-
+        - name: 友链服务
+          link: https://fca.gbfun.cc/
+          icon: https://image.anheyu.com/favicon.ico
+        - name: 站点状态
+          link: https://status.gbfun.cc/
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgfavicon.ico
+    - title: 需求网页
+      item:
+        - name: nice猫
+          link: https://api.nsmao.net/
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgicon.png
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
 mourn:
@@ -230,7 +240,7 @@ toc:
   post: true
   page: false
   number: true
-  expand: false
+  expand: true
   style_simple: false # for post
 
 post_copyright:
@@ -240,10 +250,10 @@ post_copyright:
   location: 南宁
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
-  avatarSinks: false # hover时头像下沉
+  avatarSinks: true # hover时头像下沉
   copyright_author_img_back:
   copyright_author_img_front:
-  copyright_author_link: /
+  copyright_author_link: /about/
 
 # Sponsor/reward
 reward:
