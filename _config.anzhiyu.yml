@@ -31,25 +31,47 @@ nav:
   menu:
     - title: 个人网站
       item:
+        - name: 个人主页
+          link: https://www.gbfun.cc/
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E7%88%86%E7%B1%B3%E8%8A%B1.svg
         - name: 个人博客
           link: https://blog.gbfun.cc/
           icon: /img/博客静态头像.jpg
+        - name: 博客后台
+          link: https://qexo.gbfun.cc/
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgimgicon.png
     - title: 常用服务
       item:
         - name: 朋友圈服务
           link: https://fcl.gbfun.cc/
-          icon: https://image.anheyu.com/favicon.ico
+          icon: https://fcl.gbfun.cc/favicon.ico
         - name: 友链服务
           link: https://fca.gbfun.cc/
           icon: https://image.anheyu.com/favicon.ico
         - name: 站点状态
           link: https://status.gbfun.cc/
           icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgfavicon.ico
+        - name: Mini-cover
+          link: https://cover.gbfun.cc/
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%B0%81%E9%9D%A2%E5%9B%BE%E6%A0%87.svg
     - title: 需求网页
       item:
         - name: nice猫
           link: https://api.nsmao.net/
           icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgicon.png
+        - name: UptimeRobot
+          link: https://dashboard.uptimerobot.com/monitors
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgfavicon.ico
+        - name: 图像处理<1>
+          link: https://www.iloveimg.com/zh-cn/compress-image
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgfavicon-16x16.png
+        - name: 图像处理<2>
+          link: https://imagestool.com/webp2jpg-online/
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86.png
+        - name: 图标搜寻
+          iink: https://fontawesome.com/start
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%9B%BE%E6%A0%87%E6%90%9C%E5%AF%BB.ico
+
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
 mourn:
@@ -375,7 +397,7 @@ waline:
 twikoo:
   envId: https://twikoo.gbfun.cc/
   region:
-  visitor: false # 开启 visitor 后，文章页的访问人数将改为 Twikoo 提供
+  visitor: true # 开启 visitor 后，文章页的访问人数将改为 Twikoo 提供
   option:
 
 # Artalk
@@ -871,9 +893,9 @@ aside:
 # busuanzi count for PV / UV in site
 # 访问人数
 busuanzi:
-  site_uv: false
-  site_pv: false
-  page_pv: false
+  site_uv: true
+  site_pv: true
+  page_pv: true
 
 # Time difference between publish date and now (网页运行时间)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
