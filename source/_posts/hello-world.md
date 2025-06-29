@@ -1,6 +1,7 @@
 ---
 title: Hello World
 data: 2022/05/28 12:08:00
+update: 2025/06/20 13:00:00
 abbrlink: 4a17b156
 ai: >-
   这里是GB的AI，这篇文章介绍了Hexo博客平台的基本使用方法。主要内容包括如何创建新文章（使用hexo new命令）、运行本地服务器（hexo

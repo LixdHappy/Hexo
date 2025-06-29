@@ -91,3 +91,16 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
             i.anzhiyufont.anzhiyu-icon-creative-commons-by-line
             i.anzhiyufont.anzhiyu-icon-creative-commons-nc-line
             i.anzhiyufont.anzhiyu-icon-creative-commons-nd-line
+          //- 在这里插入 BoringBay Badge
+        if theme.footer.footerBar.badge.enable  
+          a.footer-bar-link.badge(
+            href=theme.footer.footerBar.badge.link
+            title=theme.footer.footerBar.badge.title
+            target="_blank"
+            style="margin-left:8px"
+          )
+            img(
+              src=`https://boringbay.com/api/badge/${theme.footer.footerBar.badge.domain}`
+              height=theme.footer.footerBar.badge.height
+              alt=theme.footer.footerBar.badge.title
+            )

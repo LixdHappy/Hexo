@@ -553,7 +553,6 @@ footer:
             link: /games/
           - title: 文章统计
             link: /charts/
-
       - title: 协议
         links:
           - title: 隐私协议
@@ -564,10 +563,16 @@ footer:
             link: /copyright/
   footerBar:
     enable: true
-    authorLink: /about/
+    authorLink: /about
     cc:
       enable: true
       link: /copyright
+    badge:
+      enable: true
+      link: https://boringbay.com # 点击跳转链接
+      domain: "blog.gbfun.cc" # 无聊湾API与图标src 末尾域名 可以在这里了解https://boringbay.com/join-us
+      title: "无聊湾 🥱 The Boring Bay" # 图显标题
+      height: "18px" # 无聊湾徽标高度
     linkList:
       - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
         text: 主题
@@ -684,10 +689,10 @@ sidebar:
   nav_menu_project: true
 
 # 文章h2添加分隔线
-h2Divider: false
+h2Divider: true
 
 # 表格隔行变色
-table_interlaced_discoloration: false
+table_interlaced_discoloration: true
 
 # 首页双栏显示
 article_double_row: true
