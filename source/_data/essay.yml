@@ -1,8 +1,9 @@
-- title: 即刻短文
-  subTitle: 咸鱼的日常生活。
-  tips: 随时随地，分享生活
-  buttonText: 关于我
-  buttonLink: /about/
+- name: 即刻短文
+  #subTitle: 咸鱼的日常生活。
+  desc: 随时随地，分享生活
+  avatar: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%8D%9A%E5%AE%A2%E9%9D%99%E6%80%81%E5%A4%B4%E5%83%8F.jpg
+  #buttonText: 关于我
+  avatarLink: /about/
   limit: 30
   home_essay: true
   top_background: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E7%A2%B0%E4%B8%8A%E5%BD%A9%E8%99%B9.jpg
@@ -21,6 +22,12 @@
       image:
         - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgai%E8%AF%B4%E8%AF%B4.png
         - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgai%E8%AF%B4%E8%AF%B42.png
+    - content: 即刻短文朋友圈移动样式上线了, 快来体验吧~
+      date: 2025-6-29-09:43
+      address: 南宁
+      from: LixdHappy
+      image:
+        - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img23786464-48d2-420c-b384-a5e9f2d0eb4d.png
 
     #- content: 安知鱼主题指南
     #  date: 2023/09/09
