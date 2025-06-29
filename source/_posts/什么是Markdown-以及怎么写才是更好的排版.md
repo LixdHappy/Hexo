@@ -9,14 +9,18 @@ tags:
 swiper_index: 1
 top_group_index: 1
 location: 南宁
-cover: 'https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img1.Markdown.jpg'
+cover: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img1.Markdown.jpg
 copyright: true
 copyright_author: LixdHappy
-copyright_url: 'https://markdown.com.cn/'
+copyright_url: https://markdown.com.cn/
 copyright_info: 本文是转载或翻译文章，版权归原作者所有。建议访问原文，转载本文请联系原作者。
 abbrlink: edc6e88
+ai: >-
+  这里是GB的AI，这篇文章介绍了Markdown的基本概念、优势以及详细语法指南。Markdown是一种轻量级标记语言，由John
+  Gruber于2004年创建，专注于文字内容，语法简单易学，纯文本格式便于版本控制和跨平台使用。文章解释了Markdown与Word等所见即所得编辑器的区别，强调其可读性和可移植性优势，并推荐了Typora等工具。详细语法部分涵盖了标题、段落、换行、强调（粗体/斜体）、引用和列表（有序/无序）等基本元素的使用方法，包括示例和常见错误提示。文章还提到不同平台对Markdown语法的支持可能存在差异，建议遵循标准语法以确保兼容性。整体内容既适合Markdown初学者快速入门，也可作为日常写作的语法参考手册。
 date: 2025-06-21 11:17:48
 ---
+
 {% note success simple %}为了方便自己在写博文的时候参考, 特地为自己安排了 Markdown 语法的教程一环 🤐, 翻译了一下文档, 便于国人理解, 虽然单词都挺基础也罢{% endnote %}
 
 ## Markdown入门基础

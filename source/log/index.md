@@ -8,11 +8,18 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 06-30-->
+
+移植Solitude主题的`十年之约`进度条
+
+<!-- endtimeline -->
+
 <!-- timeline 06-29 -->
 
 编写 网站日志
 
 修改即刻短文移动端显示为仿朋友圈式
+
 <!-- endtimeline -->
 
 <!-- timeline 06-28 -->

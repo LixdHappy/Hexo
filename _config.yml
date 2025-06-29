@@ -317,11 +317,11 @@ hexo_safego:
       - "liushen.fun"
   # 页面外观设置
   appearance:
-    avatar: /info/avatar.ico # 头像路径
+    avatar: /img/博客静态头像.jpg # 头像路径
     title: "GB 的记事簿📒" # 页面标题
     subtitle: "安全中心" # 页面副标题
-    darkmode: true # 是否启用深色模式
-    countdowntime: -1 # 倒计时秒数
+    darkmode: fals # 是否启用深色模式
+    countdowntime: 10 # 倒计时秒数
   # 调试设置
   debug:
     enable: false # 启用调试模式
