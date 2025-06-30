@@ -8,6 +8,14 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 07-01-->
+
+- 添加 藏宝阁 页面
+
+- 添加 直达底部 按钮
+
+<!-- endtimeline -->
+
 <!-- timeline 06-30-->
 
 移植Solitude主题的`十年之约`进度条
@@ -16,9 +24,9 @@ top_img: false
 
 <!-- timeline 06-29 -->
 
-编写 网站日志
+- 编写 网站日志
 
-修改即刻短文移动端显示为仿朋友圈式
+- 修改即刻短文移动端显示为仿朋友圈式
 
 <!-- endtimeline -->
 
@@ -56,9 +64,10 @@ top_img: false
 <!-- endtimeline -->
 
 <!-- timeline 06-25 -->
-添加 [订阅页面](/subscribe)
-现在你可以进行三种订阅方式 邮箱 微信公众号 RSS订阅
-<!-- endtimeline -->
+
+- 添加 [订阅页面](/subscribe)
+  现在你可以进行三种订阅方式 邮箱 微信公众号 RSS订阅
+  <!-- endtimeline -->
 
 <!-- timeline 06-24 -->
 Twikoo评论区QQ昵称获取临时方案

@@ -1,0 +1,9 @@
+- class_name: 📺 电影
+  class_desc: #分类描述
+  link_list:
+    - name: 让子弹飞 #名字
+      img: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgimg%E8%AE%A9%E5%AD%90%E5%BC%B9%E9%A3%9E.webp #图片链接
+      score: 5 # 1-5星
+      icon: fa-solid fa-film #左上角图标
+      tip: 电影 # 右上角文字
+      url: # 可选
