@@ -1,14 +1,21 @@
 ---
 title: 如何移植Solitude主题中的十年之约进度条至anzhiyu主题
-date: 2025-06-30 01:04:01
 swiper_index: 3
 top_group_index: 3
 tags:
-  - Hexo 
+  - Hexo
   - anzhiyu
   - 主题修改
 locate: 南宁
-cover: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%AD%A6%E9%99%A2-%E6%99%A8.webp
+cover: >-
+  https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%AD%A6%E9%99%A2-%E6%99%A8.webp
+abbrlink: '5498433'
+ai: >-
+  这里是GB的AI，这篇文章详细介绍了如何将Solitude主题中的"十年之约"进度条功能移植到Anzhiyu主题中。文章首先强调了修改前的注意事项，包括备份原代码和使用合适的代码编辑器。主要内容分为三个部分：1)
+  新建tenyear.pug文件定义进度条的功能逻辑，包含时间计算和显示逻辑；2)
+  创建tenyear.styl文件定义进度条的样式，包括颜色、动画效果等；3)
+  修改about.pug文件，在关于页面中插入进度条模块。文章提供了完整的代码示例，并解释了关键部分的修改要点，如颜色适配、进度条位置等，帮助读者顺利完成主题功能的移植。
+date: 2025-06-30 01:04:01
 ---
 
 {% note flat %}
