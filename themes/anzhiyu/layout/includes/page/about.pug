@@ -105,7 +105,7 @@ if site.data.about
               else if theme.Umami.enable
                 .post-tips
                   | 统计信息来自
-                  a(href='https://umami.gbfun.cc', target='_blank', rel='noopener nofollow') Umami统计
+                  a(href='https://um.ruom.top', target='_blank', rel='noopener nofollow') Umami统计
               .banner-button-group
                 - let link = item.statistic.link
                 - let text = item.statistic.text
@@ -220,6 +220,7 @@ if site.data.about
                 i.anzhiyufont.anzhiyu-icon-arrow-circle-right
                 |  
                 span.banner-button-text 更多推荐
+
       // ✅ 添加 Tenyear 模块
       if tenyear
         .author-content#tenyear
@@ -306,7 +307,9 @@ if site.data.about
                   b=item.reward_list.length
                   | 人
 
+
     script(src=url_for(theme.asset.countup_js))
+    - const ck = theme.LA.ck
     //- Umami 统计 和 51LA 统计
     if theme.Umami && theme.Umami.enable
       script(defer).
@@ -496,34 +499,35 @@ if site.data.about
       } else {
         getScript("!{url_for(theme.asset.gsap_js)}").then(initAnimation);
       }
-              
+
       // ✅ 十年之约进度函数
       function updateTenYearProgress() {
-          let progressElement = document.querySelector(".progress");
-          let pastTimeElement = document.querySelector(".past-time");
-          let percentageLabelElement = document.querySelector(".percentage-label");
-          let startTimeElement = document.getElementById("tenyear-start-time");
-          let endTimeElement = document.getElementById("tenyear-end-time");
+        let progressElement = document.querySelector(".progress");
+        let pastTimeElement = document.querySelector(".past-time");
+        let percentageLabelElement = document.querySelector(".percentage-label");
+        let startTimeElement = document.getElementById("tenyear-start-time");
+        let endTimeElement = document.getElementById("tenyear-end-time");
 
-          if (!startTimeElement || !endTimeElement) return;
+        if (!startTimeElement || !endTimeElement) return;
 
-          let startTime = new Date(startTimeElement.textContent).getTime();
-          let endTime = new Date(endTimeElement.textContent).getTime();
-          const currentTime = new Date().getTime();
-          const progress = ((currentTime - startTime) / (endTime - startTime) * 100);
-          const progressPercentage = Math.min(progress, 100) + "%";
+        let startTime = new Date(startTimeElement.textContent).getTime();
+        let endTime = new Date(endTimeElement.textContent).getTime();
+        const currentTime = new Date().getTime();
+        const progress = ((currentTime - startTime) / (endTime - startTime) * 100);
+        const progressPercentage = Math.min(progress, 100) + "%";
 
-          pastTimeElement.style.setProperty("--past-time-percentage", progress + "%");
-          progressElement.style.setProperty("--progress-percentage", progressPercentage);
+        pastTimeElement.style.setProperty("--past-time-percentage", progress + "%");
+        progressElement.style.setProperty("--progress-percentage", progressPercentage);
 
-          if (progress > 5) {
-            percentageLabelElement.textContent = `${progress.toFixed(0)}%`;
-            percentageLabelElement.style.left = `calc(${progress}% - 35px)`;
-          }
-
-          percentageLabelElement.style.visibility = "visible";
+        if (progress > 5) {
+          percentageLabelElement.textContent = `${progress.toFixed(0)}%`;
+          percentageLabelElement.style.left = `calc(${progress}% - 35px)`;
         }
 
-        if (document.getElementById("tenyear")) {
-          updateTenYearProgress();
-        }
+        percentageLabelElement.style.visibility = "visible";
+      }
+
+      if (document.getElementById("tenyear")) {
+        updateTenYearProgress();
+      }
+          

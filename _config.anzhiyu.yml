@@ -54,6 +54,9 @@ nav:
         - name: 站点状态
           link: https://status.gbfun.cc/
           icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgfavicon.ico
+        - name: Umami
+          link: https://umami.gbfun.cc/
+          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgumami%20icon.ico
         - name: Mini-cover
           link: https://cover.gbfun.cc/
           icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%B0%81%E9%9D%A2%E5%9B%BE%E6%A0%87.svg
@@ -1154,7 +1157,7 @@ universe:
 
 # 页面卡片顶部气泡升起效果
 bubble:
-  enable: false
+  enable: true
 
 #  控制台打印信息
 console:
@@ -1162,9 +1165,17 @@ console:
 
 # 51a统计配置
 LA:
-  enable: true
+  enable: false
   ck: 3MX3kJEhxjCJarOv
   LingQueMonitorID:
+
+# Umami
+Umami:
+  enable: true # 开关
+  umami_url_js: https://umami.gbfun.cc/script.js # 填写 umami js地址 可以使用第三方CDN加速但需要配置下面的 umami_url
+  umami_id: 97f90ba2-37f5-4e79-8be0-0bd582f67a4e # 填写 umami 统计 ID
+  umami_api: https://umapi.gbfun.cc/ # 填写 umami API 地址
+  umami_url: https://umami.gbfun.cc/ # 填写 umami 服务器地址 使用 CDN 加速 Umami 静态资源后需配置此项
 
 # 标签卖萌
 diytitle:
@@ -1248,8 +1259,8 @@ greetingBox:
 post_head_ai_description:
   enable: true
   gptName: GB
-  mode: Hexo-AI-Summary-LiuShen # 默认模式 可选值: tianli/local
-  switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local
+  mode: Hexo-AI-Summary-LiuShen # 默认模式 可选值: tianli/local/Hexo-AI-Summary-LiuShen
+  switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local/Hexo-AI-Summary-LiuShen
   btnLink: https://afdian.net/item/886a79d4db6711eda42a52540025c377
   randomNum: 3 # 按钮最大的随机次数，也就是一篇文章最大随机出来几种
   basicWordCount: 1000 # 最低获取字符数, 最小1000, 最大1999
