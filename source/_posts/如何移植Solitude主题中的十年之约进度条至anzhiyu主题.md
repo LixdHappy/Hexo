@@ -11,10 +11,7 @@ cover: >-
   https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%AD%A6%E9%99%A2-%E6%99%A8.webp
 abbrlink: '5498433'
 ai: >-
-  这里是GB的AI，这篇文章详细介绍了如何将Solitude主题中的"十年之约"进度条功能移植到Anzhiyu主题中。文章首先强调了修改前的注意事项，包括备份原代码和使用合适的代码编辑器。主要内容分为三个部分：1)
-  新建tenyear.pug文件定义进度条的功能逻辑，包含时间计算和显示逻辑；2)
-  创建tenyear.styl文件定义进度条的样式，包括颜色、动画效果等；3)
-  修改about.pug文件，在关于页面中插入进度条模块。文章提供了完整的代码示例，并解释了关键部分的修改要点，如颜色适配、进度条位置等，帮助读者顺利完成主题功能的移植。
+  这里是GB的AI，这篇文章详细介绍了如何将Solitude主题中的"十年之约"进度条功能移植到Anzhiyu主题中。文章首先强调了修改前的注意事项，包括备份原代码和使用专业文本编辑器等。主要内容分为三个部分：新建tenyear.pug文件定义进度条的功能逻辑，创建tenyear.styl文件设置进度条的样式（包括颜色适配暗色模式），以及修改about.pug文件在合适位置插入进度条模块。文章提供了完整的代码示例，并特别说明了进度条颜色等样式的自定义方法，帮助用户实现这一功能的移植。
 date: 2025-06-30 01:04:01
 ---
 
@@ -224,10 +221,6 @@ if tenyear
 进度函数,
 
 ```pug
-            selfInfoContentYearUp();
-            statisticUP()
-          });
-
 +                // ✅ 十年之约进度函数
 +          function updateTenYearProgress() {
 +            let progressElement = document.querySelector(".progress");
@@ -258,13 +251,6 @@ if tenyear
 +          if (document.getElementById("tenyear")) {
 +            updateTenYearProgress();
 +          }
-          
-
-        var pursuitInterval = null;
-        pursuitInterval = setInterval(function () {
-          const show = document.querySelector("span[data-show]");
-          const next = show.nextElementSibling || document.querySelector(".first-tips");
-          const up = document.querySelector("span[data-up]");
 ```
 
 4.模块开关,路径`source>_data>about.yml`添加,
