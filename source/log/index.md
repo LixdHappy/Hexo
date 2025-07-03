@@ -8,6 +8,26 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 07-04 -->
+
+- 修改 加载动画方案
+
+- 补充 三大协议页面(隐私,Cookies,版权协议)
+
+<!-- endtimeline -->
+
+<!-- timeline 07-03-->
+
+移除 Umami统计数据方案
+
+<!-- endtimeline -->
+
+<!-- timeline 07-02-->
+
+添加 Umami前端界面(后端数据显示为零)
+
+<!-- endtimeline -->
+
 <!-- timeline 07-01-->
 
 - 添加 藏宝阁 页面
