@@ -105,7 +105,7 @@ aside: false
 - 51a 统计
 - busuanzi 统计
 
-关于如何使用你的 Cookies，请访问 [Cookies 政策](https://blog.gbfun.cc/cookies/)。
+关于如何使用你的 Cookies，请访问 [Cookies 政策](/cookies)。
 
 关于如何[在 Chrome 中清除、启用和管理 Cookie](https://support.google.com/chrome/answer/95647?co=GENIE.Platform=Desktop&hl=zh-Hans)。
 

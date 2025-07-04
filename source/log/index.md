@@ -14,7 +14,12 @@ top_img: false
 
 - 补充 三大协议页面(隐私,Cookies,版权协议)
 
+  {% note success simple %}fix 修复 侧边栏微信卡片暗色适配
+  修复 wechatOA跳转页(你可以在侧边栏卡片和订阅页公众号订阅点击进入)
+  {% endnote %}
+
 <!-- endtimeline -->
+
 
 <!-- timeline 07-03-->
 
@@ -22,11 +27,13 @@ top_img: false
 
 <!-- endtimeline -->
 
+
 <!-- timeline 07-02-->
 
 添加 Umami前端界面(后端数据显示为零)
 
 <!-- endtimeline -->
+
 
 <!-- timeline 07-01-->
 
@@ -36,11 +43,13 @@ top_img: false
 
 <!-- endtimeline -->
 
+
 <!-- timeline 06-30-->
 
 移植Solitude主题的`十年之约`进度条
 
 <!-- endtimeline -->
+
 
 <!-- timeline 06-29 -->
 
@@ -105,18 +114,22 @@ Twikoo评论区QQ昵称获取临时方案
 收集目前为止博客 现有的Bug
 {% folding cyan open, 目前BUG收集 %}
 
-{% checkbox times red checked,  友链页自己的文章无法跳转 %}
-{% checkbox times red checked,  搜索无法点开 %}
+{% checkbox times red checked,  ~~友链页自己的文章无法跳转~~ %}
+{% checkbox times red checked,  ~~搜索无法点开~~ %}
 {% checkbox times red checked,  侧边栏欢迎卡片时间不够细化,凌晨认定为早上不够符合认知  %}
-{% checkbox times red checked,  朋友圈鱼塘位置错位 %}
+{% checkbox times red checked,  ~~朋友圈鱼塘位置错位~~ %}
 {% checkbox times red checked,  评论区评论失败 %}
 {% checkbox times red checked,  正式文章页与草稿文章显示字数实际不符 %}
-{% checkbox times red checked,  Copyright盒子内的原创按钮跳转页面失败 %}
+{% checkbox times red checked,  ~~Copyright盒子内的原创按钮跳转页面失败~~ %}
 {% checkbox times red checked,  钓鱼(朋友圈)间接性失灵 %}
 {% checkbox times red checked,  RSS美化与跳转问题 %}
-{% checkbox times red checked,  微信卡片暗色未适配 %}
+{% checkbox times red checked,  ~~微信卡片暗色未适配~~ %}
 {% checkbox times red checked,  文章原创的判断问题 %}
-
+{% checkbox times red checked,  隐私协议页面缺少读取用户信息预览 07/04加入 %}
+{% checkbox times red checked,  ~~微信OA页跳转不流畅~~ 07/04加入 %}
+{% checkbox times red checked,  站点检测dns问题 07/04加入 %}
+{% checkbox times red checked,  友人帐页面添加友链过于简陋,以及勾选弹框闪现 07/04加入 %}
+{% checkbox times red checked,  log界面错位 07/04加入 %}
 {% endfolding %}
 <!-- endtimeline -->
 
@@ -160,12 +173,15 @@ Solitude琢磨
 <!-- timeline 05-20 -->
 Solitude主题第一篇文章发布
 <!-- endtimeline -->
+
 {% endtimeline %}
 
 更早的网站部署
 {% timeline 2022,red %}
+
 <!-- timeline -->
 Wordpress主题部署
 (具体时间记不清了)
 <!-- endtimeline -->
+
 {% endtimeline %}

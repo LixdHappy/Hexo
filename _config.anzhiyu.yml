@@ -203,7 +203,7 @@ cover:
   position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    # - /img/default_cover.jpg
+    - /img/default_cover.jpg
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -258,7 +258,7 @@ index_post_content:
 
 # anchor
 # 当您在帖子中滚动时，URL将根据标题ID进行更新。
-anchor: false
+anchor: true
 
 # Post
 # --------------------------------------
@@ -278,7 +278,7 @@ post_copyright:
   location: 南宁
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
-  avatarSinks: true # hover时头像下沉
+  avatarSinks: false # hover时头像下沉
   copyright_author_img_back:
   copyright_author_img_front:
   copyright_author_link: /about/
@@ -434,7 +434,7 @@ giscus:
 
 # Chat Button [recommend]
 # It will create a button in the bottom right corner of website, and hide the origin button 提供了一个按钮可以打开/关闭聊天窗口
-chat_btn: true
+chat_btn: false
 
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down 设为 true 后，使用工具提供的按钮时，只有向上滚动才会显示聊天按钮，向下滚动时会隐藏按钮
 chat_hide_show: true
@@ -872,10 +872,10 @@ aside:
       <span>😫 页面异常？尝试<kbd>Ctrl</kbd>+<kbd>F5</kbd></span><br>
       <span>📧 如需联系我：<a href="mailto:gb-1@foxmail.com"><b>发送邮件🚀</b></a></span>
       <div id="welcome-info"></div> # 必须项
-  card_weixin:
+  card_weixin: #侧边栏微信卡片
     enable: true
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
-    backFace: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%85%AC%E4%BC%97%E5%8F%B7.png
+    backFace: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%BE%AE%E4%BF%A1%E7%BF%BB%E9%9D%A2%E8%83%8C%E6%99%AF.png
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all

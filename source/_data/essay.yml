@@ -8,12 +8,17 @@
   home_essay: true
   top_background: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E7%A2%B0%E4%B8%8A%E5%BD%A9%E8%99%B9.jpg
   essay_list:
-    - content: 新布置的主题,累成狗了QAQ 修改一处没头绪就修改第二处,结果第二处修改不出来,第一处也修不出来,看来还是得好好学习一下语法
-      date: 2025-6-21-02:00
+    - content: 问就是在干土木,忙里偷闲修网站🫡
+      date: 2025-7-4-21:16
+      address: 南宁
+
+    - content: 即刻短文朋友圈移动样式上线了, 快来体验吧~
+      date: 2025-6-29-09:43
       address: 南宁
       from: LixdHappy
       image:
-        - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img8029a55a-b01c-4ff3-a666-f5d8a307e616.png
+        - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img23786464-48d2-420c-b384-a5e9f2d0eb4d.png
+
     - content: 小进展,终于把背景和小空调以及ai摘要修改完毕,实际上我还部署完了自动化( •̀ ω •́ )✧,就是我发现我的转载文怎么只能看十分之一的内容,明明我写了11k的字来着....
       date: 2025/06/25 17:00
       address: 南宁
@@ -22,12 +27,13 @@
       image:
         - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgai%E8%AF%B4%E8%AF%B4.png
         - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgai%E8%AF%B4%E8%AF%B42.png
-    - content: 即刻短文朋友圈移动样式上线了, 快来体验吧~
-      date: 2025-6-29-09:43
+
+    - content: 新布置的主题,累成狗了QAQ 修改一处没头绪就修改第二处,结果第二处修改不出来,第一处也修不出来,看来还是得好好学习一下语法
+      date: 2025-6-21-02:00
       address: 南宁
       from: LixdHappy
       image:
-        - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img23786464-48d2-420c-b384-a5e9f2d0eb4d.png
+        - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img8029a55a-b01c-4ff3-a666-f5d8a307e616.png
 
     #- content: 安知鱼主题指南
     #  date: 2023/09/09
