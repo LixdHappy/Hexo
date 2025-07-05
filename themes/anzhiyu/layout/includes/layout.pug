@@ -80,6 +80,22 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
     if theme.shortcutKey.enable
       !=partial('includes/shortcutKey', {}, {cache: true})
     include ./rightside.pug
+    .contact-info
+      .option
+        i.fas.fa-rocket
+        .bloktop
+        .text
+          | 欢迎访问 GB 的记事簿
+          .strip
+          
+      .option
+        i.fas.fa-paper-plane
+        .blok
+        .text
+          .strip
+          .post-reward
+            button.reward-button(onclick="anzhiyu.rewardShowConsole()")
+              i.anzhiyufont.anzhiyu-icon-heartbeat
 
     if (theme.nav_music.enable || theme.nav_music.console_widescreen_music)
       include ./music.pug
