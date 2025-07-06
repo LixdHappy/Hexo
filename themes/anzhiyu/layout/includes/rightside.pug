@@ -29,13 +29,16 @@ mixin rightsideItem(array)
         if commentsJsLoad
           a#to_comment(href="#post-comment" title=_p("rightside.scroll_to_comment"))
             i.anzhiyufont.anzhiyu-icon-comments
+      when 'refresh'
+        button#refresh-cache(type="button" title='刷新缓存' onclick="refreshCache()")
+          i.fas.fa-refresh.fa-spin
         if theme.comment_barrage_config && theme.comment_barrage_config.enable
           a#switch-commentBarrage(href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕")
             i.anzhiyufont.anzhiyu-icon-danmu
 
 #rightside
   - const { enable, hide, show } = theme.rightside_item_order
-  - const hideArray = enable ? hide && hide.split(',') : ['readmode','translate','darkmode','hideAside']
+  - const hideArray = enable ? hide && hide.split(',') : ['readmode','translate','darkmode','hideAside','refresh']
   - const showArray = enable ? show && show.split(',') : ['toc','chat','comment']
 
   
@@ -46,7 +49,7 @@ mixin rightsideItem(array)
     if enable
       if hide
         button#rightside-config(type="button" title=_p("rightside.setting"))
-         i.anzhiyufont.anzhiyu-icon-gear
+          i.anzhiyufont.anzhiyu-icon-gear
     else
       if is_post()
         if (readmode || translate.enable || (darkmode.enable && darkmode.button))

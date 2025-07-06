@@ -1087,15 +1087,15 @@ lazyload:
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
 pwa:
-  enable: false
+  enable: true
   startup_image_enable: true
   manifest: /manifest.json
   theme_color: var(--anzhiyu-main)
-  mask_icon: /img/siteicon/apple-icon-180.png
-  apple_touch_icon: /img/siteicon/apple-icon-180.png
-  bookmark_icon: /img/siteicon/apple-icon-180.png
-  favicon_32_32: /img/siteicon/32.png
-  favicon_16_16: /img/siteicon/16.png
+  mask_icon: /img/APP/apple-touch-icon-180.png
+  apple_touch_icon: /img/APP/apple-touch-icon-180.png
+  bookmark_icon: /img/APP/apple-touch-icon-180.png
+  favicon_32_32: /img/APP/32.ico
+#  favicon_16_16: /img/APP/siteicon/16.png
 
 # Open graph meta tags
 # https://developers.facebook.com/docs/sharing/webmasters/
@@ -1345,6 +1345,7 @@ inject:
     - <script src="/js/footer-animal.js" defer></script> #引入页脚挂件(动物派对)
     - <script async data-pjax src="/js/imgloaded.js?1"></script> # 首页图片渐进式加载
     - <script async src="/js/SmoothScroll.js"></script> #引入页面平滑滚动
+    - <script async src="/js/refresh.js"></script> #引入刷新缓存按钮
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -1353,7 +1354,7 @@ CDN:
   # The CDN provider of internal scripts (主题内部 js 的 cdn 配置)
   # option: local/elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/anheyu/custom
   # Dev version can only choose. ( dev版的主题只能设置为 local )
-  internal_provider: smartcis #已修改cdn,参考cdn修改教程
+  internal_provider: local #已修改cdn,参考cdn修改教程
 
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/anheyu/custom
@@ -1361,10 +1362,6 @@ CDN:
 
   # Add version number to CDN, true or false
   version: true
-
-  # Custom format
-  # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: # https://npm.elemecdn.com/${name}@latest/${file}
 
   option:
     # main_css:

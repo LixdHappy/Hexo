@@ -8,6 +8,15 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 07-06 -->
+
+- 适配 pwa
+- 添加 刷新缓存按钮
+
+<!-- endtimeline -->
+
+
+
 <!-- timeline 07-05 -->
 
 优化 悬浮伸缩侧边栏 代码如下,你可以在任意处引入
@@ -297,23 +306,31 @@ top_img: false
 
 /* 悬浮侧边栏样式 结束 */
 ```
+
 {% folding yellow, 优化项目 %}
-1. 暗色模式悬停动画修复 
+
+1. 暗色模式悬停动画修复
    - 明确添加暗色模式下的悬停状态
    - 保持相同的渐变效果但调整透明度为0.9
    - 保留缩放和阴影效果
+   
 2. 暗色模式图标增强
    - 创建专属暗色模式的呼吸动画
    - 添加发光效果增强视觉反馈
    - 确保图标颜色在暗色模式下保持鲜艳
+   
 3. 图标颜色保护
    - 强制锁定图标颜色不受暗色模式影响
    - 使用`!important`确保覆盖其他样式
+   
 4. 文字阴影优化：
    - 调整暗色模式下的文字阴影为深色
+   
    - 增强暗色背景上的可读性
-{% endfolding %}
+     {% endfolding %}
+
 <!-- endtimeline -->
+
 
 <!-- timeline 07-04 -->
 
@@ -323,12 +340,11 @@ top_img: false
 
 - 添加 悬浮伸缩侧边栏(欢迎,打赏模块)
 
-  {% note success simple %}fix 修复 侧边栏微信卡片暗色适配
-  修复 wechatOA跳转页(你可以在侧边栏卡片和订阅页公众号订阅点击进入)
+  {% note success simple %}fix `修复 侧边栏微信卡片暗色适配`
+  fix `修复 wechatOA跳转页`(你可以在侧边栏卡片和订阅页公众号订阅点击进入)
   {% endnote %}
 
 <!-- endtimeline -->
-
 
 <!-- timeline 07-03-->
 
@@ -336,13 +352,11 @@ top_img: false
 
 <!-- endtimeline -->
 
-
 <!-- timeline 07-02-->
 
 添加 Umami前端界面(后端数据显示为零)
 
 <!-- endtimeline -->
-
 
 <!-- timeline 07-01-->
 
@@ -352,13 +366,11 @@ top_img: false
 
 <!-- endtimeline -->
 
-
 <!-- timeline 06-30-->
 
 移植Solitude主题的`十年之约`进度条
 
 <!-- endtimeline -->
-
 
 <!-- timeline 06-29 -->
 
@@ -373,11 +385,14 @@ top_img: false
 {% folding yellow, 修改在此 %}
 
 - 标签分页
+
 - 分类总页
+
 - 分类分页(首页-分类一栏可以优化,目前未处理)
+
 - 总文章页(同上可以优化)
-{% endfolding %}
-<!-- endtimeline -->
+  {% endfolding %}
+  <!-- endtimeline -->
 
 <!-- timeline 06-27 -->
 部署几项页面,具体在网站名字左侧折叠框
@@ -413,13 +428,13 @@ Twikoo评论区QQ昵称获取临时方案
 <!-- endtimeline -->
 
 <!-- timeline 06-23 -->
- - 添加 游戏收藏页(还未添加游戏)
- - 加入 侧边栏来访者卡片 
- - 加入 动物派对主题页脚挂件
- - 加入 本地搜索栏预览图(由原来的docsearch修改为 本地搜索)
- <!-- endtimeline -->
+- 添加 游戏收藏页(还未添加游戏)
+- 加入 侧边栏来访者卡片
+- 加入 动物派对主题页脚挂件
+- 加入 本地搜索栏预览图(由原来的docsearch修改为 本地搜索)
+<!-- endtimeline -->
 
- <!-- timeline 06-22 -->
+<!-- timeline 06-22 -->
 收集目前为止博客 现有的Bug
 {% folding cyan open, 目前BUG收集 %}
 
@@ -443,13 +458,13 @@ Twikoo评论区QQ昵称获取临时方案
 <!-- endtimeline -->
 
 <!-- timeline 06-21 -->
- - 添加 总统计页面
- - 修改 字体为 寒蝉全圆体
+- 添加 总统计页面
+- 修改 字体为 寒蝉全圆体
 <!-- endtimeline -->
 
 <!-- timeline 06-20 -->
- - AI 摘要修改 (启用deepseek API 并修改为本地AI)
- - RSS 页面初步美化
+- AI 摘要修改 (启用deepseek API 并修改为本地AI)
+- RSS 页面初步美化
 <!-- endtimeline -->
 
 <!-- timeline 06-19 -->
@@ -458,8 +473,8 @@ Twikoo评论区QQ昵称获取临时方案
 <!-- endtimeline -->
 
 <!-- timeline 06-18 -->
- - anzhiyu 主题朋友圈配置(添加 轻量朋友圈)
- - 部署后台管理程序
+- anzhiyu 主题朋友圈配置(添加 轻量朋友圈)
+- 部署后台管理程序
 <!-- endtimeline -->
 
 <!-- timeline 06-17 -->
@@ -468,8 +483,8 @@ Twikoo评论区QQ昵称获取临时方案
 <!-- endtimeline -->
 
 <!-- timeline 06-16 -->
- - 重装主题为 anzhiyu 主题
- - 安装 abbrlink nofollow sitemap 插件
+- 重装主题为 anzhiyu 主题
+- 安装 abbrlink nofollow sitemap 插件
 <!-- endtimeline -->
 {% endtimeline %}
 
