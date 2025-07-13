@@ -1087,7 +1087,7 @@ lazyload:
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
 pwa:
-  enable: true
+  enable: false
   startup_image_enable: true
   manifest: /manifest.json
   theme_color: var(--anzhiyu-main)
@@ -1345,7 +1345,6 @@ inject:
     - <script src="/js/footer-animal.js" defer></script> #引入页脚挂件(动物派对)
     - <script async data-pjax src="/js/imgloaded.js?1"></script> # 首页图片渐进式加载
     - <script async src="/js/SmoothScroll.js"></script> #引入页面平滑滚动
-    - <script async src="/js/refresh.js"></script> #引入刷新缓存按钮
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -1358,7 +1357,7 @@ CDN:
 
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/anheyu/custom
-  third_party_provider: custom #已修改cdn,参考cdn修改教程
+  third_party_provider: jsdelivr #已修改cdn,参考cdn修改教程
 
   # Add version number to CDN, true or false
   version: true
