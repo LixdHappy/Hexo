@@ -471,7 +471,7 @@ Twikoo评论区QQ昵称获取临时方案
 {% checkbox times red checked,  ~~微信OA页跳转不流畅~~ 07/04加入 %}
 {% checkbox times red checked,  ~~站点检测dns问题~~ 07/04加入 %}
 {% checkbox times red checked,  友人帐页面添加友链过于简陋,以及勾选弹框闪现 07/04加入 %}
-{% checkbox times red checked,  log界面错位 07/04加入 %}
+{% checkbox times red checked,  ~~log界面错位~~ 07/04加入 %}
 {% endfolding %}
 <!-- endtimeline -->
 
