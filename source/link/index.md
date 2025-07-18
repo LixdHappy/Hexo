@@ -4,6 +4,8 @@ date: 2025-06-22 14:03:13
 type: "link"
 comments: true
 ---
+<style>.status-tag{position:absolute;bottom:0;right:0;padding:0 3px;border-radius:6px 0 12px 0;font-size:10px;color:#fff;font-weight:700;transition:font-size .3s ease-out,width .3s ease-out,opacity .3s ease-out}.flink-list-item:hover .status-tag{font-size:0px;opacity:0}.status-tag-green{background-color:#0080ff}.status-tag-yellow{background-color:#fc0}.status-tag-orange{background-color:#f80}.status-tag-red{background-color:#b00}.tk-comments>.tk-submit{opacity:0;height:0;transition:opacity .5s,height .5s;overflow:hidden}</style>
+
 
 <style>
 .tk-comments > .tk-submit {

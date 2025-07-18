@@ -1337,6 +1337,8 @@ inject:
     # 自定义css
     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
     - <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"> # loading用的fontawesome图标
+    - <link rel="stylesheet" href="/css/message.css"> # 引入右下角悬浮球样式
+    #- <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4978790_570l599x1x7.css" media="defer" onload="this.media='all'"> # 引入iconfont图标
 
   bottom:
     - <script src="/js/echarts.min.js"></script> # 统计页面
@@ -1346,6 +1348,8 @@ inject:
     - <script src="/js/imgloaded.js?1"></script> # 首页图片渐进式加载
     - <script async src="/js/SmoothScroll.js"></script> # 引入页面平滑滚动
     - <script src="/js/rightside.js"></script> # 引入右侧栏动画优化
+    - <script src="/js/message.js"></script> # 引入右下角悬浮球js
+    #- <script async src="//at.alicdn.com/t/c/font_4978790_570l599x1x7.js"></script> # 引入iconfont图标
 
 # CDN
 # Don't modify the following settings unless you know how they work
