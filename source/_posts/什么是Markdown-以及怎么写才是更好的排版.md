@@ -15,6 +15,7 @@ copyright_author: LixdHappy
 copyright_url: https://markdown.com.cn/
 copyright_info: 本文是转载或翻译文章，版权归原作者所有。建议访问原文，转载本文请联系原作者。
 abbrlink: edc6e88
+mathjax: true
 ai: >-
   这里是GB的AI，这篇文章介绍了Markdown的基本概念、优势以及详细语法指南。Markdown是一种轻量级标记语言，由John
   Gruber于2004年创建，专注于文字内容，语法简单易学，纯文本格式便于版本控制和跨平台使用。文章解释了Markdown与Word等所见即所得编辑器的区别，强调其可读性和可移植性优势，并推荐了Typora等工具。详细语法部分涵盖了标题、段落、换行、强调（粗体/斜体）、引用和列表（有序/无序）等基本元素的使用方法，包括示例和常见错误提示。文章还提到不同平台对Markdown语法的支持可能存在差异，建议遵循标准语法以确保兼容性。整体内容既适合Markdown初学者快速入门，也可作为日常写作的语法参考手册。
@@ -91,15 +92,15 @@ Markdown 速查表提供了所有 Markdown 语法元素的基本解释。如果�
 
 这些元素通过添加额外的功能扩展了基本语法。但是，并非所有 Markdown 应用程序都支持这些元素。
 
-| 元素 | Markdown 语法  |
-| ---- | ------------- |
+| 元素                                                         | Markdown 语法                                                |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [表格（Table）](https://markdown.com.cn/extended-syntax/tables.html) | `| Syntax      | Description |`<br>`| ----------- | ----------- |`<br>`| Header      | Title       |`<br>`| Paragraph   | Text        |` |
-| [代码块（Fenced Code Block）](https://markdown.com.cn/extended-syntax/fenced-code-blocks.html) | <code>```</code><br><code>{</code><br><code>  "firstName": "John",</code><br><code>  "lastName": "Smith",</code><br><code>  "age": 25</code><br><code>}</code><br><code>```</code> |
+| [代码块（Fenced Code Block）](https://markdown.com.cn/extended-syntax/fenced-code-blocks.html) | <code>```</code><br><code>{</code><br> <code>"firstName": "John",</code><br> <code>"lastName": "Smith",</code><br> <code>"age": 25</code><br><code>}</code><br><code>```</code> |
 | [脚注（Footnote）](https://markdown.com.cn/extended-syntax/footnotes.html) | Here's a sentence with a footnote. `[^1]` `[^1]`: This is the footnote. |
-| [标题编号（Heading ID）](https://markdown.com.cn/extended-syntax/heading-ids.html) | `### My Great Heading {#custom-id}`                          |
-| [定义列表（Definition List）](https://markdown.com.cn/extended-syntax/definition-lists.html) | `term`<br>`: definition`                                     |
-| [删除线（Strikethrough）](https://markdown.com.cn/extended-syntax/strikethrough.html) | `~~The world is flat.~~`                                     |
-| [任务列表（Task List）](https://markdown.com.cn/extended-syntax/task-lists.html) | `- [x] Write the press release`<br>`- [ ] Update the website`<br>`- [ ] Contact the media` |
+| [标题编号（Heading ID）](https://markdown.com.cn/extended-syntax/heading-ids.html) | `### My Great Heading {#custom-id}`|
+| [定义列表（Definition List）](https://markdown.com.cn/extended-syntax/definition-lists.html) | `term: definition`|
+| [删除线（Strikethrough）](https://markdown.com.cn/extended-syntax/strikethrough.html) | `~~The world is flat.~~`|
+| [任务列表（Task List）](https://markdown.com.cn/extended-syntax/task-lists.html) | `- [x] Write the press release- [ ] Update the website- [ ] Contact the media` |
 
 ## Markdown基本语法
 
@@ -1354,3 +1355,6 @@ Markdown 不能直接嵌入视频，但可以使用 HTML，或变通方式（图
 <iframe src="//player.bilibili.com/player.HTML?isOutside=true&aid=114201066479129&bvid=BV1GPX1YpErE&cid=28993847393&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 Markdown 作为轻量级标记语言，有一定的局限性，但借助 HTML 和 CSS，可以实现许多 Markdown 不支持的功能。希望这些技巧能帮助你更高效地使用 Markdown！ 🚀
+
+---
+> 文章完整性测试标记（此内容应显示在末尾）

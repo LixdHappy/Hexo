@@ -1339,12 +1339,13 @@ inject:
     - <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"> # loading用的fontawesome图标
 
   bottom:
-    - <script src="js/echarts.min.js"></script> # 统计页面
+    - <script src="/js/echarts.min.js"></script> # 统计页面
     - <script src="/js/countdown.js"></script> # 引入侧边栏倒计时卡片
-    - <script src="/js/card-welcome.js"></script> #引入侧边栏来访者卡片
+    - <script src="/js/card-welcome.js"></script> # 引入侧边栏来访者卡片
     - <script src="/js/footer-animal.js" defer></script> #引入页脚挂件(动物派对)
-    - <script async data-pjax src="/js/imgloaded.js?1"></script> # 首页图片渐进式加载
-    - <script async src="/js/SmoothScroll.js"></script> #引入页面平滑滚动
+    - <script src="/js/imgloaded.js?1"></script> # 首页图片渐进式加载
+    - <script async src="/js/SmoothScroll.js"></script> # 引入页面平滑滚动
+    - <script src="/js/rightside.js"></script> # 引入右侧栏动画优化
 
 # CDN
 # Don't modify the following settings unless you know how they work

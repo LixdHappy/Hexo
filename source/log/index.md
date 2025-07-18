@@ -14,6 +14,24 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 07-17 -->
+
+修改 邮件回复通知模板
+
+添加 右侧栏的时钟显示
+
+{% note success simple %}fix 修复 `由解析配置错误导致的评论区评论失效问题`{% endnote %}
+
+<!-- endtimeline -->
+
+<!-- timeline 07-15 -->
+
+修改 字数统计单位由K改为W
+
+修改 自动部署代码逻辑
+
+<!-- endtimeline -->
+
 <!-- timeline 07-14 -->
 
 {% note success simple %}fix `修复 由CDN配置错误导致的崩站错误`{% endnote %}
@@ -460,7 +478,7 @@ Twikoo评论区QQ昵称获取临时方案
 {% checkbox times red checked,  ~~搜索无法点开~~ %}
 {% checkbox times red checked,  侧边栏欢迎卡片时间不够细化,凌晨认定为早上不够符合认知  %}
 {% checkbox times red checked,  ~~朋友圈鱼塘位置错位~~ %}
-{% checkbox times red checked,  评论区评论失败 %}
+{% checkbox times red checked,  ~~评论区评论失败~~ %}
 {% checkbox times red checked,  正式文章页与草稿文章显示字数实际不符 %}
 {% checkbox times red checked,  ~~Copyright盒子内的原创按钮跳转页面失败~~ %}
 {% checkbox times red checked,  ~~钓鱼(朋友圈)间接性失灵~~ %}

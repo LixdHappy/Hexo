@@ -900,3 +900,90 @@ div#bber-tips {
 #article-container .timeline+.timeline {
     margin-top: -20px
 }
+
+
+
+/* rightside 样式开始 */
+#rightside {
+    position: fixed;
+    right: -48px;
+    bottom: 100px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--anzhiyu-post-blockquote-bg, rgba(255, 255, 255, 0.8));
+    box-shadow: var(--anzhiyu-shadow-border, 0 0 10px rgba(0, 0, 0, 0.1));
+    border-radius: 49px;
+    padding: 7px 0;
+    transition: all 0.5s ease;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 默认隐藏 */
+#rightside-config-hide {
+    display: none;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#rightside-config-hide.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#rightside-config-hide.hiding {
+    opacity: 0;
+    transform: translateY(-5px);
+}
+
+/* 按钮样式 */
+#rightside>div>a,
+#rightside>div>button {
+    display: block;
+    margin-bottom: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--btn-bg, rgba(0, 0, 0, 0.1));
+    color: var(--btn-color, #333);
+    text-align: center;
+    font-size: 16px;
+    line-height: 35px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#rightside>div>a:hover,
+#rightside>div>button:hover {
+    background-color: var(--btn-hover-color, rgba(0, 0, 0, 0.2));
+    transform: scale(1.1);
+}
+
+/* 时钟 */
+#rightside-config-clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    font-weight: 900;
+    color: var(--anzhiyu-fontcolor, #333);
+}
+
+#rightside-clock {
+    font-size: 16px;
+}
+
+#rightside-clock-period {
+    font-size: 12px;
+}
+
+/* rightside 样式结束 */
