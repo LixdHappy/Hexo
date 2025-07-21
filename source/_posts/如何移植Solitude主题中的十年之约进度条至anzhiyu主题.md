@@ -2,6 +2,7 @@
 title: 如何移植Solitude主题中的十年之约进度条至anzhiyu主题
 swiper_index: 3
 top_group_index: 3
+categories: 主题
 tags:
   - Hexo
   - anzhiyu

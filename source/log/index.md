@@ -13,12 +13,26 @@ top_img: false
 
 
 {% timeline 2025,blue %}
+<!-- timeline 07-21 -->
+移除  banner-button动画样式(bug太多且难以修复)
+<!-- endtimeline -->
+<!-- timeline 07-19 -->
+
+- 加入 仿Solitude底部站点名字附带头像
+- 对 banner-button添加动画样式[来自SNTube Studio站点](https://satera.cn/update/)
+
+<!-- endtimeline -->
+<!-- timeline 07-18 -->
+
+添加 右下角联系方式悬浮球
+
+<!-- endtimeline -->
 
 <!-- timeline 07-17 -->
 
-修改 邮件回复通知模板
+- 修改 邮件回复通知模板
 
-添加 右侧栏的时钟显示
+- 添加 右侧栏的时钟显示
 
 {% note success simple %}fix 修复 `由解析配置错误导致的评论区评论失效问题`{% endnote %}
 

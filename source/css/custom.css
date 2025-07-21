@@ -987,3 +987,68 @@ div#bber-tips {
 }
 
 /* rightside 样式结束 */
+
+/* 底部站点名附带头像(仿Solitude主题样式) 开始 */
+#footer-bar .footer-bar-link {
+    margin: 0 4px;
+    color: var(--anzhiyu-fontcolor);
+    font-size: 0.9rem;
+    /* 字体稍微大一点 */
+    font-weight: 700;
+    white-space: nowrap;
+    border-radius: 24px;
+    /* 调小圆角，更精致 */
+    line-height: 1.4;
+    /* 稍微加高行高，让文字看着不那么挤 */
+    display: inline-flex;
+    /* inline-flex 保证跟文本对齐 */
+    align-items: center;
+    gap: 0.5rem;
+    /* 头像和文字之间的间距略加大 */
+    padding: 4px 8px;
+    /* 内边距更大，hover 时更饱满 */
+    vertical-align: middle;
+    transition: background 0.3s, color 0.3s;
+    /* 平滑过渡 */
+}
+
+#footer-bar .footer-bar-link .author-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#footer-bar .footer-bar-link:hover {
+    color: var(--anzhiyu-theme);
+    background: var(--anzhiyu-main-op);
+}
+
+#footer-bar .footer-bar-link i {
+    font-size: 14px;
+}
+
+/* 如果只想让所有 img 高度统一，可以保留，但头像已经独立设置 */
+/* #footer-bar .footer-bar-link img {
+    height: 20px;
+} */
+
+#footer-bar .footer-bar-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 1.4;
+    padding: 1rem 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    #footer-bar .footer-bar-links {
+        justify-content: center;
+        gap: 8px;
+    }
+}
+
+/* 底部站点名附带头像(仿Solitude主题样式) 结束 */
