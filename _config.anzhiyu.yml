@@ -541,6 +541,8 @@ footer:
             link: https://www.foreverblog.cn/
           - title: 开往
             link: https://github.com/travellings-link/travellings
+          - title: 萌国ICP备案
+            link: https://icp.gov.moe/?keyword=20258100
       - title: 主题
         links:
           - title: 文档
@@ -584,6 +586,8 @@ footer:
         text: 主题
       - link: /subscribe
         text: 订阅
+      - link: https://beian.miit.gov.cn/
+        text: 桂ICP备2025067806号-1
       - link: https://icp.gov.moe/?keyword=20258100
         text: 萌ICP备20258100号
     subTitle:

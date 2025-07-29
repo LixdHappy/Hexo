@@ -13,6 +13,19 @@ top_img: false
 
 
 {% timeline 2025,blue %}
+
+<!-- timeline 07-29 -->
+
+网站备案通过,重新开放(广西备案速度还算可以),备案号: `桂ICP备2025067806号-1`
+
+<!-- endtimeline -->
+
+<!-- timeline 07-23 -->
+
+网站备案期间,博客暂停解析
+
+<!-- endtimeline -->
+
 <!-- timeline 07-21 -->
 移除  banner-button动画样式(bug太多且难以修复)
 <!-- endtimeline -->
