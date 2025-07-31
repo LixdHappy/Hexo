@@ -77,6 +77,9 @@ nav:
         - name: 图标搜寻
           iink: https://fontawesome.com/start
           icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%9B%BE%E6%A0%87%E6%90%9C%E5%AF%BB.ico
+        - name: 炸了么
+          link: https://zhale.me/
+          icon: https://zhale.me/favicon.ico
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
@@ -581,15 +584,15 @@ footer:
       domain: "blog.gbfun.cc" # 无聊湾API与图标src 末尾域名 可以在这里了解https://boringbay.com/join-us
       title: "无聊湾 🥱 The Boring Bay" # 图显标题
       height: "18px" # 无聊湾徽标高度
+    showBeian: true #展示备案组
     linkList:
       - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
         text: 主题
       - link: /subscribe
         text: 订阅
-      - link: https://beian.miit.gov.cn/
-        text: 桂ICP备2025067806号-1
       - link: https://icp.gov.moe/?keyword=20258100
         text: 萌ICP备20258100号
+
     subTitle:
       enable: false
       # Typewriter Effect (打字效果)

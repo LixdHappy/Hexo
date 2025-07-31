@@ -14,6 +14,12 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 07-31 -->
+
+优化页脚样式
+
+<!-- endtimeline -->
+
 <!-- timeline 07-29 -->
 
 网站备案通过,重新开放(广西备案速度还算可以),备案号: `桂ICP备2025067806号-1`

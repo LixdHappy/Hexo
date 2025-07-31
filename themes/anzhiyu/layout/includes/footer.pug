@@ -82,6 +82,38 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
                 a.footer-bar-link(href=url_for(authorLink) target="_blank")
                   img.author-avatar(src="/img/博客静态头像.jpg" alt="avatar")
                   = config.author
+          if theme.footer.footerBar.showBeian
+            .beian-group
+              a.footer-bar-link(
+                href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011402054421"
+                target="_blank"
+                rel="noopener external nofollow noreferrer"
+                title="京公网安备xxxxxxx号"
+                anzhiyutip="前往全国互联网安全管理服务平台"
+              )
+                img.beian-icon(
+                  src="https://p.zhheo.com/VPiMHH24891181731917988329.png!cover"
+                  alt="京公网安备xxxxxxxx号"
+                )
+                span 京公网安备xxxxxxxx号
+              a.footer-bar-link(
+                href="https://beian.miit.gov.cn/#/Integrated/index"
+                target="_blank"
+                rel="noopener external nofollow noreferrer"
+                title="桂ICP备2025067806号-1"
+                anzhiyutip="前往工业和信息化部政务服务平台"
+              ) 桂ICP备2025067806号-1
+
+              a.footer-bar-link.allsite_ok(
+                href="https://status.gbfun.cc/"
+                target="_blank"
+                rel="noopener external nofollow noreferrer"
+                id="allsite_status"
+                anzhiyutip="查看我的项目状态"
+              )
+                .status-light
+                span 所有业务正常
+
         #footer-type-tips
         if theme.footer.footerBar && theme.footer.footerBar.subTitle && theme.footer.footerBar.subTitle.enable
           .js-pjax
@@ -95,7 +127,6 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
             i.anzhiyufont.anzhiyu-icon-creative-commons-by-line
             i.anzhiyufont.anzhiyu-icon-creative-commons-nc-line
             i.anzhiyufont.anzhiyu-icon-creative-commons-nd-line
-          //- 在这里插入 BoringBay Badge
         if theme.footer.footerBar.badge.enable  
           a.footer-bar-link.badge(
             href=theme.footer.footerBar.badge.link
@@ -108,3 +139,49 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
               height=theme.footer.footerBar.badge.height
               alt=theme.footer.footerBar.badge.title
             )
+
+script.
+  const apiKey = "ur3002929-93298effac0a3e50041f96f7"; // ← 替换为你自己的 API Key
+  const monitorIDs = ""; // 可选：指定监控 ID，如 "12345678-23456789"，多个用 - 分隔
+
+  function updateStatusLight() {
+    const statusEl = document.getElementById("allsite_status");
+    const spanText = statusEl.querySelector("span");
+
+    fetch("https://api.uptimerobot.com/v2/getMonitors", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: `api_key=${apiKey}&format=json&monitors=${monitorIDs}`
+    })
+    .then(response => response.json())
+    .then(data => {
+      const allOk = data.monitors.every(m => m.status === 2);
+
+      if (allOk) {
+        statusEl.classList.remove("allsite_error");
+        statusEl.classList.add("allsite_ok");
+        spanText.innerText = "所有业务正常";
+      } else {
+        statusEl.classList.remove("allsite_ok");
+        statusEl.classList.add("allsite_error");
+        spanText.innerText = "部分业务异常";
+      }
+    })
+    .catch(error => {
+      console.error("状态检测失败:", error);
+      statusEl.classList.remove("allsite_ok");
+      statusEl.classList.add("allsite_error");
+      spanText.innerText = "状态检测失败";
+    })
+    .finally(() => {
+      const now = new Date().toLocaleString("zh-CN");
+      statusEl.setAttribute("title", `最新更新时间: ${now}`);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateStatusLight();
+    setInterval(updateStatusLight, 300000); // 每10分钟更新
+  });

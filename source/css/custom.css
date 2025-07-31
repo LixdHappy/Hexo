@@ -988,67 +988,331 @@ div#bber-tips {
 
 /* rightside 样式结束 */
 
-/* 底部站点名附带头像(仿Solitude主题样式) 开始 */
-#footer-bar .footer-bar-link {
-    margin: 0 4px;
+/* ===== 页脚容器样式 ===== */
+#footer-bar {
+    /* 尺寸和布局 */
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    overflow: hidden;
+    z-index: 1002;
+
+    /* 视觉样式 */
     color: var(--anzhiyu-fontcolor);
-    font-size: 0.9rem;
-    /* 字体稍微大一点 */
-    font-weight: 700;
-    white-space: nowrap;
-    border-radius: 24px;
-    /* 调小圆角，更精致 */
-    line-height: 1.4;
-    /* 稍微加高行高，让文字看着不那么挤 */
-    display: inline-flex;
-    /* inline-flex 保证跟文本对齐 */
+    background: var(--anzhiyu-secondbg);
+    border-top: var(--style-border-always);
+
+    /* CSS变量 */
+    --footer-link-padding: 8px;
+    --footer-icon-size: 14px;
+}
+
+/* ===== 页脚链接容器 ===== */
+#footer-bar .footer-bar-links {
+    /* 布局 */
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem;
-    /* 头像和文字之间的间距略加大 */
-    padding: 4px 8px;
-    /* 内边距更大，hover 时更饱满 */
-    vertical-align: middle;
-    transition: background 0.3s, color 0.3s;
-    /* 平滑过渡 */
+    justify-content: space-between;
+
+    /* 尺寸 */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+
+    /* 间距 */
+    gap: 8px;
+    line-height: 1;
 }
 
-#footer-bar .footer-bar-link .author-avatar {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+/* ===== 链接组布局 ===== */
+#footer-bar .footer-bar-left,
+#footer-bar .footer-bar-right {
+    /* 布局 */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    /* 尺寸 */
+    min-height: 32px;
+    margin: 0;
 }
 
+#footer-bar .footer-bar-left {
+    /* 特殊布局 */
+    flex-direction: column;
+    align-items: flex-start;
+    /* 左对齐 */
+}
+
+/* 左侧组内元素间距 */
+#footer-bar .footer-bar-left>span {
+    margin-right: 0.5rem;
+}
+
+/* ===== 版权信息样式 ===== */
+.copyright {
+    /* 布局 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    /* 尺寸 */
+    margin-bottom: 0.5rem;
+    /* 减小下边距 */
+
+    /* 文本 */
+    font-size: 0.9rem;
+    /* 增大字体大小 */
+}
+
+/* ===== 备案信息组样式 ===== */
+#footer-bar .beian-group {
+    /* 布局 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* 左对齐 */
+
+    /* 尺寸 */
+    margin-top: 0.3rem;
+    /* 减小上边距 */
+    margin-bottom: 0.3rem;
+    /* 减小下边距 */
+
+    /* 间距 */
+    gap: 5px;
+}
+
+/* 备案链接样式 */
+#footer-bar .beian-group .footer-bar-link {
+    /* 重置样式 */
+    padding: 0;
+    margin: 0;
+
+    /* 文本 */
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--anzhiyu-secondtext);
+
+    /* 间距 */
+    gap: 2px;
+}
+
+/* 备案链接悬停效果 */
+#footer-bar .beian-group a:hover {
+    background: none;
+}
+
+/* ===== 页脚链接样式 ===== */
+#footer-bar .footer-bar-link {
+    /* 布局 */
+    display: flex;
+    align-items: center;
+
+    /* 尺寸 */
+    padding: var(--footer-link-padding);
+    margin: 0 3px;
+    border-radius: 32px;
+
+    /* 文本 */
+    font-size: 0.9rem;
+    /* 增大字体大小 */
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    color: var(--anzhiyu-fontcolor);
+
+    /* 间距 */
+    gap: 4px;
+}
+
+/* 链接悬停效果 */
 #footer-bar .footer-bar-link:hover {
-    color: var(--anzhiyu-theme);
+    color: var(--anzhiyu-main);
     background: var(--anzhiyu-main-op);
 }
 
-#footer-bar .footer-bar-link i {
-    font-size: 14px;
+/* 特殊链接样式 */
+#footer-bar .footer-bar-link.cc {
+    margin-right: 0;
 }
 
-/* 如果只想让所有 img 高度统一，可以保留，但头像已经独立设置 */
-/* #footer-bar .footer-bar-link img {
-    height: 20px;
-} */
+/* 特殊链接图标 */
+#footer-bar .footer-bar-link.cc i {
+    font-size: 18px;
+}
 
-#footer-bar .footer-bar-links {
+/* 徽章链接悬停效果 */
+#footer-bar .footer-bar-link.badge:hover {
+    background: none;
+}
+
+/* ===== 状态指示灯样式 ===== */
+.status-light {
+    /* 布局 */
     display: flex;
-    justify-content: space-between;
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    flex-wrap: wrap;
     align-items: center;
-    line-height: 1.4;
-    padding: 1rem 1.5rem;
+    justify-content: center;
+
+    /* 尺寸 */
+    width: var(--footer-icon-size);
+    height: var(--footer-icon-size);
+    border-radius: 50%;
+
+    /* 视觉 */
+    background: #57bd6a56;
 }
 
+.status-light::after {
+    content: '';
+
+    /* 尺寸 */
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    /* 视觉 */
+    background: var(--anzhiyu-gray);
+}
+
+/* 正常状态 */
+.allsite_ok .status-light {
+    background: #57bd6a56;
+}
+
+.allsite_ok .status-light::after {
+    background: var(--anzhiyu-green);
+}
+
+/* 错误状态 */
+.allsite_error .status-light {
+    background: #d8002056;
+}
+
+.allsite_error .status-light::after {
+    background: var(--anzhiyu-red);
+}
+
+/* 状态文本悬停效果 */
+#allsite_status.allsite_ok:hover span {
+    color: var(--anzhiyu-green);
+}
+
+#allsite_status.allsite_error:hover span {
+    color: var(--anzhiyu-red);
+}
+
+/* ===== 图片通用样式 ===== */
+img {
+    /* 尺寸 */
+    max-width: 100%;
+
+    /* 视觉 */
+    border-style: none;
+}
+
+/* 空图片处理 */
+img:not([src]),
+img[src=""] {
+    opacity: 0;
+}
+
+/* 备案图标 */
+img.beian-icon {
+    height: var(--footer-icon-size);
+    min-width: 13px;
+    min-height: var(--footer-icon-size);
+}
+
+/* 作者头像 */
+#footer-bar .footer-bar-link .author-avatar {
+    width: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 20px;
+}
+
+/* ===== 文本选中效果 ===== */
+::selection {
+    background: #0079ff;
+    color: #f7f7f7;
+}
+
+/* ===== 响应式调整 - 移动设备优化 ===== */
 @media screen and (max-width: 768px) {
+
+    /* 全局变量调整 */
+    :root {
+        --style-border: 1px solid var(--anzhiyu-none);
+        --style-border-hover: 1px solid var(--anzhiyu-none);
+    }
+
+    /* 页脚链接容器优化 */
     #footer-bar .footer-bar-links {
         justify-content: center;
-        gap: 8px;
+        padding: 0.8rem 0.5rem;
+    }
+
+    /* 链接组布局优化 */
+    #footer-bar .footer-bar-left,
+    #footer-bar .footer-bar-right {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    /* 左侧组调整 */
+    #footer-bar .footer-bar-left {
+        align-items: center;
+        /* 移动端居中 */
+    }
+
+    /* 版权信息优化 */
+    .copyright {
+        margin-bottom: 0.4rem;
+        /* 减小间距 */
+        font-size: 0.85rem;
+        /* 移动端字体大小 */
+    }
+
+    /* 备案信息组优化 */
+    #footer-bar .beian-group {
+        margin-top: 0.2rem;
+        /* 减小间距 */
+        margin-bottom: 0.2rem;
+        /* 减小间距 */
+        justify-content: center;
+        /* 居中 */
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+
+    /* 左侧组内元素 */
+    #footer-bar .footer-bar-left>span {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    /* 链接样式优化 */
+    #footer-bar .footer-bar-link {
+        font-size: 0.85rem;
+        /* 移动端字体大小 */
+        padding: 5px 8px;
+        margin: 1px;
+    }
+
+    /* 状态指示灯优化 */
+    .status-light {
+        --footer-icon-size: 12px;
+    }
+
+    /* 作者头像优化 */
+    #footer-bar .footer-bar-link .author-avatar {
+        width: 18px;
+        min-width: 18px;
+        min-height: 18px;
     }
 }
-
-/* 底部站点名附带头像(仿Solitude主题样式) 结束 */
