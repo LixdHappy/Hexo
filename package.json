@@ -18,6 +18,7 @@
     "hexo-bilibili-bangumi": "^2.0.0",
     "hexo-browsersync": "^0.3.0",
     "hexo-butterfly-envelope": "^1.0.15",
+    "hexo-cdn-purge": "^1.0.1",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-nofollow": "^2.0.2",
     "hexo-generator-archive": "^2.0.0",

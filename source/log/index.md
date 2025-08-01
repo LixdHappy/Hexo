@@ -14,6 +14,12 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 08-01 -->
+
+等待网安备案,优化`相册集`页面
+
+<!-- endtimeline -->
+
 <!-- timeline 07-31 -->
 
 优化页脚样式

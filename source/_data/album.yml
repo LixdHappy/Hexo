@@ -1,9 +1,107 @@
-- class_name: 世界各地夕阳与风景
-  path_name: /wordScenery
+#类型有两种状态 type：2; type: 1
+# type: 2 需要配置附属参数 但是关于图片的参数可以不用带address from; content描述可以附带,也可以不带
+#   rowHeight: 220
+#   limit: 10
+#   lazyload: true
+#   btnLazyload: false
+#   url: false
+#
+# type：1 只需要配置content address from
+#
+
+- class_name: 壁纸收藏
+  path_name: /wallpaper
   type: 2
-  description: 因为到不了世界各地，所以请网友们发来了各地的夕阳与风景🌇。
-  cover: https://upload-bbs.miyoushe.com/upload/2025/06/13/125766904/2cf2b6aea07bba089d0d17c4fea72d1b_5366629137934368264.png
-  top_background: https://bu.dusays.com/2023/06/30/649e546ada7dd.webp
+  description: 因为看不到美丽世界，所以请网友们发来了美丽的图片给我做壁纸🌇。(流量警告)
+  rowHeight: 220
+  limit: 10
+  lazyload: true
+  btnLazyload: false
+  url: false
+  cover: https://image-head.gbfun.cc///imgf452133de15dff10dd63cbfe77a9d1f3.jpeg?blog-image?&imageSlim
+  top_background: https://image-head.gbfun.cc/相册/1754024054088.jpg?blog-image?
+  top_link: /album
+  top_btn_text: 返回
+  album_list:
+    - image:
+        - https://image-head.gbfun.cc/相册/1754023510056.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754029357189.gif?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024054212.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024054193.jpeg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024054161.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024054144.png?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024054129.png?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024054111.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024054088.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024054059.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024054025.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024053985.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754024053937.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023895924.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023633056.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023632865.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023632427.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023631521.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023631200.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023630970.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023630424.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023630117.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023629811.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023629189.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023628820.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023628579.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023628426.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023628216.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023628035.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023627603.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023627083.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023626549.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023626413.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023625961.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023625696.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023624696.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023623684.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023622967.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023620849.webp?blog-image?
+
+- class_name: 我的日常
+  path_name: /dailyPhoto
+  type: 1
+  description: 这里存放的是有关我自己的一些有趣的事情。
+  top_link: /album
+  top_btn_text: 返回
+  top_background: https://image-head.gbfun.cc/相册/1754029311233.jpg?blog-image?
+  cover: https://image-head.gbfun.cc/相册/1754029357189.gif?blog-image?
+  album_list:
+    - date: 2025-7-31
+      content: 感谢支付宝送来的奖牌(确实好看(✧∀✧)
+      address: 广西南宁
+      from: 再接再厉
+      image:
+        - https://image-head.gbfun.cc/相册/1754023506514.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754023505228.webp?blog-image?
+    - date: 2025-07-28
+      content: 我头顶的这一片星空
+      address: 广西南宁
+      from: LixdHappy
+      image:
+        - https://image-head.gbfun.cc/相册/1754033283329.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754033283358.png?blog-image?
+    - date: 2025-06-21
+      content: 外婆家的树蜥(城市娃没怎么见过QAQ)
+      address: 广西南宁
+      image:
+        - https://image-head.gbfun.cc/相册/1754026060552.jpg?blog-image?
+    - date: 2025-05-01
+      content: 葡萄下挂的雏鸟
+      address: 广西南宁
+      image:
+        - https://image-head.gbfun.cc/相册/1754023510508.webp?blog-image?
+
+- class_name: 有趣的图片
+  path_name: /funphoto
+  type: 2
+  description: 收集的一些有趣表情包
   rowHeight: 220
   limit: 10
   lazyload: true
@@ -11,31 +109,31 @@
   url: false
   top_link: /album
   top_btn_text: 返回
+  top_background: https://image-head.gbfun.cc/相册/1754030140635.JPG?blog-image?
+  cover: https://image-head.gbfun.cc/相册/1754025489787.jpg?blog-image?
   album_list:
-    - date: 2022/10/26 01:00:00
-      content: 湘潭的一角。
-      address: 湖南湘潭
-      from: 再吃一口就减肥
-      image:
-        - https://bu.dusays.com/2023/04/09/64329399db122.webp
-    - date: 2022-10-25
-      content: 洛阳暴雨后的天空。
-      address: 河南洛阳
-      from: 紫菜卷
-      image:
-        - https://bu.dusays.com/2023/04/09/64329399db122.webp
-        - https://bu.dusays.com/2023/04/09/64329399db2e1.webp
+    - image:
+        - https://image-head.gbfun.cc/相册/1754025489813.jpg?blog-image?
 
-- class_name: 我的日常
-  path_name: /dailyPhoto
+- class_name: 精修图片
+  path_name: /pyq
   type: 1
-  description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
+  description: 精修图片,大部分为朋友圈来源
   top_link: /album
   top_btn_text: 返回
-  top_background: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
-  cover: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
+  top_background: https://image-head.gbfun.cc/相册/1754033895215.webp?blog-image?
+  cover: https://image-head.gbfun.cc/相册/1754023895924.jpg?blog-image?
   album_list:
-    - date: 2022-10-24
-      content: 老妹的画
+    - date: 2025-03-29
+      content: 南宁故游
+      address: 广西南宁
       image:
-        - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
+        - https://image-head.gbfun.cc/相册/1754033895215.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754033895761.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754033894812.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754033894474.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754033894061.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754033893665.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754034088238.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754034380548.webp?blog-image?
+        - https://image-head.gbfun.cc/相册/1754034089245.webp?blog-image?
