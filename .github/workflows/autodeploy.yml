@@ -47,6 +47,7 @@ jobs:
         run: |
           node link.js
           node link_alive.js
+          node update-status.js
           hexo clean
           hexo bangumi -u
           hexo generate

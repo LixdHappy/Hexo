@@ -1,0 +1,33 @@
+name: UptimeRobot 状态检测
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  check-uptime:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: 运行 UptimeRobot 状态检测脚本
+        run: |
+          node update-status.js
+        env:
+          UPTIMEROBOT_API_KEY: ${{ secrets.UPTIMEROBOT_API_KEY }}
+
+      - name: 提交更新的 status.json
+        run: |
+          git config --global user.name "${{ secrets.GITHUBUSERNAME }}"
+          git config --global user.email "${{ secrets.GITHUBEMAIL }}"
+          git add ./source/status.json
+          git commit -m "🤖 更新监控状态 $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git push

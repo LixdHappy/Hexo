@@ -1,4 +1,4 @@
-#footer-wrap
+#footer-wrap 
   if theme.footer.socialBar.enable
     - let centerImg = theme.footer.socialBar.centerImg ? theme.footer.socialBar.centerImg : theme.avatar.img
     - let leftInfo = theme.footer.socialBar.left
@@ -101,7 +101,7 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
                 target="_blank"
                 rel="noopener external nofollow noreferrer"
                 title="桂ICP备2025067806号-1"
-                anzhiyutip="前往工业和信息化部政务服务平台"
+                tips="前往工业和信息化部政务服务平台"
               ) 桂ICP备2025067806号-1
 
               a.footer-bar-link.allsite_ok(
@@ -109,12 +109,12 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
                 target="_blank"
                 rel="noopener external nofollow noreferrer"
                 id="allsite_status"
-                anzhiyutip="查看我的项目状态"
+                tips="查看我的项目状态"
               )
                 .status-light
-                span 所有业务正常
+                span 状态检测中...
 
-        #footer-type-tips
+      #footer-type-tips
         if theme.footer.footerBar && theme.footer.footerBar.subTitle && theme.footer.footerBar.subTitle.enable
           .js-pjax
             include ./third-party/footerBarSubtitle.pug
@@ -127,7 +127,7 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
             i.anzhiyufont.anzhiyu-icon-creative-commons-by-line
             i.anzhiyufont.anzhiyu-icon-creative-commons-nc-line
             i.anzhiyufont.anzhiyu-icon-creative-commons-nd-line
-        if theme.footer.footerBar.badge.enable  
+        if theme.footer.footerBar.badge.enable
           a.footer-bar-link.badge(
             href=theme.footer.footerBar.badge.link
             title=theme.footer.footerBar.badge.title
@@ -141,47 +141,55 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
             )
 
 script.
-  const apiKey = "ur3002929-93298effac0a3e50041f96f7"; // ← 替换为你自己的 API Key
-  const monitorIDs = ""; // 可选：指定监控 ID，如 "12345678-23456789"，多个用 - 分隔
-
   function updateStatusLight() {
     const statusEl = document.getElementById("allsite_status");
+    if (!statusEl) return;
+
     const spanText = statusEl.querySelector("span");
+    const statusDot = statusEl.querySelector(".status-light");
 
-    fetch("https://api.uptimerobot.com/v2/getMonitors", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body: `api_key=${apiKey}&format=json&monitors=${monitorIDs}`
-    })
-    .then(response => response.json())
-    .then(data => {
-      const allOk = data.monitors.every(m => m.status === 2);
+    fetch("/source/status.json?t=" + Date.now())
+      .then(response => response.json())
+      .then(data => {
+        const monitors = data.monitors || [];
+        const total = monitors.length;
+        const downCount = monitors.filter(m => m.status !== 2).length;
 
-      if (allOk) {
-        statusEl.classList.remove("allsite_error");
-        statusEl.classList.add("allsite_ok");
-        spanText.innerText = "所有业务正常";
-      } else {
+        let statusLabel = "";
+        let className = "";
+
+        if (downCount === 0) {
+          statusLabel = "所有业务正常";
+          className = "allsite_ok";
+        } else if (downCount < total) {
+          statusLabel = "部分业务异常";
+          className = "allsite_error";
+        } else {
+          statusLabel = "全部业务异常";
+          className = "allsite_error";
+        }
+
+        // 更新显示文字
+        if (spanText) spanText.innerText = statusLabel;
+
+        // 更新 title 显示更新时间
+        const now = new Date().toLocaleString("zh-CN");
+        statusEl.setAttribute("title", "最新更新时间: " + now);
+
+        // 替换 class
+        statusEl.classList.remove("allsite_ok", "allsite_error");
+        statusEl.classList.add(className);
+      })
+      .catch(error => {
+        console.error("状态检测失败:", error);
+        if (spanText) spanText.innerText = "状态检测失败";
+        statusEl.setAttribute("title", "状态检测失败，请稍后重试");
         statusEl.classList.remove("allsite_ok");
         statusEl.classList.add("allsite_error");
-        spanText.innerText = "部分业务异常";
-      }
-    })
-    .catch(error => {
-      console.error("状态检测失败:", error);
-      statusEl.classList.remove("allsite_ok");
-      statusEl.classList.add("allsite_error");
-      spanText.innerText = "状态检测失败";
-    })
-    .finally(() => {
-      const now = new Date().toLocaleString("zh-CN");
-      statusEl.setAttribute("title", `最新更新时间: ${now}`);
-    });
+      });
   }
 
   document.addEventListener("DOMContentLoaded", () => {
     updateStatusLight();
-    setInterval(updateStatusLight, 300000); // 每10分钟更新
+    setInterval(updateStatusLight, 1800000); // 每 30 分钟自动检测
   });

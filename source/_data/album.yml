@@ -63,6 +63,7 @@
         - https://image-head.gbfun.cc/相册/1754023623684.webp?blog-image?
         - https://image-head.gbfun.cc/相册/1754023622967.webp?blog-image?
         - https://image-head.gbfun.cc/相册/1754023620849.webp?blog-image?
+        -
 
 - class_name: 我的日常
   path_name: /dailyPhoto
@@ -73,7 +74,7 @@
   top_background: https://image-head.gbfun.cc/相册/1754029311233.jpg?blog-image?
   cover: https://image-head.gbfun.cc/相册/1754029357189.gif?blog-image?
   album_list:
-    - date: 2025-7-31
+    - date: 2025-07-31
       content: 感谢支付宝送来的奖牌(确实好看(✧∀✧)
       address: 广西南宁
       from: 再接再厉
@@ -114,6 +115,7 @@
   album_list:
     - image:
         - https://image-head.gbfun.cc/相册/1754025489813.jpg?blog-image?
+        - https://image-head.gbfun.cc/相册/1754025489787.jpg?blog-image?
 
 - class_name: 精修图片
   path_name: /pyq
@@ -129,11 +131,43 @@
       address: 广西南宁
       image:
         - https://image-head.gbfun.cc/相册/1754033895215.webp?blog-image?
+    - date: 2025-03-29
+      content: 南宁故游
+      address: 广西南宁
+      image:
         - https://image-head.gbfun.cc/相册/1754033895761.webp?blog-image?
+    - date: 2025-03-29
+      content: 南宁故游
+      address: 广西南宁
+      image:
         - https://image-head.gbfun.cc/相册/1754033894812.webp?blog-image?
+    - date: 2025-03-29
+      content: 南宁故游
+      address: 广西南宁
+      image:
         - https://image-head.gbfun.cc/相册/1754033894474.webp?blog-image?
+    - date: 2025-03-29
+      content: 南宁故游
+      address: 广西南宁
+      image:
         - https://image-head.gbfun.cc/相册/1754033894061.webp?blog-image?
+    - date: 2025-03-29
+      content: 南宁故游
+      address: 广西南宁
+      image:
         - https://image-head.gbfun.cc/相册/1754033893665.webp?blog-image?
+    - date: 2025-03-29
+      content: 南宁故游
+      address: 广西南宁
+      image:
         - https://image-head.gbfun.cc/相册/1754034088238.webp?blog-image?
+    - date: 2025-03-29
+      content: 南宁故游
+      address: 广西南宁
+      image:
         - https://image-head.gbfun.cc/相册/1754034380548.webp?blog-image?
+    - date: 2025-03-29
+      content: 南宁故游
+      address: 广西南宁
+      image:
         - https://image-head.gbfun.cc/相册/1754034089245.webp?blog-image?
