@@ -47,6 +47,7 @@ jobs:
         env:
           UPTIMEROBOT_API_KEY: ${{ secrets.UPTIMEROBOT_API_KEY }}
         run: |
+          echo "检查密钥是否注入: ${{ secrets.UPTIMEROBOT_API_KEY }}"
           node update-status.js
 
       - name: 生成静态文件
