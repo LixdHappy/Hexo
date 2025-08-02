@@ -1,6 +1,8 @@
 const fs = require('fs');
 const https = require('https');
 
+console.log("读取到的 UPTIMEROBOT_API_KEY:", process.env.UPTIMEROBOT_API_KEY ? "存在" : "不存在");
+
 const apiKey = process.env.UPTIMEROBOT_API_KEY;
 if (!apiKey) {
   console.error('❌ 未设置 UPTIMEROBOT_API_KEY');
