@@ -24,10 +24,13 @@ jobs:
         env:
           UPTIMEROBOT_API_KEY: ${{ secrets.UPTIMEROBOT_API_KEY }}
 
+      - name: 修改文件时间戳确保 git 识别到变化
+        run: touch ./source/status.json
+
       - name: 提交更新的 status.json
         run: |
           git config --global user.name "${{ secrets.GITHUBUSERNAME }}"
           git config --global user.email "${{ secrets.GITHUBEMAIL }}"
           git add ./source/status.json
-          git commit -m "🤖 更新监控状态 $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git commit -m "🤖 更新监控状态 $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
           git push --force
