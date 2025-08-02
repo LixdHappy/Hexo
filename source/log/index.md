@@ -14,6 +14,12 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 08-02 -->
+
+优化 页脚站点状态检测 的逻辑
+
+<!-- endtimeline -->
+
 <!-- timeline 08-01 -->
 
 等待网安备案,优化`相册集`页面
