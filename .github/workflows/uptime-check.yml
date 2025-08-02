@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '*/30 * * * *'
   workflow_dispatch:
+        
+env:
+  TZ: Asia/Shanghai    
 
 jobs:
   check-uptime:
@@ -11,10 +14,10 @@ jobs:
 
     steps:
       - name: 检出代码
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 安装 Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
@@ -32,5 +35,5 @@ jobs:
           git config --global user.name "${{ secrets.GITHUBUSERNAME }}"
           git config --global user.email "${{ secrets.GITHUBEMAIL }}"
           git add ./source/status.json
-          git commit -m "🤖 更新监控状态 $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git commit -m "🤖 更新监控状态 $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
           git push --force

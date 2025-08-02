@@ -30,8 +30,13 @@ const req = https.request(options, res => {
   res.on('end', () => {
     try {
       const parsed = JSON.parse(rawData);
+
+      // ✅ 添加更新时间字段
+      parsed.updated_at = new Date().toISOString(); // ISO 格式时间，例如 2025-08-03T01:02:03.456Z
+
       const outputPath = './source';
       if (!fs.existsSync(outputPath)) fs.mkdirSync(outputPath, { recursive: true });
+
       fs.writeFileSync(`${outputPath}/status.json`, JSON.stringify(parsed, null, 2));
       console.log('✅ 已生成 status.json 至 source/');
     } catch (e) {
