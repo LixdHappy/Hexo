@@ -42,6 +42,12 @@ jobs:
         run: |
           npm install gulp-cli -g
           npm install --save
+      
+      - name: 运行状态更新脚本
+        env:
+          UPTIMEROBOT_API_KEY: ${{ secrets.UPTIMEROBOT_API_KEY }}
+        run: |
+          node update-status.js
 
       - name: 生成静态文件
         run: |
