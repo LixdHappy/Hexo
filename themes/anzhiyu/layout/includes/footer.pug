@@ -148,7 +148,7 @@ script.
     const spanText = statusEl.querySelector("span");
     const statusDot = statusEl.querySelector(".status-light");
 
-    fetch("/source/status.json?t=" + Date.now())
+    fetch("/status.json?t=" + Date.now())
       .then(response => response.json())
       .then(data => {
         const monitors = data.monitors || [];

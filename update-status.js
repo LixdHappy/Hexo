@@ -32,7 +32,7 @@ const req = https.request(options, res => {
       const parsed = JSON.parse(rawData);
       const outputPath = './source';
       if (!fs.existsSync(outputPath)) fs.mkdirSync(outputPath, { recursive: true });
-      fs.writeFileSync(`${outputPath}/status.json`, JSON.stringify(parsed, null, 2));
+      fs.writeFileSync('status.json', JSON.stringify(output, null, 2));
       console.log('✅ 已生成 status.json 至 source/');
     } catch (e) {
       console.error('❌ 解析响应失败:', e.message);
