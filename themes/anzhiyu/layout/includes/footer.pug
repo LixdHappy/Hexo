@@ -65,80 +65,80 @@
           img(src=item.shields alt=item.message)
 
 if theme.footer.footerBar && theme.footer.footerBar.enable
-  #footer-bar
-    .footer-bar-links
-      .footer-bar-left
-        #footer-bar-tips
-          if theme.footer.owner.enable
-            - var nowYear = new Date().getFullYear()
-            - let authorLink = theme.footer.footerBar.authorLink ? theme.footer.footerBar.authorLink : config.url
-            if theme.footer.owner.since && theme.footer.owner.since != nowYear
-              .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} By `
-                a.footer-bar-link(href=url_for(authorLink) target="_blank")
-                  img.author-avatar(src="/img/博客静态头像.jpg" alt="avatar")
-                  = config.author
-            else
-              .copyright!= `&copy;${nowYear} By `
-                a.footer-bar-link(href=url_for(authorLink) target="_blank")
-                  img.author-avatar(src="/img/博客静态头像.jpg" alt="avatar")
-                  = config.author
-          if theme.footer.footerBar.showBeian
-            .beian-group
-              a.footer-bar-link(
-                href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011402054421"
-                target="_blank"
-                rel="noopener external nofollow noreferrer"
-                title="京公网安备xxxxxxx号"
-                anzhiyutip="前往全国互联网安全管理服务平台"
-              )
-                img.beian-icon(
-                  src="https://p.zhheo.com/VPiMHH24891181731917988329.png!cover"
-                  alt="京公网安备xxxxxxxx号"
+    #footer-bar
+      .footer-bar-links
+        .footer-bar-left
+          #footer-bar-tips
+            if theme.footer.owner.enable
+              - var nowYear = new Date().getFullYear()
+              - let authorLink = theme.footer.footerBar.authorLink ? theme.footer.footerBar.authorLink : config.url
+              if theme.footer.owner.since && theme.footer.owner.since != nowYear
+                .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} By `
+                  a.footer-bar-link(href=url_for(authorLink) target="_blank")
+                    img.author-avatar(src="/img/博客静态头像.jpg" alt="avatar")
+                    = config.author
+              else
+                .copyright!= `&copy;${nowYear} By `
+                  a.footer-bar-link(href=url_for(authorLink) target="_blank")
+                    img.author-avatar(src="/img/博客静态头像.jpg" alt="avatar")
+                    = config.author
+            if theme.footer.footerBar.showBeian
+              .beian-group
+                a.footer-bar-link(
+                  href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011402054421"
+                  target="_blank"
+                  rel="noopener external nofollow noreferrer"
+                  title="京公网安备xxxxxxx号"
+                  anzhiyutip="前往全国互联网安全管理服务平台"
                 )
-                span 京公网安备xxxxxxxx号
-              a.footer-bar-link(
-                href="https://beian.miit.gov.cn/#/Integrated/index"
-                target="_blank"
-                rel="noopener external nofollow noreferrer"
-                title="桂ICP备2025067806号-1"
-                tips="前往工业和信息化部政务服务平台"
-              ) 桂ICP备2025067806号-1
+                  img.beian-icon(
+                    src="https://p.zhheo.com/VPiMHH24891181731917988329.png!cover"
+                    alt="京公网安备xxxxxxxx号"
+                  )
+                  span 京公网安备xxxxxxxx号
+                a.footer-bar-link(
+                  href="https://beian.miit.gov.cn/#/Integrated/index"
+                  target="_blank"
+                  rel="noopener external nofollow noreferrer"
+                  title="桂ICP备2025067806号-1"
+                  tips="前往工业和信息化部政务服务平台"
+                ) 桂ICP备2025067806号-1
 
-              a.footer-bar-link.allsite_ok(
-                href="https://status.gbfun.cc/"
-                target="_blank"
-                rel="noopener external nofollow noreferrer"
-                id="allsite_status"
-                tips="查看我的项目状态"
-              )
-                .status-light
-                span 状态检测中...
+                a.footer-bar-link.allsite_ok(
+                  href="https://status.gbfun.cc/"
+                  target="_blank"
+                  rel="noopener external nofollow noreferrer"
+                  id="allsite_status"
+                  tips="查看我的项目状态"
+                )
+                  .status-light
+                  span 状态检测中...
 
-      #footer-type-tips
-        if theme.footer.footerBar && theme.footer.footerBar.subTitle && theme.footer.footerBar.subTitle.enable
-          .js-pjax
-            include ./third-party/footerBarSubtitle.pug
-      .footer-bar-right
-        each item in theme.footer.footerBar.linkList
-          a.footer-bar-link(href=url_for(item.link) title=item.text)=item.text
-        if theme.footer.footerBar.cc.enable
-          a.footer-bar-link.cc(href=url_for(theme.footer.footerBar.cc.link) title="cc协议")
-            i.anzhiyufont.anzhiyu-icon-copyright-line
-            i.anzhiyufont.anzhiyu-icon-creative-commons-by-line
-            i.anzhiyufont.anzhiyu-icon-creative-commons-nc-line
-            i.anzhiyufont.anzhiyu-icon-creative-commons-nd-line
-        if theme.footer.footerBar.badge.enable
-          a.footer-bar-link.badge(
-            href=theme.footer.footerBar.badge.link
-            title=theme.footer.footerBar.badge.title
-            target="_blank"
-            style="margin-left:8px"
-          )
-            img(
-              src=`https://boringbay.com/api/badge/${theme.footer.footerBar.badge.domain}`
-              height=theme.footer.footerBar.badge.height
-              alt=theme.footer.footerBar.badge.title
+        #footer-type-tips
+          if theme.footer.footerBar && theme.footer.footerBar.subTitle && theme.footer.footerBar.subTitle.enable
+            .js-pjax
+              include ./third-party/footerBarSubtitle.pug
+        .footer-bar-right
+          each item in theme.footer.footerBar.linkList
+            a.footer-bar-link(href=url_for(item.link) title=item.text)=item.text
+          if theme.footer.footerBar.cc.enable
+            a.footer-bar-link.cc(href=url_for(theme.footer.footerBar.cc.link) title="cc协议")
+              i.anzhiyufont.anzhiyu-icon-copyright-line
+              i.anzhiyufont.anzhiyu-icon-creative-commons-by-line
+              i.anzhiyufont.anzhiyu-icon-creative-commons-nc-line
+              i.anzhiyufont.anzhiyu-icon-creative-commons-nd-line
+          if theme.footer.footerBar.badge.enable
+            a.footer-bar-link.badge(
+              href=theme.footer.footerBar.badge.link
+              title=theme.footer.footerBar.badge.title
+              target="_blank"
+              style="margin-left:8px"
             )
+              img(
+                src=`https://boringbay.com/api/badge/${theme.footer.footerBar.badge.domain}`
+                height=theme.footer.footerBar.badge.height
+                alt=theme.footer.footerBar.badge.title
+              )
 
 script.
   function updateStatusLight() {
@@ -169,12 +169,16 @@ script.
           className = "allsite_error";
         }
 
-        // 更新显示文字
+        // 更新状态文本
         if (spanText) spanText.innerText = statusLabel;
 
-        // 更新 title 显示更新时间
-        const now = new Date().toLocaleString("zh-CN");
-        statusEl.setAttribute("title", "最新更新时间: " + now);
+        // 使用 status.json 中的 updated_at 字段
+        if (data.updated_at) {
+          statusEl.setAttribute("title", "最新更新时间: " + data.updated_at);
+        } else {
+          const now = new Date().toLocaleString("zh-CN");
+          statusEl.setAttribute("title", "最新更新时间: " + now);
+        }
 
         // 替换 class
         statusEl.classList.remove("allsite_ok", "allsite_error");
@@ -187,6 +191,7 @@ script.
         statusEl.classList.remove("allsite_ok");
         statusEl.classList.add("allsite_error");
       });
+
   }
 
   document.addEventListener("DOMContentLoaded", () => {
