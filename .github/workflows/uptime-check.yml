@@ -2,18 +2,19 @@ name: UptimeRobot 状态检测
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '*/30 * * * *'  # 每 30 分钟运行一次
   workflow_dispatch:
-        
+
 env:
   TZ: Asia/Shanghai    
 
 jobs:
   check-uptime:
+    name: 检查 UptimeRobot 并同步状态
     runs-on: ubuntu-latest
 
     steps:
-      - name: 检出代码
+      - name: 检出 Hexo 源码仓库
         uses: actions/checkout@v4
 
       - name: 安装 Node.js
@@ -22,18 +23,41 @@ jobs:
           node-version: '20'
 
       - name: 运行 UptimeRobot 状态检测脚本
-        run: |
-          node update-status.js
+        run: node update-status.js
         env:
           UPTIMEROBOT_API_KEY: ${{ secrets.UPTIMEROBOT_API_KEY }}
 
-      - name: 修改文件时间戳确保 git 识别到变化
-        run: touch ./source/status.json
-
-      - name: 提交更新的 status.json
+      - name: 确保 Hexo 源码仓库记录更新
         run: |
-          git config --global user.name "${{ secrets.GITHUBUSERNAME }}"
-          git config --global user.email "${{ secrets.GITHUBEMAIL }}"
+          touch ./source/status.json
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add ./source/status.json
           git commit -m "🤖 更新监控状态 $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
-          git push --force
+          git push
+
+      - name: 克隆展示页仓库
+        env:
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        run: |
+          git clone https://x-access-token:${PUBLISH_TOKEN}@github.com/LixdHappy/LixdHappy.github.io.git publish-repo
+
+      - name: 复制并推送 status.json 到展示仓库
+        run: |
+          cp ./source/status.json publish-repo/status.json
+          cd publish-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add status.json
+          git commit -m "🤖 同步状态文件 $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git push
+
+  keepalive-workflow:
+    name: Keepalive Workflow
+    if: ${{ always() }}
+    needs: check-uptime
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: liskin/gh-workflow-keepalive@v1

@@ -43,15 +43,29 @@ jobs:
           npm install gulp-cli -g
           npm install --save
 
-      - name: 生成静态文件
+      - name: 生成静态文件（含重试逻辑）
         run: |
-          node link.js
-          node link_alive.js
-          hexo clean
-          hexo bangumi -u
-          hexo generate
-          hexo swpp
-          gulp
+          echo "🔁 开始生成静态文件（最多重试 3 次）"
+          n=0
+          until [ "$n" -ge 3 ]
+          do
+            node link.js && \
+            node link_alive.js && \
+            hexo clean && \
+            hexo bangumi -u && \
+            hexo generate && \
+            hexo swpp && \
+            gulp && break
+
+            n=$((n+1))
+            echo "⚠️ 生成失败，重试第 $n 次..."
+            sleep 5
+          done
+
+          if [ "$n" -ge 3 ]; then
+            echo "❌ 生成静态文件失败 3 次，终止部署"
+            exit 1
+          fi
 
       - name: 部署到 GitHub Pages
         run: |

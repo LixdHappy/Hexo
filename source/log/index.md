@@ -14,6 +14,20 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 08-03 -->
+
+自动部署逻辑 完善
+
+{% folding yellow, 优化项目 %}
+
+- **每 12 小时自动部署一次**（定时任务）
+
+- **加入保活逻辑**（`gh-workflow-keepalive`）
+
+- **部署失败自动重试 3 次**
+
+{% endfolding %}
+
 <!-- timeline 08-02 -->
 
 优化 页脚站点状态检测 的逻辑
