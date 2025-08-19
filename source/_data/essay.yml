@@ -8,28 +8,37 @@
   home_essay: true
   top_background: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E7%A2%B0%E4%B8%8A%E5%BD%A9%E8%99%B9.jpg
   essay_list:
-    - content: 拜托,备案期间我也闲着写博客滴,更值得一提的是自己第一次拍星空的成就感很足!!!
-      date: 2025-7-29-23:59
+    - content: 逆天这一块自古以来就有的
+      date: 2025-08-19 21:45
       address: 南宁
-      link: 
+      image:
+        - https://image-head.gbfun.cc///imgIMG_1.webp?blog-image?&imageSlim
+        - https://image-head.gbfun.cc///imgIMG_2.webp?blog-image?&imageSlim
+        - https://image-head.gbfun.cc///imgIMG_3.webp?blog-image?&imageSlim
+        - https://image-head.gbfun.cc///imgIMG_4.webp?blog-image?&imageSlim
+
+    - content: 拜托,备案期间我也闲着写博客滴,更值得一提的是自己第一次拍星空的成就感很足!!!
+      date: 2025-7-29 23:59
+      address: 南宁
+      link:
       image:
         - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img7.28_%E6%98%9F%E7%A9%BA%E5%9B%BE_%E4%BF%AE.webp
         - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E6%98%9F%E5%BA%A7%E6%B3%A8%E9%87%8A_%E7%BF%BB%E8%AF%91.webp?blog-image?
 
     - content: 丢,下午流鼻涕,晚上发烧,绝了,还是大热天.
-      date: 2025-7-6-22:14
+      date: 2025-7-6 22:14
       address: 南宁
 
     - content: 好家伙,没想到12306还可以使用积分换车票的(貌似记得是消费够多少才能用来着)
-      date: 2025-7-6-17:49
+      date: 2025-7-6 17:49
       address: 南宁
 
     - content: 问就是在干土木,忙里偷闲修网站🫡
-      date: 2025-7-4-21:16
+      date: 2025-7-4 21:16
       address: 南宁
 
     - content: 即刻短文朋友圈移动样式上线了, 快来体验吧~
-      date: 2025-6-29-09:43
+      date: 2025-6-29 09:43
       address: 南宁
       from: LixdHappy
       image:
@@ -45,7 +54,7 @@
         - https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgai%E8%AF%B4%E8%AF%B42.png
 
     - content: 新布置的主题,累成狗了QAQ 修改一处没头绪就修改第二处,结果第二处修改不出来,第一处也修不出来,看来还是得好好学习一下语法
-      date: 2025-6-21-02:00
+      date: 2025-6-21 02:00
       address: 南宁
       from: LixdHappy
       image:

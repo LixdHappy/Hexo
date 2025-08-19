@@ -1270,7 +1270,7 @@ greetingBox:
 
 # 文章顶部ai摘要
 post_head_ai_description:
-  enable: true
+  enable: false
   gptName: GB
   mode: Hexo-AI-Summary-LiuShen # 默认模式 可选值: tianli/local/Hexo-AI-Summary-LiuShen
   switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local/Hexo-AI-Summary-LiuShen
@@ -1279,6 +1279,12 @@ post_head_ai_description:
   basicWordCount: 1000 # 最低获取字符数, 最小1000, 最大1999
   key: xxxx
   Referer: https://xx.xx/
+
+ai_summary:
+  enable: true
+  title: GBのAI摘要
+  loadingText: AI正在绞尽脑汁想思路ING···
+  modelName: DeepSeek-Chat
 
 # 快捷键配置
 shortcutKey:
@@ -1356,6 +1362,7 @@ inject:
     - <script async src="/js/SmoothScroll.js"></script> # 引入页面平滑滚动
     - <script src="/js/rightside.js"></script> # 引入右侧栏动画优化
     - <script src="/js/message.js"></script> # 引入右下角悬浮球js
+    - <script src="/js/ai.js"></script> # 引入AI概括
     #- <script async src="//at.alicdn.com/t/c/font_4978790_570l599x1x7.js"></script> # 引入iconfont图标
 
 # CDN
