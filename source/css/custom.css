@@ -1521,3 +1521,51 @@ img.beian-icon {
     display: inline-block;
     margin: 2px 0 0 !important;
 }
+
+
+/* =======友链页面延迟显示样式定义======= */
+.flink-list-item {
+    position: relative;
+    /* 给状态条定位的锚点 */
+}
+
+.status-tag {
+    position: absolute;
+    bottom: 0px;
+    /* 贴底 */
+    right: 0px;
+    /* 贴右 */
+    padding: 0px 3px;
+    border-radius: 6px 0px 12px 0px;
+    /* 右下角的小角标 */
+    font-size: 10px;
+    color: white;
+    font-weight: 700;
+    transition: font-size 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.flink-list-item:hover .status-tag {
+    font-size: 0px;
+    opacity: 0;
+}
+
+/* 固态颜色 */
+.status-tag-green {
+    background-color: #005E00;
+    /* 绿色: 快 */
+}
+
+.status-tag-light-yellow {
+    background-color: #FED101;
+    /* 浅黄: 中 */
+}
+
+.status-tag-dark-yellow {
+    background-color: #F0B606;
+    /* 深黄: 慢 */
+}
+
+.status-tag-red {
+    background-color: #B90000;
+    /* 红色: 超时/不可达 */
+}

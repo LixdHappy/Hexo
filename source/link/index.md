@@ -5,7 +5,7 @@ type: "link"
 comments: true
 ---
 ## 我的友链
-{% tabs  %}
+{% tabs  mylink %}
 <!-- tab 🙋anzhiyu -->
 ```yaml
 - name: GB的记事簿
@@ -258,3 +258,5 @@ https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/anheyu.com/https:/
     overflow: hidden;
   }
 </style>
+
+
