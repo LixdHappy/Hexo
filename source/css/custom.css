@@ -1316,3 +1316,208 @@ img.beian-icon {
         min-height: 18px;
     }
 }
+
+/* 友人帐页面复选框定义 */
+:root {
+    --checkbox-blue: #2196f3;
+    --checkbox-red: #fe5f58;
+    --checkbox-green: #3dc550;
+    --checkbox-yellow: #ffbd2b;
+    --checkbox-cyan: #1bcdfc;
+}
+
+/* 基础布局 */
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input {
+    appearance: none;
+    position: relative;
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 2px;
+    border: 2px solid var(--checkbox-blue);
+    flex-shrink: 0;
+    outline: 0;
+    transition: all 0.15s ease-out;
+    pointer-events: none;
+}
+
+/* 复选框钩子线条 */
+.checkbox input[type=checkbox]::before,
+.checkbox input[type=checkbox]::after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+/* 未选中状态 */
+.checkbox input[type=checkbox]::before {
+    left: 1px;
+    top: 5px;
+    width: 0;
+    height: 2px;
+    transform: rotate(45deg);
+}
+
+.checkbox input[type=checkbox]::after {
+    right: 7px;
+    bottom: 3px;
+    width: 2px;
+    height: 0;
+    transform: rotate(40deg);
+    transition-delay: 0.25s;
+}
+
+/* 选中状态 */
+.checkbox input[type=checkbox]:checked {
+    background: var(--checkbox-blue);
+}
+
+.checkbox input[type=checkbox]:checked::before {
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 2px;
+}
+
+.checkbox input[type=checkbox]:checked::after {
+    right: 3px;
+    bottom: 1px;
+    width: 2px;
+    height: 10px;
+}
+
+/* 变体：minus */
+.checkbox.minus input[type=checkbox]::before,
+.checkbox.minus input[type=checkbox]::after {
+    transform: rotate(0);
+    left: 1px;
+    top: 5px;
+    width: 0;
+    height: 2px;
+}
+
+.checkbox.minus input[type=checkbox]:checked::before,
+.checkbox.minus input[type=checkbox]:checked::after {
+    width: 10px;
+    height: 2px;
+}
+
+/* 变体：plus */
+.checkbox.plus input[type=checkbox]::before {
+    left: 1px;
+    top: 5px;
+}
+
+.checkbox.plus input[type=checkbox]::after {
+    left: 5px;
+    top: 1px;
+    width: 2px;
+    height: 0;
+}
+
+.checkbox.plus input[type=checkbox]:checked::before {
+    width: 10px;
+    height: 2px;
+}
+
+.checkbox.plus input[type=checkbox]:checked::after {
+    height: 10px;
+}
+
+/* 变体：times */
+.checkbox.times input[type=checkbox]::before {
+    transform: rotate(45deg);
+    left: 3px;
+    top: 1px;
+}
+
+.checkbox.times input[type=checkbox]::after {
+    transform: rotate(135deg);
+    right: 3px;
+    top: 1px;
+}
+
+.checkbox.times input[type=checkbox]:checked::before {
+    left: 1px;
+    top: 5px;
+    width: 10px;
+    height: 2px;
+}
+
+.checkbox.times input[type=checkbox]:checked::after {
+    right: 1px;
+    top: 5px;
+    width: 10px;
+    height: 2px;
+}
+
+/* 单选框 */
+.checkbox input[type=radio] {
+    border-radius: 50%;
+}
+
+.checkbox input[type=radio]::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 2px;
+    transform: scale(0);
+    transition: transform 0.25s ease-out;
+}
+
+.checkbox input[type=radio]:checked::before {
+    transform: scale(1);
+    background: var(--checkbox-blue);
+}
+
+/* 颜色主题 */
+.checkbox.red input {
+    border-color: var(--checkbox-red);
+}
+
+.checkbox.red input[type=checkbox]:checked,
+.checkbox.red input[type=radio]:checked::before {
+    background: var(--checkbox-red);
+}
+
+.checkbox.green input {
+    border-color: var(--checkbox-green);
+}
+
+.checkbox.green input[type=checkbox]:checked,
+.checkbox.green input[type=radio]:checked::before {
+    background: var(--checkbox-green);
+}
+
+.checkbox.yellow input {
+    border-color: var(--checkbox-yellow);
+}
+
+.checkbox.yellow input[type=checkbox]:checked,
+.checkbox.yellow input[type=radio]:checked::before {
+    background: var(--checkbox-yellow);
+}
+
+.checkbox.cyan input {
+    border-color: var(--checkbox-cyan);
+}
+
+.checkbox.cyan input[type=checkbox]:checked,
+.checkbox.cyan input[type=radio]:checked::before {
+    background: var(--checkbox-cyan);
+}
+
+/* 标签文字 */
+.checkbox p {
+    display: inline-block;
+    margin: 2px 0 0 !important;
+}

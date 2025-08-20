@@ -14,6 +14,14 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 08-20 -->
+
+迫于结识各位大佬的现实需求,将简陋的友情页面进行了一番美化与修正。
+
+所以本次优化的是 [友情链接](https://blog.gbfun.cc/link/)的展示样式
+
+<!-- endtimeline -->
+
 <!-- timeline 08-19 -->
 
 完善 AI概述 的样式定义以及生成逻辑
@@ -555,12 +563,13 @@ Twikoo评论区QQ昵称获取临时方案
 {% checkbox times red checked,  隐私协议页面缺少读取用户信息预览 07/04加入 %}
 {% checkbox times red checked,  ~~微信OA页跳转不流畅~~ 07/04加入 %}
 {% checkbox times red checked,  ~~站点检测dns问题~~ 07/04加入 %}
-{% checkbox times red checked,  友人帐页面添加友链过于简陋,以及勾选弹框闪现 07/04加入 %}
+{% checkbox times red checked,  ~~友人帐页面添加友链过于简陋,以及勾选弹框闪现 ~~07/04加入 %}
 {% checkbox times red checked,  ~~log界面错位~~ 07/04加入 %}
 {% endfolding %}
 <!-- endtimeline -->
 
 <!-- timeline 06-21 -->
+
 - 添加 总统计页面
 - 修改 字体为 寒蝉全圆体
 <!-- endtimeline -->

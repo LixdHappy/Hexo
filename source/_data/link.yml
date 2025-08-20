@@ -14,7 +14,7 @@
 
 - class_name: 推荐 # 分类名称
   class_desc: 参与本站开发、提供设计灵感的优秀博主,综合排序
-  flink_style: flexcard
+  flink_style: telescopic
   hundredSuffix: ""
   link_list:
     - name: Hexo
@@ -30,7 +30,7 @@
       descr: 分享设计与科技生活
       avatar: https://img.zhheo.com/i/67d8fa75943e4.webp
       siteshot: https://img.zhheo.com/i/67d8fb3c51399.webp
-      tag: 生活
+      tag: 主题来源
       color: vip
 
     - name: Efu # 友链名称
@@ -38,7 +38,7 @@
       descr: An Open Source worker. # 友链简介
       avatar: https://s3.qjqq.cn/47/660a7ece07609.webp!color # 显示头像
       siteshot: https://s3.qjqq.cn/47/660a7ece07609.webp!color # 如果是card模式下，将显示主页截图
-      tag: 主题作者
+      tag: 主题灵感
       color: vip
 
     - name: 安知鱼
@@ -46,12 +46,12 @@
       descr: 生活明朗，万物可爱
       avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
       siteshot: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg
-      tag: 博主
+      tag: 主题作者
       color: vip
 
-    - name: GB_blog
+    - name: GB的记事簿
       link: https://blog.gbfun.cc/
-      descr: 追求美,探索美,创造美.
+      descr: 热爱生活.
       avatar: https://cdn.jsdelivr.net/gh/LixdHappy/Needaicon/博客头像.gif
       siteshot:
       tag: 生活
@@ -87,8 +87,8 @@
       siteshot: https://blog.liushen.fun/info/siteshot.jpg
       atom(options): https://blog.liushen.fun/atom.xml
 
-- class_name: 技术型 # 分类名称
-  class_desc: 技术知识为主的博客
+- class_name: 小伙伴们 # 分类名称
+  class_desc: 迷失了方向可以看看他们
   flink_style: anzhiyu
   hundredSuffix: ""
   link_list:
