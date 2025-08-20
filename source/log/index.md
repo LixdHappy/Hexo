@@ -14,6 +14,12 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 08-21 -->
+
+分类需要加密的文章,并归类为日记~~(实际也不是~~,现在具有公示期的文章将规划为十天后进行加密处理
+
+<!-- endtimeline -->
+
 <!-- timeline 08-20 -->
 
 迫于结识各位大佬的现实需求,将简陋的友情页面进行了一番美化与修正。
@@ -549,6 +555,7 @@ Twikoo评论区QQ昵称获取临时方案
 收集目前为止博客 现有的Bug
 {% folding cyan open, 目前BUG收集 %}
 
+{% checkbox times red checked,  页脚备案组可能会因为Pjax的页面切换导致一直显示加载中 08/21加入 %}
 {% checkbox times red checked,  ~~友链页自己的文章无法跳转~~ %}
 {% checkbox times red checked,  ~~搜索无法点开~~ %}
 {% checkbox times red checked,  侧边栏欢迎卡片时间不够细化,凌晨认定为早上不够符合认知  %}

@@ -17,6 +17,7 @@
     "hexo-abbrlink": "^2.2.1",
     "hexo-ai-summary-liushen": "^1.2.1",
     "hexo-bilibili-bangumi": "^2.0.0",
+    "hexo-blog-encrypt": "^3.1.9",
     "hexo-browsersync": "^0.3.0",
     "hexo-butterfly-envelope": "^1.0.15",
     "hexo-cdn-purge": "^1.0.1",
