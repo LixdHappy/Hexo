@@ -16,11 +16,11 @@ top_img: false
 
 <!-- timeline 08-21 -->
 
-分类需要加密的文章,并归类为日记~~(实际也不是~~,现在具有公示期的文章将规划为十天后进行加密处理
+- 分类需要加密的文章,并归类为日记~~(实际也不是~~,现在具有公示期的文章将规划为十天后进行加密处理
+
+- RSS页面最终美化
 
 {% note success simple %}fix `修复 加密插件与swpp的递归循环问题`{% endnote %}
-
-{% note success simple %}fix `修复 订阅页链接跳转问题`{% endnote %}
 
 <!-- endtimeline -->
 

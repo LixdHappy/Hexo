@@ -71,7 +71,7 @@
             background-color: var(--bg-color);
             min-height: 100vh;
             -webkit-font-smoothing: antialiased;
-            background-image: url('https://bing.liushen.fun/daily.webp');
+            background-image: url('https://bing.gbfun.cc/daily.webp');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;

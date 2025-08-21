@@ -496,7 +496,7 @@ footer:
         message: 本站使用AnZhiYu主题
       - link: https://cloud.tencent.com/product/cdn
         shields: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgtencentcloud.svg
-        message: 本站使用腾讯云为静态资源提供CDN加速
+        message: 本站使用腾讯云Edge One为静态资源提供CDN加速
       - link: https://vercel.com/
         shields: https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel
         message: 本站默认线路托管于Vercel
