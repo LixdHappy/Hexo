@@ -13,8 +13,11 @@ function addStatusTagsWithCache(jsonUrl) {
         const cards = document.querySelectorAll('.flink-list-item');
 
         if (!cards.length) {
-            console.warn("⚠️ 没有找到 .flink-list-item，延迟 500ms 再试一次...");
-            setTimeout(() => applyStatusTags(data), 500);
+            // 不在 /link/ 页面时不再提示
+            if (location.pathname.includes('/link/')) {
+                // 只在 link 页面才重试
+                setTimeout(() => applyStatusTags(data), 500);
+            }
             return;
         }
 
@@ -65,7 +68,9 @@ function addStatusTagsWithCache(jsonUrl) {
             .catch(error => console.error('❌ 获取 result.json 出错:', error));
     }
 
-    // 先用缓存
+    // 只在 /link/ 页面执行
+    if (!location.pathname.includes('/link/')) return;
+
     const cachedData = localStorage.getItem(cacheKey);
     if (cachedData) {
         const { data, timestamp } = JSON.parse(cachedData);
@@ -74,18 +79,15 @@ function addStatusTagsWithCache(jsonUrl) {
         }
     }
 
-    // 再拉最新
     fetchDataAndUpdateUI();
 }
 
-// ========= 🚀 入口 =========
-
-// 1. 首次加载
+// 页面加载时执行
 document.addEventListener("DOMContentLoaded", () => {
     addStatusTagsWithCache('https://fca.gbfun.cc/result.json');
 });
 
-// 2. 适配 anzhiyu 的 PJAX 页面切换
+// 适配 PJAX 页面切换
 document.addEventListener("pjax:complete", () => {
     addStatusTagsWithCache('https://fca.gbfun.cc/result.json');
 });
