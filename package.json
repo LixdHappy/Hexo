@@ -41,7 +41,7 @@
     "hexo-theme-landscape": "^1.0.0",
     "hexo-wordcount-fomal": "^1.0.0",
     "node-fetch": "^3.3.2",
-    "p-limit": "^7.0.0",
+    "p-limit": "^7.1.0",
     "swpp-backends": "^3.0.0-alpha.906",
     "yamljs": "^0.3.0"
   },
