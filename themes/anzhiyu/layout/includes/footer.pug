@@ -146,7 +146,6 @@ script.
     if (!statusEl) return;
 
     const spanText = statusEl.querySelector("span");
-    const statusDot = statusEl.querySelector(".status-light");
 
     fetch("/status.json?t=" + Date.now())
       .then(response => response.json())
@@ -191,10 +190,15 @@ script.
         statusEl.classList.remove("allsite_ok");
         statusEl.classList.add("allsite_error");
       });
-
   }
 
+  // 首次加载
   document.addEventListener("DOMContentLoaded", () => {
     updateStatusLight();
     setInterval(updateStatusLight, 1800000); // 每 30 分钟自动检测
+  });
+
+  // 兼容 PJAX：页面切换后重新执行
+  document.addEventListener("pjax:complete", () => {
+    updateStatusLight();
   });
