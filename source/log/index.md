@@ -18,6 +18,8 @@ top_img: false
 
 分类需要加密的文章,并归类为日记~~(实际也不是~~,现在具有公示期的文章将规划为十天后进行加密处理
 
+{% note success simple %}fix `修复 加密插件与swpp的递归循环问题`{% endnote %}
+
 <!-- endtimeline -->
 
 <!-- timeline 08-20 -->
