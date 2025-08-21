@@ -57,6 +57,14 @@
       tag: 主题作者
       color: vip
 
+    - name: Mo的记事簿
+      link: https://blog.xiowo.net/
+      avatar: https://blog.xiowo.net/img/avatar.png
+      descr: 万年鸽王，哈哈OvO
+      siteshot: https://bu.dusays.com/2025/06/17/685044d6bca69.png
+      tag: 主题灵感
+      color: vip
+
     - name: GB的记事簿
       link: https://blog.gbfun.cc/
       descr: 热爱生活.
@@ -116,13 +124,6 @@
       avatar: https://p.fiveth.cc/avatar.jpg
       descr: 分享知识与生活
       tag: 博主
-
-    - name: Mo的记事簿
-      link: https://blog.xiowo.net/
-      avatar: https://blog.xiowo.net/img/avatar.png
-      descr: 万年鸽王，哈哈OvO
-      siteshot: https://bu.dusays.com/2025/06/17/685044d6bca69.png
-      tag: 推荐
 
     - name: 尘の个人博客
       link: https://blog.mcxiaochen.top/
