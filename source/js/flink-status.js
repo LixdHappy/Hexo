@@ -11,8 +11,15 @@ function addStatusTagsWithCache(jsonUrl) {
         clearOldTags();
 
         const linkStatus = data.link_status;
+        const cards = document.querySelectorAll('.flink-list-item');
 
-        document.querySelectorAll('.flink-list-item').forEach(card => {
+        if (!cards.length) {
+            console.warn("⚠️ 没有找到 .flink-list-item，延迟 500ms 再试一次...");
+            setTimeout(() => applyStatusTags(data), 500); // 防止 DOM 没渲染好
+            return;
+        }
+
+        cards.forEach(card => {
             const linkEl = card.querySelector('a'); 
             if (!linkEl || !linkEl.href) return;
 
@@ -53,7 +60,7 @@ function addStatusTagsWithCache(jsonUrl) {
     }
 
     function fetchDataAndUpdateUI() {
-        fetch(jsonUrl)
+        fetch(jsonUrl + '?t=' + Date.now()) // 加时间戳避免缓存
             .then(response => response.json())
             .then(data => {
                 applyStatusTags(data);
@@ -68,12 +75,10 @@ function addStatusTagsWithCache(jsonUrl) {
     if (cachedData) {
         const { data, timestamp } = JSON.parse(cachedData);
         if (Date.now() - timestamp < cacheExpirationTime) {
-            applyStatusTags(data);
-            //  同时后台刷新，保证延迟信息能更新
-            fetchDataAndUpdateUI();
-            return;
+            applyStatusTags(data);  
         }
     }
+
     fetchDataAndUpdateUI();
 }
 
