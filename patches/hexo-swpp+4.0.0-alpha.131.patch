@@ -1,0 +1,110 @@
+diff --git a/node_modules/hexo-swpp/dist/index.js b/node_modules/hexo-swpp/dist/index.js
+index ed6e9c8..c7becbc 100644
+--- a/node_modules/hexo-swpp/dist/index.js
++++ b/node_modules/hexo-swpp/dist/index.js
+@@ -291,44 +291,43 @@ function sort(hexo, pluginConfig) {
+     let Locals;
+     if (version.startsWith('7')) {
+         Locals = require(path_1.default.resolve('node_modules/hexo/dist/hexo/locals')).prototype;
+-    }
+-    else {
++    } else {
+         Locals = require(path_1.default.resolve('node_modules/hexo/lib/hexo/locals')).prototype;
+     }
++
+     const compare = (a, b) => {
+         const result = a.length === b.length ? a < b : a.length < b.length;
+         return result ? -1 : 1;
+     };
++
++    const visited = new WeakSet();
++
+     const sort = (obj, value, keyName) => {
+-        if (!obj || !value)
+-            return;
++        if (!obj || !value) return;
++        if (visited.has(obj)) return;
++        visited.add(obj);
++
+         const target = obj.data ?? obj;
+         if ('sort' in target) {
+             if (typeof value === 'boolean') {
+                 target.sort(compare);
+-            }
+-            else {
++            } else {
+                 target.sort((a, b) => compare(a[value], b[value]));
+             }
+-        }
+-        else {
++        } else {
+             const keyList = Object.getOwnPropertyNames(target);
+-            if (keyList.length === 0)
+-                return;
++            if (keyList.length === 0) return;
+             let comparator;
+             if (typeof value === 'boolean') {
+                 comparator = (a, b) => compare(a.value, b.value);
+-            }
+-            else if (typeof target[keyList[0]] == 'string') {
++            } else if (typeof target[keyList[0]] == 'string') {
+                 if (value != 'name') {
+                     return console.warn(`排序时出现问题，某个键（该键的 key 为“${keyName}”）的排序规则存在问题`);
+                 }
+                 comparator = (a, b) => compare(a.value, b.value);
+-            }
+-            else if (value in target[keyList[0]]) {
++            } else if (value in target[keyList[0]]) {
+                 comparator = (a, b) => compare(a.value[value], b.value[value]);
+-            }
+-            else {
++            } else {
+                 return console.warn(`排序时出现问题，某个键（该键的 key 为“${keyName}”）的排序规则存在问题`);
+             }
+             const result = [];
+@@ -345,6 +344,7 @@ function sort(hexo, pluginConfig) {
+             }
+         }
+     };
++
+     const list = {
+         posts: 'title',
+         pages: 'title',
+@@ -352,17 +352,28 @@ function sort(hexo, pluginConfig) {
+     };
+     Object.assign(list, pluginConfig.sort_rules ?? {});
+     const getter = Locals.get;
++
++    // === 修改后的 Locals.get，加入递归保护 ===
++    const activeKeys = new Set();
++
+     Locals.get = function (name) {
+-        const result = getter.call(this, name);
+-        if (name in list)
+-            sort(result, list[name], name);
+-        if ((typeof result == 'object') && 'forEach' in result) {
+-            result.forEach((it) => {
+-                for (let tag in list)
+-                    sort(it[tag], list[tag], tag);
+-            });
++        if (activeKeys.has(name)) {
++            return getter.call(this, name);
++        }
++
++        activeKeys.add(name);
++        try {
++            const result = getter.call(this, name);
++            if (name in list) sort(result, list[name], name);
++            if ((typeof result == 'object') && 'forEach' in result) {
++                result.forEach((it) => {
++                    for (let tag in list) sort(it[tag], list[tag], tag);
++                });
++            }
++            return result;
++        } finally {
++            activeKeys.delete(name);
+         }
+-        return result;
+     };
+ }
+ start(hexo).catch(e => {
