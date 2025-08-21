@@ -20,6 +20,8 @@ top_img: false
 
 {% note success simple %}fix `修复 加密插件与swpp的递归循环问题`{% endnote %}
 
+{% note success simple %}fix `修复 订阅页链接跳转问题`{% endnote %}
+
 <!-- endtimeline -->
 
 <!-- timeline 08-20 -->

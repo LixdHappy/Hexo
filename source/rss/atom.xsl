@@ -265,7 +265,7 @@
     来自GB的技术博客，提供生活点滴、科技钻研，个人经验，融合技术开发与人文思考，懒癌不发作时更新深度指南与创意灵感，给大家提供更多帮助。
             </p>
             <p class="header-description-en">
-    Tech musings & life bits from GB — where code meets coffee, and laziness occasionally takes a day off.
+    Tech musings &amp; life bits from GB — where code meets coffee, and laziness occasionally takes a day off.
             </p>
 
             <div class="header-subscribe">
@@ -319,11 +319,13 @@
             </div>
             <div class="footer-line">
               <span>本项目由Hexo自动爬取生成</span>
-              <span> • </span>
+              <span>•</span>
               <a href="https://blog.gbfun.cc/" target="_blank" rel="nofollow noopener noreferrer">GB的记事簿📒</a>
             </div>
             <div class="footer-line">
-              <a href="https://bing.liushen.fun/" target="_blank" rel="nofollow noopener noreferrer">Bing每日一图</a>
+              <span>本站壁纸由</span>
+              <a href="https://bing.gbfun.cc/" target="_blank" rel="nofollow noopener noreferrer">Bing每日一图</a>
+              <span>提供</span>
             </div>
           </footer>
 

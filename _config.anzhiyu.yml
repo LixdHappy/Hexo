@@ -60,6 +60,9 @@ nav:
         - name: Mini-cover
           link: https://cover.gbfun.cc/
           icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img%E5%B0%81%E9%9D%A2%E5%9B%BE%E6%A0%87.svg
+        - name: 每日一图
+          link: https://bing.gbfun.cc/
+          icon: https://bing.gbfun.cc/favicon.ico
     - title: 需求网页
       item:
         - name: nice猫
@@ -1124,16 +1127,16 @@ home_top:
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
-    - name: 大学
-      path: /categories/大学生涯/
-      shadow: var(--anzhiyu-shadow-red)
-      class: red
-      icon: anzhiyu-icon-fire
     - name: 生活
       path: /categories/生活日常/
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-book
+    - name: 关于我
+      path: /about/
+      shadow: var(--anzhiyu-shadow-red)
+      class: red
+      icon: anzhiyu-icon-fire
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper: #文章置顶
     enable: false
