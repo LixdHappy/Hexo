@@ -31,7 +31,7 @@ defineConfig({
     },
 
     crossEnv: {
-        CACHE_NAME: "BlogCache",
+        CACHE_NAME: "GB-BlogCache",
         VERSION_PATH: "https://id.v3/",
         ESCAPE: 15,
     },
@@ -45,7 +45,7 @@ defineConfig({
                 'cdn.cbd.int',
                 'npm.elemecdn.com',
                 'cdn.staticfile.org',
-                'cdnjs.cloudflare.com',
+                'cdn.smartcis.cn',
                 'unpkg.com'
             ]
             const elme = 'npm.elemecdn.com'

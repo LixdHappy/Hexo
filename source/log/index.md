@@ -14,6 +14,16 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 08-22 -->
+
+二次修复 SWPP 问题
+
+{% note success simple %}fix `修复 失效CDN以及二维码失效`{% endnote %}
+
+{% note success simple %}fix `修复 pwa失效问题`{% endnote %}
+
+<!-- endtimeline -->
+
 <!-- timeline 08-21 -->
 
 - 分类需要加密的文章,并归类为日记~~(实际也不是~~,现在具有公示期的文章将规划为十天后进行加密处理

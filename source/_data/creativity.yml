@@ -22,35 +22,27 @@
 
     - name: Vue
       color: "#b8f0ae"
-      icon: https://cdn.bywind.xyz/img/banners/vue.webp
+      icon: https://image-head.gbfun.cc///imgvue.webp?blog-image?&imageSlim
 
     - name: Java
       color: "#fff"
-      icon: https://cdn.bywind.xyz/img/banners/Java.webp
+      icon: https://image-head.gbfun.cc///imgjava.webp?blog-image?&imageSlim
 
     - name: Photoshop
       color: "#4082c3"
-      icon: https://cdn.bywind.xyz/img/banners/PS.webp
-
-    - name: Swift
-      color: "#eb6840"
-      icon: https://cdn.bywind.xyz/img/banners/swift.webp
+      icon: https://image-head.gbfun.cc///imgPS.webp?blog-image?&imageSlim
 
     - name: Python
       color: "#fff"
-      icon: https://cdn.bywind.xyz/img/banners/python.webp
+      icon: https://image-head.gbfun.cc///imgpython.webp?blog-image?&imageSlim
 
     - name: Node
       color: "#333"
-      icon: https://cdn.bywind.xyz/img/banners/node-logo.svg
+      icon: https://npm.elemecdn.com/anzhiyu-blog@2.1.1/img/svg/node-logo.svg
 
     - name: CSS3
       color: "#2c51db"
-      icon: https://cdn.bywind.xyz/img/banners/css.webp
-
-    - name: Kotlin
-      color: "#ffffff"
-      icon: https://npm.elemecdn.com/wleelw-blog-abs@1.0.0/img/icon/kotlin-logo.svg
+      icon: https://image-head.gbfun.cc///imgcss3.webp?blog-image?&imageSlim
 
     - name: Visual Studio
       color: "#ffffff"
@@ -71,3 +63,7 @@
     - name: Apifox
       color: "#e65164"
       icon: https://img02.anheyu.com/adminuploads/1/2022/09/25/633007087a4dc.webp
+
+    - name: Flutter
+      color: "#4499e4"
+      icon: https://image-head.gbfun.cc///imgflutter.webp?blog-image?&imageSlim
