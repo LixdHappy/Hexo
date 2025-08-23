@@ -1181,17 +1181,17 @@ console:
 
 # 51a统计配置
 LA:
-  enable: true
+  enable: false
   ck: 3MX3kJEhxjCJarOv
   LingQueMonitorID:
 
 # Umami
 Umami:
-  enable: false # 开关
+  enable: true # 开关
   umami_url_js: https://umami.gbfun.cc/script.js # 填写 umami js地址 可以使用第三方CDN加速但需要配置下面的 umami_url
   umami_id: 97f90ba2-37f5-4e79-8be0-0bd582f67a4e # 填写 umami 统计 ID
-  umami_api: https://umami-api.2521564831.workers.dev/ # 填写 umami API 地址
-  umami_url: https://umami.gbfun.cc/ # 填写 umami 服务器地址 使用 CDN 加速 Umami 静态资源后需配置此项
+  umami_api: https://um-api.2521564831.workers.dev/ # 填写 umami API 地址
+  umami_url: # 填写 umami 服务器地址 使用 CDN 加速 Umami 静态资源后需配置此项
 
 # 标签卖萌
 diytitle:

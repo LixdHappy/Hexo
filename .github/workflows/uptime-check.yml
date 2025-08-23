@@ -2,7 +2,7 @@ name: UptimeRobot 状态检测
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # 每 30 分钟运行一次
+    - cron: '0 * * * *'  # 每小时整点触发一次
   workflow_dispatch:
 
 env:
@@ -14,6 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: 随机延迟 0-59 分钟
+        run: sleep $((RANDOM % 3600))
+
       - name: 检出 Hexo 源码仓库
         uses: actions/checkout@v4
 
