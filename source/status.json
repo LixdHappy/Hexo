@@ -54,7 +54,7 @@
       "port": "",
       "interval": 300,
       "timeout": 30,
-      "status": 2,
+      "status": 9,
       "create_datetime": 1751129414
     },
     {
@@ -71,7 +71,7 @@
       "port": "",
       "interval": 300,
       "timeout": 30,
-      "status": 2,
+      "status": 9,
       "create_datetime": 1751107801
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "id": 800829167,
-      "friendly_name": "友链服务",
+      "friendly_name": "友链服���",
       "url": "https://fca.gbfun.cc",
       "type": 1,
       "sub_type": "",
@@ -126,5 +126,5 @@
       "create_datetime": 1751109664
     }
   ],
-  "updated_at": "2025-08-23 21:39:24"
+  "updated_at": "2025-08-23 22:10:42"
 }
