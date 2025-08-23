@@ -20,7 +20,7 @@
       "port": "",
       "interval": 300,
       "timeout": 30,
-      "status": 9,
+      "status": 2,
       "create_datetime": 1751129492
     },
     {
@@ -126,5 +126,5 @@
       "create_datetime": 1751109664
     }
   ],
-  "updated_at": "2025-08-23 15:33:55"
+  "updated_at": "2025-08-23 16:15:03"
 }
