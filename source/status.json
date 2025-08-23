@@ -3,9 +3,26 @@
   "pagination": {
     "offset": 0,
     "limit": 50,
-    "total": 7
+    "total": 9
   },
   "monitors": [
+    {
+      "id": 801226320,
+      "friendly_name": "Bing每日一图",
+      "url": "https://bing.gbfun.cc",
+      "type": 1,
+      "sub_type": "",
+      "keyword_type": 0,
+      "keyword_case_type": 0,
+      "keyword_value": "",
+      "http_username": "",
+      "http_password": "",
+      "port": "",
+      "interval": 300,
+      "timeout": 30,
+      "status": 2,
+      "create_datetime": 1755993530
+    },
     {
       "id": 800830232,
       "friendly_name": "Mini-cover",
@@ -22,6 +39,23 @@
       "timeout": 30,
       "status": 2,
       "create_datetime": 1751129492
+    },
+    {
+      "id": 801226311,
+      "friendly_name": "Twikoo评论服务",
+      "url": "https://twikoo.gbfun.cc",
+      "type": 1,
+      "sub_type": "",
+      "keyword_type": 0,
+      "keyword_case_type": 0,
+      "keyword_value": "",
+      "http_username": "",
+      "http_password": "",
+      "port": "",
+      "interval": 300,
+      "timeout": 30,
+      "status": 2,
+      "create_datetime": 1755993441
     },
     {
       "id": 801000391,
@@ -71,7 +105,7 @@
       "port": "",
       "interval": 300,
       "timeout": 30,
-      "status": 2,
+      "status": 9,
       "create_datetime": 1751107801
     },
     {
@@ -93,7 +127,7 @@
     },
     {
       "id": 800829167,
-      "friendly_name": "友���服务",
+      "friendly_name": "友链服务",
       "url": "https://fca.gbfun.cc",
       "type": 1,
       "sub_type": "",
@@ -126,5 +160,5 @@
       "create_datetime": 1751109664
     }
   ],
-  "updated_at": "2025-08-23 23:47:19"
+  "updated_at": "2025-08-24 00:24:21"
 }
