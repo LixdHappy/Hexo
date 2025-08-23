@@ -19,6 +19,7 @@ menu:
 
   关于:
     关于本人: /about/ || anzhiyu-icon-paper-plane
+    网站日志: /log/ || anzhiyu-icon-list-ul
     闲言碎语: /essay/ || anzhiyu-icon-lightbulb
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
     我的装备: /equipment/ || fas fa-laptop
@@ -40,9 +41,6 @@ nav:
         - name: 博客后台
           link: https://qexo.gbfun.cc/
           icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgimgicon.png
-        - name: 网站日志
-          link: /log
-          icon: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imglist-solid.svg
     - title: 常用服务
       item:
         - name: 朋友圈服务

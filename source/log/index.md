@@ -14,6 +14,14 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 08-23 -->
+
+- 试运行 Umami 统计服务(51la老是抽风
+
+- 调整`网站日志`页面至`关于`分类
+
+<!-- endtimeline -->
+
 <!-- timeline 08-22 -->
 
 二次修复 SWPP 问题
