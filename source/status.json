@@ -93,7 +93,7 @@
     },
     {
       "id": 800829089,
-      "friendly_name": "个人博客",
+      "friendly_name": "个人博���",
       "url": "https://blog.gbfun.cc/",
       "type": 1,
       "sub_type": "",
@@ -105,7 +105,7 @@
       "port": "",
       "interval": 300,
       "timeout": 30,
-      "status": 9,
+      "status": 2,
       "create_datetime": 1751107801
     },
     {
@@ -160,5 +160,5 @@
       "create_datetime": 1751109664
     }
   ],
-  "updated_at": "2025-08-24 00:24:21"
+  "updated_at": "2025-08-24 01:24:58"
 }
