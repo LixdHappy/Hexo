@@ -31,7 +31,7 @@ defineConfig({
     },
 
     crossEnv: {
-        CACHE_NAME: "BlogCache",
+        CACHE_NAME: "GB-BlogCache",
         VERSION_PATH: "https://id.v3/",
         ESCAPE: 15,
     },

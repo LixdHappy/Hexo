@@ -10,9 +10,34 @@ top_img: false
 
 
 <div class="timeline-container"> <!-- 添加容器解决错位问题 -->
+{% folding red open, 目前BUG收集 %}
 
+{% checkbox times red checked,  ~~页脚备案组可能会因为Pjax的页面切换导致一直显示加载中~~ 08/21加入 %}
+{% checkbox times red checked,  ~~友链页自己的文章无法跳转~~ %}
+{% checkbox times red checked,  ~~搜索无法点开~~ %}
+{% checkbox times red checked,  侧边栏欢迎卡片时间不够细化,凌晨认定为早上不够符合认知  %}
+{% checkbox times red checked,  ~~朋友圈鱼塘位置错位~~ %}
+{% checkbox times red checked,  ~~评论区评论失败~~ %}
+{% checkbox times red checked,  正式文章页与草稿文章显示字数实际不符 %}
+{% checkbox times red checked,  ~~Copyright盒子内的原创按钮跳转页面失败~~ %}
+{% checkbox times red checked,  ~~钓鱼(朋友圈)间接性失灵~~ %}
+{% checkbox times red checked, ~~RSS美化与跳转问题~~ %}
+{% checkbox times red checked,  ~~微信卡片暗色未适配~~ %}
+{% checkbox times red checked,  ~~文章原创的判断问题~~ %}
+{% checkbox times red checked,  隐私协议页面缺少读取用户信息预览 07/04加入 %}
+{% checkbox times red checked,  ~~微信OA页跳转不流畅~~ 07/04加入 %}
+{% checkbox times red checked,  ~~站点检测dns问题~~ 07/04加入 %}
+{% checkbox times red checked,  ~~友人帐页面添加友链过于简陋 以及勾选弹框闪现~~  07/04加入 %}
+{% checkbox times red checked,  ~~log界面错位~~ 07/04加入 %}
+{% endfolding %}
 
 {% timeline 2025,blue %}
+
+<!-- timeline 08-24 -->
+
+{% note success simple %}fix `修复 转载判定问题并保留关于自己头像下方的名字`~~(删去`.config.author`~~{% endnote %}
+
+<!-- endtimeline -->
 
 <!-- timeline 08-23 -->
 
@@ -577,7 +602,7 @@ Twikoo评论区QQ昵称获取临时方案
 收集目前为止博客 现有的Bug
 {% folding cyan open, 目前BUG收集 %}
 
-{% checkbox times red checked,  页脚备案组可能会因为Pjax的页面切换导致一直显示加载中 08/21加入 %}
+{% checkbox times red checked,  ~~页脚备案组可能会因为Pjax的页面切换导致一直显示加载中~~ 08/21加入 %}
 {% checkbox times red checked,  ~~友链页自己的文章无法跳转~~ %}
 {% checkbox times red checked,  ~~搜索无法点开~~ %}
 {% checkbox times red checked,  侧边栏欢迎卡片时间不够细化,凌晨认定为早上不够符合认知  %}
@@ -586,13 +611,13 @@ Twikoo评论区QQ昵称获取临时方案
 {% checkbox times red checked,  正式文章页与草稿文章显示字数实际不符 %}
 {% checkbox times red checked,  ~~Copyright盒子内的原创按钮跳转页面失败~~ %}
 {% checkbox times red checked,  ~~钓鱼(朋友圈)间接性失灵~~ %}
-{% checkbox times red checked,  RSS美化与跳转问题 %}
+{% checkbox times red checked, ~~RSS美化与跳转问题~~ %}
 {% checkbox times red checked,  ~~微信卡片暗色未适配~~ %}
-{% checkbox times red checked,  文章原创的判断问题 %}
+{% checkbox times red checked,  ~~文章原创的判断问题~~ %}
 {% checkbox times red checked,  隐私协议页面缺少读取用户信息预览 07/04加入 %}
 {% checkbox times red checked,  ~~微信OA页跳转不流畅~~ 07/04加入 %}
 {% checkbox times red checked,  ~~站点检测dns问题~~ 07/04加入 %}
-{% checkbox times red checked,  ~~友人帐页面添加友链过于简陋,以及勾选弹框闪现 ~~07/04加入 %}
+{% checkbox times red checked,  ~~友人帐页面添加友链过于简陋 以及勾选弹框闪现~~  07/04加入 %}
 {% checkbox times red checked,  ~~log界面错位~~ 07/04加入 %}
 {% endfolding %}
 <!-- endtimeline -->

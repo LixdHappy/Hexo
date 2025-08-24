@@ -2,7 +2,8 @@ name: UptimeRobot 状态检测
 
 on:
   schedule:
-    - cron: '0 * * * *'  # 每小时整点触发一次
+    # 每 3 小时一次：UTC 0,3,6,9,12,15,18,21
+    - cron: '0 */3 * * *'
   workflow_dispatch:
 
 env:
@@ -14,23 +15,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 随机延迟 0-59 分钟
-        run: sleep $((RANDOM % 3600))
+      - name: 随机跳过机制 (50% 概率运行)
+        id: random-check
+        run: |
+          if [ $((RANDOM % 2)) -eq 0 ]; then
+            echo "skip_job=true" >> $GITHUB_ENV
+            echo "本次触发被随机跳过 ✅"
+          else
+            echo "skip_job=false" >> $GITHUB_ENV
+            echo "本次触发继续执行 🚀"
+          fi
 
       - name: 检出 Hexo 源码仓库
+        if: env.skip_job == 'false'
         uses: actions/checkout@v4
 
       - name: 安装 Node.js
+        if: env.skip_job == 'false'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: 运行 UptimeRobot 状态检测脚本
+        if: env.skip_job == 'false'
         run: node update-status.js
         env:
           UPTIMEROBOT_API_KEY: ${{ secrets.UPTIMEROBOT_API_KEY }}
 
       - name: 确保 Hexo 源码仓库记录更新
+        if: env.skip_job == 'false'
         run: |
           touch ./source/status.json
           git config user.name "github-actions[bot]"
@@ -40,12 +53,14 @@ jobs:
           git push
 
       - name: 克隆展示页仓库
+        if: env.skip_job == 'false'
         env:
           PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         run: |
           git clone https://x-access-token:${PUBLISH_TOKEN}@github.com/LixdHappy/LixdHappy.github.io.git publish-repo
 
       - name: 复制并推送 status.json 到展示仓库
+        if: env.skip_job == 'false'
         run: |
           cp ./source/status.json publish-repo/status.json
           cd publish-repo
