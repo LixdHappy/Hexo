@@ -33,6 +33,12 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 08-25 -->
+
+修正 十年之约 日期的显示样式 由`M/D/YYYY`换为`YYYY/M/D`
+
+<!-- endtimeline -->
+
 <!-- timeline 08-24 -->
 
 {% note success simple %}fix `修复 转载判定问题并保留关于自己头像下方的名字`~~(删去`.config.author`~~{% endnote %}

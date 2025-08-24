@@ -30,13 +30,25 @@ top_group_index: 1
 
   {% endnote %}
 
+{% folding red, 文章更新日志 %}
+{% timeline 2025,red %}
+<!-- timeline 06-30 -->
+初稿
+<!-- endtimeline -->
+<!-- timeline 08-25 -->
+修改`tenyear.pug`模块日期的显示逻辑,避免由于系统语言等因素影响
+<!-- endtimeline -->
+
+{% endtimeline %}
+{% endfolding %}
+
 ## 前言
 
-在逛[Mo的记事簿](https://blog.xiowo.net/)大佬的博客时,~~本着偷窥人家隐私为目的~~,去看看大佬的设计时发现之前用着Solitude主题时候一个设计比较美丽的进度条--`十年之约`
+在逛[Mo的记事簿](https://blog.xiowo.net/)大佬的博客时,~~本着偷窥人家隐私为目的~~,去看看大佬的设计时,发现之前用着Solitude主题时候一个设计比较美丽的进度条--`十年之约`
 
 ![来源 Mo的记事簿](https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//imgimage-20250630105906218.png)
 
-随后我也想着要不把这个进度条搬过来吧,就安置在原Solitude主题的模块位置--`关于`,说干就干,之前琢磨这么久的主题不就是为了~~偷代码~~学习嘛
+随后我也想着要不把这个进度条搬过来吧,就安置在原Solitude主题的模块位置--`关于`页面中间处,说干就干,之前琢磨这么久的主题不就是为了~~偷代码~~学习嘛
 
 ## 修改
 
@@ -48,7 +60,11 @@ top_group_index: 1
 
 {% endfolding %}
 
-1. 首先需要决定<b>十年之约</b>模块的运作方式,路径`anzhiyu>layout>includes>widget>tenyear.pug`,新建`tenyear.pug`文件
+1. 首先需要决定<b>十年之约</b>模块的运作方式,路径`anzhiyu>layout>includes>widget`,新建`tenyear.pug`文件
+
+{% tip key %}自8月25日后,tenyear.pug的代码逻辑已修改,之前已部署的请自行修改为后面的内容,往后的可以忽略本条提示,放心部署{% endtip %}
+
+{% folding cyan,6月30日的内容 已作废 %}
 
 `tenyear.pug`的内容如下:
 
@@ -96,8 +112,69 @@ if tenyear
             updateTenYearProgress();
         }
 ```
+{% endfolding %}
 
-2. 决定完模块运作方式还需要确定它的样子.路径`anzhiyu>source>css>_page>tenyear.styl`下新建`tenyear.styl`
+{% folding blue open, 8月25日内容 请部署这一部分 %}
+
+`tenyear.pug`内容如下,相比于初版,修改了几处内容:
+
+- 通过`formatDate()` 函数  在 Pug 渲染阶段将日期格式化成 `YYYY/M/D`的形式，这样设置的显示不会受系统语言影响,上一个版本会有概率形成`M/D/YYYY`
+- `new Date(startTimeElement.textContent)`修改为`new Date(startTimeElement.dataset.date)`
+
+```pug
+- var tenyear = site.data.about.tenyear
+- function formatDate(dateStr) {
+-   const d = new Date(dateStr);
+-   return `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}`;
+- }
+
+if tenyear
+    .author-content#tenyear
+        .create-site-post.author-content-item.single
+            .author-content-item-tips= tenyear.tips
+            .author-content-item-title= tenyear.title
+            p= tenyear.text
+            .tenyear-timeline
+                .progress
+                .past-time
+                .percentage-label
+            .time-labels
+                .start-time#tenyear-start-time(data-date=tenyear.start)= formatDate(tenyear.start)
+                .end-time#tenyear-end-time(data-date=tenyear.end)= formatDate(tenyear.end)
+
+    script.
+        function updateTenYearProgress() {
+            let progressElement = document.querySelector(".progress");
+            let pastTimeElement = document.querySelector(".past-time");
+            let percentageLabelElement = document.querySelector(".percentage-label");
+            let startTimeElement = document.getElementById("tenyear-start-time");
+            let endTimeElement = document.getElementById("tenyear-end-time");
+
+            let startTime = new Date(startTimeElement.dataset.date).getTime();
+            let endTime = new Date(endTimeElement.dataset.date).getTime();
+
+            const currentTime = new Date().getTime();
+            const progress = ((currentTime - startTime) / (endTime - startTime) * 100);
+            const progressPercentage = Math.min(progress, 100) + "%";
+
+            pastTimeElement.style.setProperty("--past-time-percentage", progress + "%");
+            progressElement.style.setProperty("--progress-percentage", progressPercentage);
+            if (progress > 5) {
+                percentageLabelElement.textContent = `${progress.toFixed(0)}%`;
+                percentageLabelElement.style.left = `calc(${progress}% - 35px)`;
+            }
+
+            percentageLabelElement.style.visibility = "visible";
+        }
+
+        if (document.getElementById("tenyear")) {
+            updateTenYearProgress();
+        }
+```
+{% endfolding %}
+
+
+2. 决定完模块运作方式还需要定义模块样式.路径`anzhiyu>source>css>_page`下新建`tenyear.styl`
 
 `tenyear.styl`内容如下:
 
@@ -170,7 +247,7 @@ if tenyear
 
    顶部判定条件加入,
 
-   ```pug
+   ```diff
    if site.data.about
      - let aboutData = site.data.about
      each item in aboutData
@@ -191,7 +268,7 @@ if tenyear
 
 添加`tenyear模块`,这里我选择放置在打赏模块与音乐喜好模块之间,
 
-```pug
+```diff
               .tips=`跟 ${aboutName} 一起欣赏更多音乐`
             .banner-button-group
               a.banner-button(onclick=`pjax.loadUrl("${music_link}")`)
@@ -221,7 +298,9 @@ if tenyear
 
 进度函数,
 
-```pug
+8-25留 之前对这一部分缺少了介绍,这一部分内容其实就是脚本的运行计算逻辑,所以你需要注意的是将本内容添加至`script(*defer*).`的后方,我的建议是直接甩在全内容的最后方,只需要注意缩进即可
+
+```diff
 +                // ✅ 十年之约进度函数
 +          function updateTenYearProgress() {
 +            let progressElement = document.querySelector(".progress");

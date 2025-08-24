@@ -1,4 +1,9 @@
 - var tenyear = site.data.about.tenyear
+- function formatDate(dateStr) {
+-   const d = new Date(dateStr);
+-   return `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}`;
+- }
+
 if tenyear
     .author-content#tenyear
         .create-site-post.author-content-item.single
@@ -10,8 +15,8 @@ if tenyear
                 .past-time
                 .percentage-label
             .time-labels
-                .start-time#tenyear-start-time= new Date(tenyear.start).toLocaleDateString()
-                .end-time#tenyear-end-time= new Date(tenyear.end).toLocaleDateString()
+                .start-time#tenyear-start-time(data-date=tenyear.start)= formatDate(tenyear.start)
+                .end-time#tenyear-end-time(data-date=tenyear.end)= formatDate(tenyear.end)
 
     script.
         function updateTenYearProgress() {
@@ -20,8 +25,10 @@ if tenyear
             let percentageLabelElement = document.querySelector(".percentage-label");
             let startTimeElement = document.getElementById("tenyear-start-time");
             let endTimeElement = document.getElementById("tenyear-end-time");
-            let startTime = new Date(startTimeElement.textContent).getTime();
-            let endTime = new Date(endTimeElement.textContent).getTime();
+
+            // 用 data-date 中的原始日期计算，避免格式化影响解析
+            let startTime = new Date(startTimeElement.dataset.date).getTime();
+            let endTime = new Date(endTimeElement.dataset.date).getTime();
 
             const currentTime = new Date().getTime();
             const progress = ((currentTime - startTime) / (endTime - startTime) * 100);
