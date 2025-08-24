@@ -107,8 +107,8 @@
     enable: true # 十年之约开关，true为显示，false为隐藏
     tips: 十年之约
     title: 寻找更合适的自己。
-    start: 2022/05/28
-    end: 2032/05/28
+    start: 2022/5/28/
+    end: 2032/05/28/
 
   reward_list:
     - name: 我家彬少
