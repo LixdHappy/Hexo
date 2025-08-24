@@ -74,7 +74,7 @@ jobs:
           git config --global user.name '${{ secrets.GITHUBUSERNAME }}'
           git config --global user.email '${{ secrets.GITHUBEMAIL }}'
           git add .
-          git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
+          git commit -m "${{ github.event.head_commit.message }} 更新推送自 $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
 
           echo "开始推送到 GitHub Pages..."
           n=0
@@ -85,6 +85,7 @@ jobs:
             echo "推送失败，重试第 $n 次..."
             sleep 5
           done
+
 
       # 如有需要，可继续添加 Coding 或 Gitee 推送，同样加重试：
       # - name: 部署到 Coding
