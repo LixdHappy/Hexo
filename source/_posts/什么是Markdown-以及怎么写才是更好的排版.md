@@ -6,8 +6,8 @@ tags:
   - Hexo
   - 文章排版
   - 转载或翻译
-swiper_index: 6
-top_group_index: 6
+swiper_index: 5
+top_group_index: 5
 location: 南宁
 cover: https://blog-image-1302787555.cos.ap-guangzhou.myqcloud.com//img1.Markdown.jpg
 copyright: true
