@@ -1225,7 +1225,7 @@ music_page_default: nav_music
 # 评论匿名邮箱
 visitorMail:
   enable: true
-  mail: "visitor@gbfun.com"
+  mail: "visitor@gbfun.cc"
 
 # ptool 文章底部工具
 ptool:
@@ -1402,7 +1402,7 @@ CDN:
     # pjax:
     # blueimp_md5:
     # valine:
-    twikoo: /js/twikoo.all.min.js #Twikoo 评论区 QQ 昵称获取临时修复
+    twikoo: https://registry.npmmirror.com/twikoo/1.6.44/files/dist/twikoo.all.min.js #Twikoo 评论区 QQ 昵称获取临时修复
     # waline_js:
     # waline_css:
     # sharejs:
