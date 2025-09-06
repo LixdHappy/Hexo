@@ -31,14 +31,14 @@ if theme.friends_lite.enable
         .banner-button-group
           a.banner-button(onclick='pjax.loadUrl("/subscribe")')
             i.anzhiyufont.anzhiyu-icon-arrow-circle-right(style='font-size: 22px; margin-right: 0.25rem')
-            span.banner-button-text 订阅本站
+            span.banner-button-text(gbtip="查看本站的订阅方式") 订阅本站
     .title-h2-a
       .title-h2-a-left
         h2(style='padding-top:0;margin:.6rem 0 .6rem') 🎣 钓鱼
-        a.random-post-start(href='javascript:fetchRandomPost();')
+        a.random-post-start(gbtip="钓钓更健康" href='javascript:fetchRandomPost();')
           i.anzhiyufont.anzhiyu-icon-arrow-rotate-right
       .title-h2-a-right
-        a.random-post-all(href='/link/') 全部友链
+        a.random-post-all( gbtip="查看本站的朋友们" href='/link/') 全部友链
     #random-post
     .title-h2-a
       .title-h2-a-left

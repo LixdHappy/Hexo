@@ -9,17 +9,17 @@ if theme.post_copyright.enable && page.copyright !== false
       - let copyright_author_img_back = theme.post_copyright.copyright_author_img_back ? theme.post_copyright.copyright_author_img_back : theme.avatar.img
       - let copyright_author_img_front = theme.post_copyright.copyright_author_img_front ? theme.post_copyright.copyright_author_img_front : theme.avatar.img
       - let copyright_author_link = theme.post_copyright.copyright_author_link ? theme.post_copyright.copyright_author_link : '/'
-      a.post-copyright__author_img(href=url_for(copyright_author_link) title='头像')
-        img.post-copyright__author_img_back(src=url_for(copyright_author_img_back) title='头像' alt='头像')
-        img.post-copyright__author_img_front(src=url_for(copyright_author_img_front) title="头像" alt='头像')
+      a.post-copyright__author_img(href=url_for(copyright_author_link) title='关于博主' gbtip="关于博主")
+        img.post-copyright__author_img_back(src=url_for(copyright_author_img_back) title='关于博主' alt='头像')
+        img.post-copyright__author_img_front(src=url_for(copyright_author_img_front) title="关于博主" alt='头像')
       .post-copyright__author_name=author
       .post-copyright__author_desc=config.subtitle
     .post-copyright__post__info
       if page.copyright
-        a.post-copyright__reprint(title="该文章为转载文章，注意版权协议" href=url_for(url)) 转载
+        a.post-copyright__reprint(title="该文章为转载文章，注意版权协议" gbtip="该文章为转载或翻译文章,版权归原作者所有,点击跳转原文" href=url_for(url)) 转载或翻译
       else
-        a.post-copyright__original(title="该文章为原创文章，注意版权协议" href=url_for(url)) 原创
-      a.post-copyright-title
+        a.post-copyright__original(title="该文章为原创文章，注意版权协议" gbtip="该文章为原创文章,注意版权协议,点击跳转版权协议" href="/copyright/") 原创
+      a.post-copyright-title(gbtip="点击复制链接")
         span(onclick=`rm.copyPageUrl('${theme.post_copyright.decode ? decodeURI(url) : url}')`)=pageTitle
     //- ptool
     if theme.ptool.enable

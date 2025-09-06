@@ -14,7 +14,7 @@ nav#nav
                     a.back-menu-item(href=url_for(item.link), title=item.name)
                       img.back-menu-item-icon(src=item.icon alt=item.name)
                       span.back-menu-item-text= item.name
-      a#site-name(href=url_for('/') accesskey="h")
+      a#site-name(href=url_for('/') gbtip="返回博客主页" accesskey="h")
         .title #[=config.title]
         i.anzhiyufont.anzhiyu-icon-house-chimney
       if (theme.nav.clock)
@@ -32,17 +32,17 @@ nav#nav
           a.site-page(onclick='anzhiyu.totraveling()', title='随机前往一个开往项目网站', href='javascript:void(0);', rel='external nofollow', data-pjax-state='external')
             i.anzhiyufont.anzhiyu-icon-train
       .nav-button#randomPost_button
-        a.site-page(onclick='toRandomPost()', title='随机前往一个文章', href='javascript:void(0);')
+        a.site-page(onclick='toRandomPost()', title='随机前往一个文章', gbtip="随机前往一个文章" href='javascript:void(0);')
           i.anzhiyufont.anzhiyu-icon-dice
       if (theme.algolia_search.enable || theme.local_search.enable || theme.docsearch.enable)
         div.nav-button#search-button
-          a.site-page.social-icon.search(href='javascript:void(0);', title='搜索🔍' accesskey="s")
+          a.site-page.social-icon.search(href='javascript:void(0);', title='搜索🔍' gbtip="本站搜索🔍" accesskey="s")
             i.anzhiyufont.anzhiyu-icon-magnifying-glass
             span=' '+_p('search.title')
 
       if theme.centerConsole.enable
         input#center-console(type="checkbox")
-        label.widget(for="center-console" title=_p("中控台") onclick="anzhiyu.switchConsole();")
+        label.widget(for="center-console" title=_p("中控台") gbtip="显示中控台" onclick="anzhiyu.switchConsole();")
           i.left
           i.widget.center
           i.widget.right
@@ -50,7 +50,7 @@ nav#nav
       !=partial('includes/anzhiyu/console', {}, {cache:true})
 
       div.nav-button#nav-totop
-        a.totopbtn(href='javascript:void(0);')
+        a.totopbtn(href='javascript:void(0);' gbtip="返回顶部⬆️")
           i.anzhiyufont.anzhiyu-icon-arrow-up
           span#percent(onclick="anzhiyu.scrollToDest(0,500)") 0
 

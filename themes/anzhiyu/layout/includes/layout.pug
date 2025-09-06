@@ -104,3 +104,5 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
 
     //- 弹窗通知
     !=partial('includes/popup/index', {}, {cache: true})
+    //- 全局 Tooltip 容器（空，JS 运行时填入文本并写 top/left/opacity）
+    div.custom-tooltip

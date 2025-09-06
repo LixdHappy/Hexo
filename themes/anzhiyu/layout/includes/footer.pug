@@ -5,7 +5,7 @@
     - let rightInfo = theme.footer.socialBar.right
     #footer_deal
       each item, index in leftInfo
-        a.deal_link(href=url_for(item.link) title=item.title)
+        a.deal_link(href=url_for(item.link) title=item.title gbtip=item.title)
           if (item.icon.startsWith("fa"))
             i(class=`${item.icon}`)
           else if (item.icon.startsWith("icon"))
@@ -13,9 +13,9 @@
               use(xlink:href=`#`+ item.icon)
           else if (item.icon.startsWith("anzhiyu"))
             i.anzhiyufont(class=`${item.icon}`)
-      img.footer_mini_logo(title="返回顶部", alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)", src=centerImg, size="50px")
+      img.footer_mini_logo(title="返回顶部", alt="返回顶部" gbtip="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)", src=centerImg, size="50px")
       each item, index in rightInfo
-        a.deal_link(href=url_for(item.link) title=item.title)
+        a.deal_link(href=url_for(item.link) title=item.title gbtip=item.title)
           if (item.icon.startsWith("fa"))
             i(class=`${item.icon}`)
           else if (item.icon.startsWith("icon"))
@@ -54,14 +54,14 @@
         .footer-group
           .footer-title-group
             .footer-title 友链
-            a.random-friends-btn#footer-random-friends-btn(href="javascript:addFriendLinksInFooter();" title="换一批友情链接")
+            a.random-friends-btn#footer-random-friends-btn(href="javascript:addFriendLinksInFooter();" title="换一批友情链接" gbtip="换一批友情链接")
               i.anzhiyufont.anzhiyu-icon-arrow-rotate-right
           .footer-links#friend-links-in-footer
 
   if theme.footer.bdageitem.enable
     p#ghbdages
       each item in theme.footer.bdageitem.list
-        a.github-badge(target='_blank' href=item.link style='margin-inline:5px' data-title=item.message title=item.message)
+        a.github-badge(target='_blank' href=item.link style='margin-inline:5px' data-title=item.message title=item.message gbtip=item.message)
           img(src=item.shields alt=item.message)
 
 if theme.footer.footerBar && theme.footer.footerBar.enable
@@ -74,12 +74,12 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
               - let authorLink = theme.footer.footerBar.authorLink ? theme.footer.footerBar.authorLink : config.url
               if theme.footer.owner.since && theme.footer.owner.since != nowYear
                 .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} By `
-                  a.footer-bar-link(href=url_for(authorLink) target="_blank")
+                  a.footer-bar-link(href=url_for(authorLink) target="_blank" gbtip="前往我的主页")
                     img.author-avatar(src="/img/博客静态头像.jpg" alt="avatar")
                     = config.author
               else
                 .copyright!= `&copy;${nowYear} By `
-                  a.footer-bar-link(href=url_for(authorLink) target="_blank")
+                  a.footer-bar-link(href=url_for(authorLink) target="_blank" gbtip="前往我的主页")
                     img.author-avatar(src="/img/博客静态头像.jpg" alt="avatar")
                     = config.author
             if theme.footer.footerBar.showBeian
@@ -89,7 +89,7 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
                   target="_blank"
                   rel="noopener external nofollow noreferrer"
                   title="京公网安备xxxxxxx号"
-                  anzhiyutip="前往全国互联网安全管理服务平台"
+                  gbtip="前往全国互联网安全管理服务平台"
                 )
                   img.beian-icon(
                     src="https://p.zhheo.com/VPiMHH24891181731917988329.png!cover"
@@ -101,7 +101,7 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
                   target="_blank"
                   rel="noopener external nofollow noreferrer"
                   title="桂ICP备2025067806号-1"
-                  tips="前往工业和信息化部政务服务平台"
+                  gbtip="前往工业和信息化部政务服务平台"
                 ) 桂ICP备2025067806号-1
 
                 a.footer-bar-link.allsite_ok(
@@ -109,7 +109,7 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
                   target="_blank"
                   rel="noopener external nofollow noreferrer"
                   id="allsite_status"
-                  tips="查看我的项目状态"
+                  gbtip="查看我的项目状态"
                 )
                   .status-light
                   span 状态检测中...
@@ -120,9 +120,9 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
               include ./third-party/footerBarSubtitle.pug
         .footer-bar-right
           each item in theme.footer.footerBar.linkList
-            a.footer-bar-link(href=url_for(item.link) title=item.text)=item.text
+            a.footer-bar-link(href=url_for(item.link) title=item.text )=item.text
           if theme.footer.footerBar.cc.enable
-            a.footer-bar-link.cc(href=url_for(theme.footer.footerBar.cc.link) title="cc协议")
+            a.footer-bar-link.cc(href=url_for(theme.footer.footerBar.cc.link) title="cc协议" gbtip="网站采用 署名-非商业性使用-禁止演绎 4.0 国际 标准")
               i.anzhiyufont.anzhiyu-icon-copyright-line
               i.anzhiyufont.anzhiyu-icon-creative-commons-by-line
               i.anzhiyufont.anzhiyu-icon-creative-commons-nc-line
@@ -131,6 +131,7 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
             a.footer-bar-link.badge(
               href=theme.footer.footerBar.badge.link
               title=theme.footer.footerBar.badge.title
+              gbtip="加入无聊湾吧🥱"
               target="_blank"
               style="margin-left:8px"
             )

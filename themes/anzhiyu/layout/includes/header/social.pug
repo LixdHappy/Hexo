@@ -1,5 +1,5 @@
 each value, title in theme.social
-  a.social-icon.faa-parent.animated-hover(href=url_for(trim(value.split('||')[0])) target="_blank" title=title === undefined ? '' : trim(title))
+  a.social-icon.faa-parent.animated-hover(href=url_for(trim(value.split('||')[0])) target="_blank" title=title === undefined ? '' : trim(title) gbtip=title)
     if value.split('||')[1]
       - var icon_value = trim(value.split('||')[1])
       - var anima_value = value.split('||')[2] ? trim(value.split('||')[2]) : 'faa-tada'

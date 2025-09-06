@@ -33,6 +33,12 @@ top_img: false
 
 {% timeline 2025,blue %}
 
+<!-- timeline 09-06 -->
+
+加入`tooltip`信息拓展框(暂定命名)
+
+<!-- endtimeline -->
+
 <!-- timeline 08-25 -->
 
 修正 十年之约 日期的显示样式 由`M/D/YYYY`换为`YYYY/M/D`

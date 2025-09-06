@@ -3,8 +3,10 @@
       #catalog-bar
         #catalog-list
           .catalog-list-item(id='首页')
-            a(href="/") 首页
+            a(href="/" gbtip="查看所有精选文章") 精选 
+          .catalog-list-item(id='隧道')
+            a(href="/archives/" gbtip="查看所有文章") 全部文章  
           !=catalog_list("categories")
-        .category-bar-next#category-bar-next(onclick="anzhiyu.scrollCategoryBarToRight()")
+        .category-bar-next#category-bar-next(onclick="anzhiyu.scrollCategoryBarToRight()" gbtip="分类条翻页")
           i.anzhiyufont.anzhiyu-icon-angle-double-right
-        a.catalog-more(href="/categories/")!= '更多'
+        a.catalog-more(href="/categories/" gbtip="查看所有分类")!= '更多'

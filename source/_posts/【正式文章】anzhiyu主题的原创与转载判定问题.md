@@ -111,3 +111,7 @@ top_group_index: 2
 ```diff
 + if page.copyright === true
 ```
+
+
+
+那么以后就只需要在`front-matter`里添加上`copy-right`就可以实现原创与转载的手动标注
