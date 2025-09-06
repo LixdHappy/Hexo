@@ -1290,17 +1290,28 @@ const anzhiyu = {
     const $categoryBar = document.getElementById("category-bar");
     if (!$categoryBar) return;
 
+    // 首页
     if (urlinfo === "/") {
-      $categoryBar.querySelector("#首页").classList.add("select");
-    } else {
-      const pattern = /\/categories\/.*?\//;
-      const patbool = pattern.test(urlinfo);
-      if (!patbool) return;
-
-      const nowCategorie = urlinfo.split("/")[2];
-      $categoryBar.querySelector(`#${nowCategorie}`).classList.add("select");
+      const homeItem = $categoryBar.querySelector('[data-cate="home"]');
+      if (homeItem) homeItem.classList.add("selected");
+      return;
     }
+
+    // 分类页
+    const pattern = /^\/categories\/([^/]+)\/?/;
+    const match = urlinfo.match(pattern);
+    if (!match) return;
+
+    const nowCategorie = match[1];
+    // 优先通过 id 匹配
+    let target = $categoryBar.querySelector(`#${CSS.escape(nowCategorie)}`);
+    // 如果没有 id，可以改用 data-cate 来选
+    if (!target) {
+      target = $categoryBar.querySelector(`[data-cate="${nowCategorie}"]`);
+    }
+    if (target) target.classList.add("selected");
   },
+  
   topCategoriesBarScroll: function () {
     const $categoryBarItems = document.getElementById("category-bar-items");
     if (!$categoryBarItems) return;
