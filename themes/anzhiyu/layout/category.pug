@@ -9,16 +9,13 @@ block content
   else
     include ./includes/mixins/article-sort.pug
     #category
-      <div id="categories-chart" data-parent="true" style="height: 300px; padding: 10px;"></div>
+      // 添加分类页统计图表
+      <div id="categories-chart" data-parent="true" style="height: 300px; padding: 10px;"></div> 
       #catalog-bar
         i.anzhiyufont.anzhiyu-icon-shapes
         #catalog-list
-          .catalog-list-item
-            a(href="/") 首页
-          !=catalog_list("categories")
-        .category-bar-next#category-bar-next(onclick="anzhiyu.scrollCategoryBarToRight()")
-          i.anzhiyufont.anzhiyu-icon-angle-double-right
-        a.catalog-more(href="/categories/")!= '更多'
+          // 由 helper 统一生成：固定项（精选/全部）+ 当前分类置顶(如有) + 其余分类 + 翻页 + 更多
+          != catalog_list("categories", page)
       .article-sort-title= _p('page.category') + ' - ' + page.category
       +articleSort(page.posts, page.current)
       include includes/pagination.pug

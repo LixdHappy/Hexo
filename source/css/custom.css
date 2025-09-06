@@ -1612,3 +1612,33 @@ img.beian-icon {
         line-height: 1.4;
     }
 }
+
+/* ======= 首页与分类页翻页条按钮动画 ======== */
+/* 基础：箭头块级以支持 transform */
+#category-bar-next i {
+    display: inline-block;
+    transition: transform 0.28s ease;
+}
+
+/* 仅当 JS 添加了 anim-enabled 且切换 rotated 时才翻转 */
+#category-bar-next.anim-enabled.rotated i {
+    transform: rotate(180deg);
+}
+
+/* 当没有 anim-enabled 时（分类少），箭头仍然可见但不会旋转 */
+#category-bar-next:not(.anim-enabled) i {
+    transform: none;
+    transition: none;
+}
+
+/* 当前分类高亮 */
+#catalog-list .catalog-list-item.current a {
+    font-weight: 700;
+    color: var(--anzhiyu-main);
+}
+
+/* 可选：当分类很多时给展开的 bar 一个样式 */
+#category-bar.expanded {
+    /* 例：增加阴影或背景色，按需启用 */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
+}

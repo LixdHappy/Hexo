@@ -3,7 +3,7 @@ function initTooltip() {
   if (!tooltip) return;
 
   let hideTimer = null;
-  const hasHover = matchMedia("(hover: hover)").matches;
+  const hasHover = matchMedia("(hover: hover)").matches; // true = 桌面端，false = 移动端
 
   // 保证默认内联属性存在
   tooltip.style.maxWidth ||= "200px";
@@ -11,25 +11,23 @@ function initTooltip() {
   tooltip.style.overflowWrap ||= "break-word";
   tooltip.style.opacity ||= "0";
 
-  // 当前激活的目标与冻结位置
   let activeTarget = null;
   let frozenPos = { top: null, left: null };
 
   function computePosition(el) {
-    // 先移出视口，避免测量受当前位置影响
     tooltip.style.top = "-9999px";
     tooltip.style.left = "-9999px";
     tooltip.classList.remove("bottom");
-    void tooltip.offsetHeight; // 强制 reflow
+    void tooltip.offsetHeight;
 
     const rect = el.getBoundingClientRect();
     const ttRect = tooltip.getBoundingClientRect();
     const offset = 10;
 
-    let top = rect.top - ttRect.height - offset; // 默认在上方
+    let top = rect.top - ttRect.height - offset;
     if (rect.top <= ttRect.height + offset) {
       tooltip.classList.add("bottom");
-      top = rect.bottom + offset; // 改为下方
+      top = rect.bottom + offset;
     }
 
     let left = rect.left + rect.width / 2 - ttRect.width / 2;
@@ -46,12 +44,14 @@ function initTooltip() {
   }
 
   function showTooltip(el, text) {
+    // 移动端直接不显示
+    if (!hasHover) return;
+
     clearTimeout(hideTimer);
     activeTarget = el;
     tooltip.textContent = text;
     tooltip.style.opacity = "1";
 
-    // 仅计算一次位置并“冻结”，后续滚动不再更新
     frozenPos = computePosition(el);
     applyFrozen();
   }
@@ -67,28 +67,23 @@ function initTooltip() {
 
   function bindTargets(root = document) {
     root.querySelectorAll("[gbtip], [data-tooltip]").forEach(el => {
-      if (el.dataset.tooltipBound) return; // 防止重复绑定
+      if (el.dataset.tooltipBound) return;
       el.dataset.tooltipBound = "true";
 
       const tipText = el.getAttribute("gbtip") || el.getAttribute("data-tooltip");
       if (!tipText) return;
 
       if (hasHover) {
+        // 桌面端 hover 触发
         el.addEventListener("mouseenter", () => showTooltip(el, tipText));
         el.addEventListener("mouseleave", hideTooltip);
       } else {
-        el.addEventListener("touchstart", () => {
-          showTooltip(el, tipText);
-          clearTimeout(hideTimer);
-          hideTimer = setTimeout(hideTooltip, 1500); // 触屏自动隐藏
-        }, { passive: true });
-
-        el.addEventListener("touchend", hideTooltip, { passive: true });
+        // 移动端：直接跳过，不绑定 tooltip 显示
+        // 如果你想保留触屏点击显示，可以在这里写逻辑
       }
     });
   }
 
-  // 全局滚动/缩放：固定元素保持显示；普通元素移出视口则隐藏；不更新位置
   function onViewportChange() {
     if (!activeTarget || tooltip.style.opacity === "0" || !activeTarget.isConnected) return;
 
@@ -103,25 +98,17 @@ function initTooltip() {
       rect.left < window.innerWidth;
 
     if (isFixedOrSticky || inViewport) {
-      // 按你的需求：位置保持不变，不做 placeTooltip
-      // 若你希望在 resize 时避免完全越界，可启用一次轻微“夹取”
-      // const minPad = 8;
-      // frozenPos.left = Math.max(minPad, Math.min(frozenPos.left, window.innerWidth - tooltip.offsetWidth - minPad));
-      // frozenPos.top  = Math.max(minPad, Math.min(frozenPos.top,  window.innerHeight - tooltip.offsetHeight - minPad));
       applyFrozen();
     } else {
       hideTooltip();
     }
   }
 
-  // 初次绑定
   bindTargets();
 
-  // 全局监听一次即可，避免为每个元素重复加监听
   window.addEventListener("scroll", onViewportChange, { passive: true });
   window.addEventListener("resize", onViewportChange, { passive: true });
 
-  // anzhiyu PJAX：切换前隐藏；切换后重新绑定
   window.addEventListener("pjax:send", hideTooltip);
   window.addEventListener("pjax:success", () => {
     bindTargets(document);
@@ -129,3 +116,82 @@ function initTooltip() {
 }
 
 document.addEventListener("DOMContentLoaded", initTooltip);
+
+// 针对翻页条的按钮动画js
+(function () {
+  function normalizePath(path) {
+    if (!path) return '/';
+    try {
+      // 支持绝对或相对 href（基于 location.origin）
+      const url = new URL(path, location.origin);
+      let p = url.pathname || '/';
+      // 保持末尾斜杠，方便比较
+      if (!p.endsWith('/')) p = p + '/';
+      return p;
+    } catch (e) {
+      // 如果无法 new URL（极少数相对特殊），退回原始处理
+      if (!path.endsWith('/')) return path + '/';
+      return path;
+    }
+  }
+
+  function updateSelected() {
+    const list = document.getElementById('catalog-list');
+    if (!list) return;
+
+    // 清除已有 selected（避免重复/残留）
+    list.querySelectorAll('.catalog-list-item.selected').forEach(n => n.classList.remove('selected'));
+
+    const anchors = Array.from(list.querySelectorAll('.catalog-list-item a'));
+    const currentPath = normalizePath(window.location.pathname || '/');
+
+    // 尝试精确匹配 href -> pathname
+    let matched = false;
+    for (const a of anchors) {
+      const href = a.getAttribute('href');
+      if (!href) continue;
+      const hrefPath = normalizePath(href);
+      if (hrefPath === currentPath) {
+        const item = a.closest('.catalog-list-item');
+        if (item) {
+          item.classList.add('selected');
+          matched = true;
+          break;
+        }
+      }
+    }
+
+    // 若未匹配到，尝试一些宽松规则：
+    if (!matched) {
+      // 1) 如果当前路径以 /categories/ 开头，尝试匹配包含最后一段的文本（兼容分类页伪静态差异）
+      if (currentPath.startsWith('/categories/')) {
+        const seg = currentPath.replace(/^\/categories\//, '').replace(/\/$/, '');
+        if (seg) {
+          for (const a of anchors) {
+            if ((a.textContent || '').trim() === decodeURIComponent(seg)) {
+              const item = a.closest('.catalog-list-item');
+              if (item) { item.classList.add('selected'); matched = true; break; }
+            }
+          }
+        }
+      }
+    }
+
+    // 2) 仍未匹配：特殊处理首页和 archives
+    if (!matched) {
+      if (currentPath === '/' || currentPath === '/index.html') {
+        const home = document.getElementById('cat-home');
+        if (home) { home.classList.add('selected'); matched = true; }
+      } else if (currentPath.startsWith('/archives')) {
+        const archives = document.getElementById('cat-archives');
+        if (archives) { archives.classList.add('selected'); matched = true; }
+      }
+    }
+
+    // 如果还是没有匹配，保留服务端生成（若已有 selected）或不高亮
+  }
+
+  document.addEventListener('DOMContentLoaded', updateSelected);
+  window.addEventListener('popstate', updateSelected);
+  // 若你使用 PJAX 并触发自定义事件，请确保在 PJAX 完成后调用 updateSelected()
+})();

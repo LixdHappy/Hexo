@@ -35,7 +35,9 @@ top_img: false
 
 <!-- timeline 09-06 -->
 
-加入`tooltip`信息拓展框(暂定命名)
+- 加入`tooltip`信息拓展框(暂定命名)
+
+- 对`分类条`做出修改
 
 <!-- endtimeline -->
 

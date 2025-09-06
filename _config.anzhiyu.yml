@@ -1365,6 +1365,7 @@ inject:
     - <script src="/js/ai.js"></script> # 引入AI概括
     - <script src="/js/flink-status.js"></script> # 引入友链页面延迟显示
     - <script src="/js/gb-tooltip.js"></script> # 引入tooltip提示框
+    # - <script src="/js/rebuildCategoryBar.js"></script> # 重构首页页面分类条
     #- <script async src="//at.alicdn.com/t/c/font_4978790_570l599x1x7.js"></script> # 引入iconfont图标
 
 # CDN
